@@ -7,8 +7,6 @@ export const useStore = create((set) => ({
     return tShirts.find((tShirt: any) => tShirt.id === id);
   },
   chargeTshirts: (data: any) => {
-    console.log(data, "datp");
-
     set((state: any) => ({
       characters: data,
     }));

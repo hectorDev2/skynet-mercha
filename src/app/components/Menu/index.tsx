@@ -1,15 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import * as Styled from './styles'
 
-import cubes from '../../assets/icons/cubes.svg'
-import iconLogo from '../../assets/icons/icon-logo.svg'
-import iconDownload from '../../assets/icons/icon-downloads.svg'
-import iconChat from '../../assets/icons/icon-chat.svg'
-import trophy from '../../assets/icons/trophy.svg'
-
 import { Fragment, ReactElement, useMemo } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 
 interface IGames {
   image: ReactElement
