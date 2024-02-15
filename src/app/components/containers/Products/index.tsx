@@ -1,11 +1,7 @@
-'use client'
-import { useStore } from '@/db/useStore'
 import { Container, GameCard, GamesList } from './style'
 import Link from 'next/link'
 
 export function Products ({ tshirts }: any) {
-  console.log(tshirts)
-
   return (
     <Container>
       <div className='flex text-center justify-evenly'>
