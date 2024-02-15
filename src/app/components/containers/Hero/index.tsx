@@ -85,7 +85,7 @@ export function Hero () {
   )
 
   const [index, setIndex] = useState(0)
-  const [timer, setTimer] = useState<any>(null)
+  const [timer, setTimer] = useState<NodeJS.Timeout>()
 
   useEffect(() => {
     if (timer != null) {

@@ -1,7 +1,8 @@
+import { TShirt } from '@/types'
 import { Container, GameCard, GamesList } from './style'
 import Link from 'next/link'
 
-export function Products ({ tshirts }: any) {
+export function Products ({ tshirts }: { tshirts: TShirt[] }) {
   return (
     <Container>
       <div className='flex text-center justify-evenly'>
@@ -11,7 +12,7 @@ export function Products ({ tshirts }: any) {
         </div>
       </div>
       <GamesList>
-        {tshirts?.map((tShirt: any) => (
+        {tshirts?.map((tShirt: TShirt) => (
           <Link key={tShirt.name} href={`/productos/${tShirt.id}`}>
             <GameCard data-aos='fade-right '>
               <div className='game-image-container transition-transform ease-in  hover:scale-110'>

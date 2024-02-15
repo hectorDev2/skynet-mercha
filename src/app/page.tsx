@@ -11,7 +11,7 @@ import { Layout } from './layout/Layout'
 export default async function Home () {
   const supabase = createServerComponentClient<Database>({ cookies })
 
-  const { data: tshirts = [] } = await supabase
+  const { data: tshirts } = await supabase
     .from('tshirts')
     .select('*')
     .order('created_at', { ascending: false })
@@ -27,7 +27,7 @@ export default async function Home () {
         <Loading />
         <Hero />
 
-        <Products tshirts={tshirts} />
+        <Products tshirts={tshirts || []} />
         <Download />
       </main>
     </Layout>
