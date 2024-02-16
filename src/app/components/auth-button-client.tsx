@@ -14,7 +14,7 @@ export function AuthButton ({ session }: { session: Session | null }) {
     await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: 'https://skynet-mercha.vercel.app/auth/callback'
+        redirectTo: 'https://www.skynetmerchandising.com/auth/callback'
       }
     })
   }
@@ -23,7 +23,7 @@ export function AuthButton ({ session }: { session: Session | null }) {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: 'https://skynet-mercha.vercel.app/auth/callback'
+        redirectTo: 'https://www.skynetmerchandising.com/auth/callback'
       }
     })
   }
