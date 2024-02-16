@@ -3,8 +3,8 @@ import './globals.css'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Clon de Twitter',
-  description: 'Generado moviendo las manitas'
+  title: 'SKYNET MERCHA',
+  description: 'Tienda Skynet'
 }
 
 export default function RootLayout ({

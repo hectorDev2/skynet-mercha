@@ -14,18 +14,18 @@ export function AuthButton ({ session }: { session: Session | null }) {
     await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: 'http://localhost:3000/auth/callback'
+        redirectTo: 'https://skynet-mercha.vercel.app/auth/callback'
       }
     })
   }
 
   const handleSignInGoogle = async () => {
-    // await supabase.auth.signInWithOAuth({
-    //   provider: 'google',
-    //   options: {
-    //     redirectTo: 'http://localhost:3000/auth/callback'
-    //   }
-    // })
+    await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: 'https://skynet-mercha.vercel.app/auth/callback'
+      }
+    })
   }
 
   const handleSignOut = async () => {
