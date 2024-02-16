@@ -34,7 +34,10 @@ export const ContentContainer = styled("div", {
 export const NavContainer = styled("div", {
   display: "flex",
   alignItems: "center",
-  gap: "11.2rem",
+  gap: "0",
+  "@md": {
+    padding: "11.2rem",
+  },
 });
 
 export const Logo = styled("div", {

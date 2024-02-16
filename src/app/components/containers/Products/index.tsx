@@ -6,7 +6,7 @@ export function Products ({ tshirts }: { tshirts: TShirt[] }) {
   return (
     <div
       style={{ background: 'hsla(205, 46%, 10%, 1)' }}
-      className='py-[100px] px-[100px] '
+      className='py-[100px] px-[10px] md:px-[100px] '
     >
       <div className='flex text-center justify-evenly'>
         <div className='text-center'>
@@ -14,7 +14,7 @@ export function Products ({ tshirts }: { tshirts: TShirt[] }) {
           <h2 className='text-4xl'>Modelos Exclusivos</h2>
         </div>
       </div>
-      <div className='flex gap-2 py-5'>
+      <div className=' flex flex-col md:flex-row items-center gap-2 py-5'>
         {tshirts?.map((tShirt: TShirt) => (
           <Link key={tShirt.name} href={`/productos/${tShirt.id}`}>
             <CardProduct product={tShirt} />

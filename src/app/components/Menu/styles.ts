@@ -12,9 +12,6 @@ export const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
   zIndex: 5,
-  "@media(max-width:1260px)": {
-    display: "none",
-  },
   variants: {
     show: {
       false: {
