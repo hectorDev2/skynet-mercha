@@ -1,6 +1,11 @@
 import { AOSInit } from '@/utils/aos'
 import './globals.css'
-import { Providers } from './providers'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Clon de Twitter',
+  description: 'Generado moviendo las manitas'
+}
 
 export default function RootLayout ({
   children
@@ -10,10 +15,8 @@ export default function RootLayout ({
   return (
     <html lang='en' className='dark'>
       <AOSInit />
-      <body>
-        <Providers>{children}</Providers>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
-export const dynamic = 'force-static'
+// export const dynamic = 'force-static'

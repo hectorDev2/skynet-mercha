@@ -1,30 +1,26 @@
 import { TShirt } from '@/types'
-import { Container, GameCard, GamesList } from './style'
 import Link from 'next/link'
+import { CardProduct } from '../../CardProduct'
 
 export function Products ({ tshirts }: { tshirts: TShirt[] }) {
   return (
-    <Container>
+    <div
+      style={{ background: 'hsla(205, 46%, 10%, 1)' }}
+      className='py-[100px] px-[100px] '
+    >
       <div className='flex text-center justify-evenly'>
         <div className='text-center'>
           <p className='games-label'>Merchandising</p>
           <h2 className='text-4xl'>Modelos Exclusivos</h2>
         </div>
       </div>
-      <GamesList>
+      <div className='flex gap-2 py-5'>
         {tshirts?.map((tShirt: TShirt) => (
           <Link key={tShirt.name} href={`/productos/${tShirt.id}`}>
-            <GameCard data-aos='fade-right '>
-              <div className='game-image-container transition-transform ease-in  hover:scale-110'>
-                <img className='w-[400px]' src={`${tShirt.image[0]}`} alt='' />
-                <div className='overlay'></div>
-              </div>
-              <p className='game-name'>{tShirt.name}</p>
-              <p className='game-category'>S ./{tShirt.price}</p>
-            </GameCard>
+            <CardProduct product={tShirt} />
           </Link>
         ))}
-      </GamesList>
+      </div>
       <div className='w-full py-20 flex justify-center '>
         <Link href='/productos'>
           <button>
@@ -47,6 +43,6 @@ export function Products ({ tshirts }: { tshirts: TShirt[] }) {
           </button>
         </Link>
       </div>
-    </Container>
+    </div>
   )
 }

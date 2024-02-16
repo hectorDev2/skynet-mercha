@@ -20,12 +20,12 @@ export function AuthButton ({ session }: { session: Session | null }) {
   }
 
   const handleSignInGoogle = async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: 'http://localhost:3000/auth/callback'
-      }
-    })
+    // await supabase.auth.signInWithOAuth({
+    //   provider: 'google',
+    //   options: {
+    //     redirectTo: 'http://localhost:3000/auth/callback'
+    //   }
+    // })
   }
 
   const handleSignOut = async () => {

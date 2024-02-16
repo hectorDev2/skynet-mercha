@@ -7,16 +7,14 @@ import { Loading } from './components/containers/Loading'
 import { Hero } from './components/containers/Hero'
 import { Products } from './components/containers/Products'
 import { Layout } from './layout/Layout'
+import { Banner } from './components/shared/Banner'
 
 export default async function Home () {
   const supabase = createServerComponentClient<Database>({ cookies })
 
-  const { data: tshirts } = await supabase
-    .from('tshirts')
-    .select('*')
-    .order('created_at', { ascending: false })
+  const { data: tshirts } = await supabase.from('tshirts').select('*')
 
-  console.log(tshirts)
+  console.log(tshirts, 'tshirtss')
 
   return (
     <Layout>
@@ -26,8 +24,8 @@ export default async function Home () {
       <main>
         <Loading />
         <Hero />
-
         <Products tshirts={tshirts || []} />
+        <Banner />
         <Download />
       </main>
     </Layout>
