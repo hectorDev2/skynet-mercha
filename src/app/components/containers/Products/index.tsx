@@ -1,8 +1,8 @@
-import { TShirt } from '@/types'
 import Link from 'next/link'
 import { CardProduct } from '../../CardProduct'
+import { tShirts } from '@/types'
 
-export function Products ({ tshirts }: { tshirts: TShirt[] }) {
+export function Products ({ tshirts }: { tshirts: tShirts[] }) {
   return (
     <div
       style={{ background: 'hsla(205, 46%, 10%, 1)' }}
@@ -14,8 +14,8 @@ export function Products ({ tshirts }: { tshirts: TShirt[] }) {
           <h2 className='text-4xl'>Modelos Exclusivos</h2>
         </div>
       </div>
-      <div className=' flex flex-col md:flex-row items-center gap-2 py-5'>
-        {tshirts?.map((tShirt: TShirt) => (
+      <div className=' flex flex-col md:flex-row md:flex-wrap items-center gap-2 py-5'>
+        {tshirts?.map((tShirt: tShirts) => (
           <Link key={tShirt.name} href={`/productos/${tShirt.id}`}>
             <CardProduct product={tShirt} />
           </Link>

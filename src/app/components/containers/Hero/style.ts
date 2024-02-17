@@ -1,7 +1,7 @@
 import { styled, css, keyframes } from "@stitches/react";
 
 export const Container = styled("section", {
-  minHeight: "73.6rem",
+  minHeight: "53.6rem",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   backgroundPosition: "center",

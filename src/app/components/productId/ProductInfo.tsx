@@ -1,10 +1,10 @@
 'use client'
-import { TShirt } from '@/types'
 import React, { useState } from 'react'
 import { ButtonBuy } from '../shared/ButtonBuy'
+import { tShirts } from '@/types'
 const sizes = ['XS', 'S', 'M', 'L', 'XL']
 
-export const ProductInfo = ({ info }: { info: TShirt }) => {
+export const ProductInfo = ({ info }: { info: tShirts }) => {
   const [sizeTarget, setSizeTarget] = useState('M')
   const [count, setCount] = useState(0)
 
@@ -47,7 +47,7 @@ export const ProductInfo = ({ info }: { info: TShirt }) => {
         ))}
       </div>
       <div className='call-to-action'>
-        <div className='flex gap-3 cursor-pointer items-center text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-md border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900'>
+        <div className='flex  gap-3  cursor-pointer items-center text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-md border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900'>
           <button className='minus' onClick={handleRemoveToCart}>
             <svg
               xmlns='http://www.w3.org/2000/svg'

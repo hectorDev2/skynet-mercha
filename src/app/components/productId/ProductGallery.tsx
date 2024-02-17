@@ -3,13 +3,26 @@ import React, { useState } from 'react'
 
 export const ProductGallery = ({ images = [] }: { images: string[] }) => {
   const [imagePrincipal, setImagePrincipal] = useState(images[0] || '')
+  const indexOf = images.indexOf(imagePrincipal)
+  console.log(indexOf)
+  const nextImage = () => {
+    if (indexOf == images.length - 1) setImagePrincipal(images[0])
+
+    setImagePrincipal(images[indexOf + 1])
+  }
+  const beforeImage = () => {
+    if (indexOf == 0) {
+      setImagePrincipal(images[images.length - 1])
+    }
+    setImagePrincipal(images[indexOf - 1])
+  }
 
   return (
     <div className='images-gallery'>
       {/* <!-- main image --> */}
       <figcaption className='main-image'>
         {/* <!--prev button --> */}
-        <button className='prev-btn'>
+        <button onClick={beforeImage} className='prev-btn'>
           <img src='/images/icon-previous.svg' alt='previous icon' />
         </button>
         <img
@@ -18,7 +31,7 @@ export const ProductGallery = ({ images = [] }: { images: string[] }) => {
           className='magnifiedImg main Image w-[362px] h-[362px] '
         />
         {/* <!--next button --> */}
-        <button className='next-btn'>
+        <button className='next-btn' onClick={nextImage}>
           <img src='/images/icon-next.svg' alt='next icon' />
         </button>
       </figcaption>

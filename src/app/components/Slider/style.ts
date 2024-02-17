@@ -5,9 +5,6 @@ export const Container = styled("div", {
   flexDirection: "column",
   gap: "2rem",
   position: "absolute",
-  left: "8.8rem",
-  top: "24.1rem",
-  zIndex: 3,
   "@xl": {
     left: "11.2rem",
   },
@@ -21,6 +18,9 @@ export const Container = styled("div", {
     left: "2.2rem",
     bottom: "6.8rem",
   },
+  left: "4.8rem",
+  top: "14.1rem",
+  zIndex: 3,
 });
 
 export const Game = styled("button", {

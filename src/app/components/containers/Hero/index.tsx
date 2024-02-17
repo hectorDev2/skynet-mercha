@@ -1,84 +1,44 @@
 'use client'
 import * as Styled from './style'
 
-import diabloBg from '../../../assets/banners_hero/diablo-bg.png'
-import diabloThumb from '../../../assets/banners_hero/diablo-animation-cover.png'
-import diabloGif from '../../../assets/banners_hero/diablo-animation.gif'
-import diabloLogo from '../../../assets/banners_hero/diablo-logo.png'
+import diabloBg from '../../../../../public/home/gamer.jpeg'
 
-import hearthstoneBg from '../../../assets/banners_hero/hearthstone-bg.png'
-import hearthstoneThumb from '../../../assets/banners_hero/hearthstone-animation-cover.png'
-import hearthstoneGif from '../../../assets/banners_hero/hearthstone-animation.gif'
-import hearthstoneLogo from '../../../assets/banners_hero/hearthstone-logo.png'
+import hearthstoneBg from '../../../../../public/home/films.jpeg'
 
-import wowBg from '../../../assets/banners_hero/wow-bg.png'
-import wowThumb from '../../../assets/banners_hero/wow-animation-cover.png'
-import wowGif from '../../../assets/banners_hero/wow-animation.gif'
-import wowLogo from '../../../assets/banners_hero/wow-logo.png'
-
-import UserIcon from '../../../assets/icons/user.svg'
+import wowBg from '../../../../../public/home/wow.jpeg'
 
 import { useEffect, useMemo, useState } from 'react'
 import { Slider } from '../../Slider'
 
-import { Button } from '../../Button'
 import {
   MouseParallaxChild,
   MouseParallaxContainer
 } from 'react-parallax-mouse'
-import Image, { type StaticImageData } from 'next/image'
-
-interface IGames {
-  id: string
-  background: string
-  heading: string
-  text: string
-  buttonText: string
-  logo: StaticImageData
-  trailer: {
-    gif: StaticImageData
-    thumbnail: StaticImageData
-  }
-}
+import Link from 'next/link'
 
 export function Hero () {
-  const games = useMemo<IGames[]>(
+  const pages = useMemo(
     () => [
       {
         id: 'diablo',
         background: diabloBg.src,
         heading: 'Venta de merchandising',
         text: 'Polos personalizados, buena calidad y gamers',
-        buttonText: 'Comprar ahora',
-        trailer: {
-          gif: diabloGif,
-          thumbnail: diabloThumb
-        },
-        logo: diabloLogo
+        url: ''
       },
       {
         id: 'hearthstone',
         background: hearthstoneBg.src,
-        heading: 'merchandising de Hearthstone',
-        text: 'Polos, tazas, poleras y mucho mas con la tematica de hearthstone',
-        buttonText: 'Reserve agora na pré-venda',
-        trailer: {
-          gif: hearthstoneGif,
-          thumbnail: hearthstoneThumb
-        },
-        logo: hearthstoneLogo
+        heading: 'Peliculas, series y mas!',
+        text: 'Skynet tiene una gran variedad de contenido en nuestro pagina web',
+        url: 'https://skynet.com.pe/'
       },
       {
         id: 'wow',
         background: wowBg.src,
         heading: 'Servidor de Wow: SKYNET WOW',
         text: 'Juega con tus amigos en este loco mundo abierto',
-        buttonText: 'registrar',
-        trailer: {
-          gif: wowGif,
-          thumbnail: wowThumb
-        },
-        logo: wowLogo
+        url: 'https://www.skynetwow.com/'
       }
     ],
     []
@@ -92,7 +52,7 @@ export function Hero () {
       clearTimeout(timer)
     }
     const newTimer = setTimeout(() => {
-      if (index + 1 === games.length) {
+      if (index + 1 === pages.length) {
         setIndex(0)
       } else {
         setIndex(index + 1)
@@ -102,7 +62,7 @@ export function Hero () {
   }, [index])
 
   const handleSelectGame = (id: string) => {
-    const gameIndex = games.findIndex(game => game.id === id)
+    const gameIndex = pages.findIndex(game => game.id === id)
     if (gameIndex >= 0) {
       setIndex(gameIndex)
     }
@@ -111,11 +71,11 @@ export function Hero () {
   return (
     <Styled.Container>
       <Slider
-        gameIdActive={games[index].id}
+        gameIdActive={pages[index].id}
         handleSelectGame={handleSelectGame}
       />
-      {games.map((game, i) => (
-        <Styled.GameContent key={game.id} active={i === index}>
+      {pages.map((page, i) => (
+        <Styled.GameContent key={page.id} active={i === index}>
           {i === index && <Styled.ProgressBar />}
           <MouseParallaxContainer
             containerStyle={{
@@ -131,29 +91,47 @@ export function Hero () {
               factorX={0.02}
               factorY={0.01}
               style={{
-                backgroundImage: `url(${game.background})`
+                backgroundImage: `url(${page.background})`
               }}
               className={Styled.Bg()}
             ></MouseParallaxChild>
           </MouseParallaxContainer>
 
-          <Styled.GameContainers>
+          <div className='relative ml-[2rem] md:ml-[15rem] pt-[15.7rem] flex justify-between max-w-[108.2rem]'>
             <Styled.LeftSide>
               <div>
-                <h1>{game.heading}</h1>
-                <p>{game.text}</p>
+                <h1 className='text-xl md:text-5xl  drop-shadow-lg'>
+                  {page.heading}
+                </h1>
+                <p
+                  className='text-xs leading-9
+ md:text-5xl  drop-shadow-lg'
+                >
+                  {page.text}
+                </p>
               </div>
-              <Button
-                leftIcon={<Image src={UserIcon} alt='' />}
-                aligment={'left'}
-                css={{
-                  padding: '1.4rem 3.2rem'
-                }}
-              >
-                {game.buttonText}
-              </Button>
+              <Link target='_blank' href={`${page.url}`}>
+                <button className='flex justify-center max-w-[300px] gap-3 cursor-pointer items-center text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-md border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='icon icon-tabler icon-tabler-caret-down'
+                    width='44'
+                    height='44'
+                    viewBox='0 0 24 24'
+                    stroke-width='1.5'
+                    stroke='#ffffff'
+                    fill='none'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                  >
+                    <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                    <path d='M6 10l6 6l6 -6h-12' />
+                  </svg>
+                  Ver Mas
+                </button>
+              </Link>
             </Styled.LeftSide>
-          </Styled.GameContainers>
+          </div>
         </Styled.GameContent>
       ))}
     </Styled.Container>

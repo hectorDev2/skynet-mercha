@@ -1,6 +1,6 @@
+import { AOSInit } from '@/utils/aos'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
-import { AuthButtonServer } from '../components/auth-button-server'
 
 import { Loading } from '../components/containers/Loading'
 type Props = {
@@ -11,7 +11,7 @@ export const Layout = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <AuthButtonServer />
+      <AOSInit />
       <Loading />
       {children}
       <Footer />

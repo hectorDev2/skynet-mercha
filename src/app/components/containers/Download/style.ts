@@ -27,8 +27,7 @@ export const Container = styled("section", {
 export const LeftSide = styled("div", {
   width: "100%",
   maxWidth: "30rem",
-  textAlign: "center",
-  paddingTop: "13.2rem",
+  paddingTop: "7.2rem",
   h2: {
     margin: "3.2rem 0",
     fontSize: "3.2rem",
@@ -92,11 +91,6 @@ export const RightSide = styled("div", {
     animation: `${translateAnimation} ease-in-out 5s infinite`,
   },
   ".img2": {
-    maxWidth: "647.21px",
-    maxHeight: "335.75px",
-    position: "absolute",
-    right: "5.4rem",
-    bottom: "-3rem",
     animation: `${translateAnimation} ease-in-out 3s infinite`,
   },
   "@md": {

@@ -1,14 +1,12 @@
-export interface TShirt {
-  id: string
-  name: string
-  category: number
-  price: number
-  colors: Color[]
-  description: string
-  image: string[]
-}
-
-export interface Color {
-  id: number
-  name: string
+export interface tShirts {
+  id: string;
+  name: string;
+  category: string;
+  price: number;
+  colors: {
+    id: number;
+    name: string;
+  }[];
+  description: string;
+  image: string[];
 }
