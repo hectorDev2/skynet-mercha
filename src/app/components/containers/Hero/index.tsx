@@ -53,7 +53,7 @@ export function Hero () {
         background: MarketingBg.src,
         heading: 'Skynet Marketing',
         text: 'Servicios de redes sociales, marketing digital.',
-        url: 'https://www.skynet-mu.com/'
+        url: 'https://www.corporacionskynet.com/'
       }
     ],
     []
