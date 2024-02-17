@@ -1,10 +1,12 @@
+import { tShirts } from '@/types'
 import React from 'react'
 
 export const CardProductEx = ({
   product,
   image
 }: {
-  product: any
+  product: tShirts
+
   image: string
 }) => {
   return (

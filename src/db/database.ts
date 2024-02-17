@@ -129,7 +129,7 @@ export const TshirtsExclusive = {
   price: 80.0,
   description:
     ": Revive la nostalgia y la emoción de tus juegos favoritos de Nintendo con nuestra línea de polos dedicada a esta icónica compañía de videojuegos. Desde Mario y Zelda hasta Pokémon y Splatoon, nuestra colección ofrece una amplia gama de opciones para los fans de todas las edades.",
-  images: [
+  image: [
     "/polos/personalizados/1.png",
     "/polos/personalizados/2.png",
     "/polos/personalizados/3.png",

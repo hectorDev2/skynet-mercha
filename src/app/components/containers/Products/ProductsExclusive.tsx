@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { TshirtsExclusive } from '@/db/database'
-import { CardProduct } from './CardProduct'
 import { CardProductEx } from './CardProductEx'
 
 export function ProductsExclusive () {
@@ -18,7 +17,7 @@ export function ProductsExclusive () {
         </div>
       </div>
       <div className=' flex flex-col md:flex-row md:flex-wrap items-center gap-2 py-5'>
-        {exclusive.images?.map((image: string) => (
+        {exclusive.image?.map((image: string) => (
           <Link key={image} href={`/productos/${exclusive.id}`}>
             <CardProductEx image={image} product={exclusive} />
           </Link>
