@@ -1,13 +1,13 @@
 'use client'
+import { useEffect, useMemo, useState } from 'react'
+
 import * as Styled from './style'
 
 import diabloBg from '../../../../../public/home/gamer.jpeg'
-
 import hearthstoneBg from '../../../../../public/home/films.jpeg'
-
 import wowBg from '../../../../../public/home/wow.jpeg'
+import muBg from '../../../../../public/home/mu2.jpeg'
 
-import { useEffect, useMemo, useState } from 'react'
 import { Slider } from '../../Slider'
 
 import {
@@ -39,6 +39,13 @@ export function Hero () {
         heading: 'Servidor de Wow: SKYNET WOW',
         text: 'Juega con tus amigos en este loco mundo abierto',
         url: 'https://www.skynetwow.com/'
+      },
+      {
+        id: 'mu',
+        background: muBg.src,
+        heading: 'Servidor de Mu:SKYNET MU',
+        text: 'Servidor de Mu online ',
+        url: 'https://www.skynet-mu.com/'
       }
     ],
     []

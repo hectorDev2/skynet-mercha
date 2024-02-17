@@ -6,6 +6,7 @@ import Diablo from '../../../../public/icons/logo.png'
 
 import Hearthstone from '../../../../public/icons/films.png'
 import Wow from '../../assets/game_icons/wow.png'
+import Mu from '../../../../public/icons/mu.png'
 
 interface IGames {
   id: string
@@ -32,6 +33,10 @@ const Slider = forwardRef<null, SliderProps>(
         {
           id: 'wow',
           image: Wow.src
+        },
+        {
+          id: 'mu',
+          image: Mu.src
         }
       ],
       []
