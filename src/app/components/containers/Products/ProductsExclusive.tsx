@@ -1,28 +1,31 @@
 import Link from 'next/link'
-import { tShirts } from '@/types'
+import { TshirtsExclusive } from '@/db/database'
 import { CardProduct } from './CardProduct'
+import { CardProductEx } from './CardProductEx'
 
-export function Products ({ tshirts }: { tshirts: tShirts[] }) {
+export function ProductsExclusive () {
+  const exclusive = TshirtsExclusive
+
   return (
     <div
       style={{ background: 'hsla(205, 46%, 10%, 1)' }}
-      className='py-[100px] px-[10px] md:px-[100px] '
+      className='py-[50px] px-[10px] md:px-[100px] '
     >
       <div className='flex text-center justify-evenly'>
         <div className='text-center'>
           <p className='games-label'>Merchandising</p>
-          <h2 className='text-4xl'>Modelos Variados</h2>
+          <h2 className='text-4xl'>Modelos Exclusivos</h2>
         </div>
       </div>
       <div className=' flex flex-col md:flex-row md:flex-wrap items-center gap-2 py-5'>
-        {tshirts?.slice(0, 6).map((tShirt: tShirts) => (
-          <Link key={tShirt.name} href={`/productos/${tShirt.id}`}>
-            <CardProduct product={tShirt} />
+        {exclusive.images?.map((image: string) => (
+          <Link key={image} href={`/productos/${exclusive.id}`}>
+            <CardProductEx image={image} product={exclusive} />
           </Link>
         ))}
       </div>
       <div className='w-full py-20 flex justify-center '>
-        <Link href='/productos'>
+        <Link href='/productos/9'>
           <button>
             VER MAS
             <svg
