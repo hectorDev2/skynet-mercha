@@ -7,8 +7,6 @@ import Buy from '../../../assets/icons/buy.svg'
 import Download1 from '../../../assets/images/download-1.png'
 import Download2 from '../../../assets/images/download-2.png'
 
-import { Button } from '../../../components/Button'
-
 export function Download () {
   return (
     <Container>
