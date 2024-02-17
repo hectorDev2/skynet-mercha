@@ -8,12 +8,6 @@ import { Banner } from './components/shared/Banner'
 import { tShirts } from '@/db/database'
 
 export default async function Home () {
-  // const supabase = createServerComponentClient<Database>({ cookies })
-
-  // const { data: tshirts } = await supabase.from('tshirts').select('*')
-
-  // console.log(tshirts, 'tshirtss')
-
   return (
     <Layout>
       <Head>

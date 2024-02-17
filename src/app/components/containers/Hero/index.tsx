@@ -7,6 +7,7 @@ import diabloBg from '../../../../../public/home/gamer.jpeg'
 import hearthstoneBg from '../../../../../public/home/films.jpeg'
 import wowBg from '../../../../../public/home/wow.jpeg'
 import muBg from '../../../../../public/home/mu2.jpeg'
+import MarketingBg from '../../../../../public/home/marketing.jpeg'
 
 import { Slider } from '../../Slider'
 
@@ -45,6 +46,13 @@ export function Hero () {
         background: muBg.src,
         heading: 'Servidor de Mu:SKYNET MU',
         text: 'Servidor de Mu online ',
+        url: 'https://www.skynet-mu.com/'
+      },
+      {
+        id: 'marketing',
+        background: MarketingBg.src,
+        heading: 'Skynet Marketing',
+        text: 'Servicios de redes sociales, marketing digital.',
         url: 'https://www.skynet-mu.com/'
       }
     ],
