@@ -2,9 +2,9 @@
 import React from 'react'
 import { ProductGallery } from './ProductGallery'
 import { ProductInfo } from './ProductInfo'
-import { TShirt } from '../../../types/index'
+import { tShirts } from '../../../types/index'
 
-export const Content = ({ tShirt }: { tShirt: TShirt }) => {
+export const Content = ({ tShirt }: { tShirt: tShirts }) => {
   return (
     <main>
       {/* <!-- product section --> */}
