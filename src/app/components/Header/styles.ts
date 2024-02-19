@@ -14,7 +14,7 @@ export const Container = styled("header", {
 export const ContentContainer = styled("div", {
   margin: "0 auto",
   width: "100%",
-  height: "9.6rem",
+  height: "7.6rem",
   maxWidth: "131.4rem",
   display: "flex",
   alignItems: "center",

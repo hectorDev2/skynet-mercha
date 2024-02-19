@@ -67,7 +67,7 @@ export function Header () {
             <Styled.Logo ref={logoRef}>
               <Link href='/'>
                 <img
-                  className='max-w-[100px]'
+                  className='max-w-[70px] md:max-w-[100px]'
                   alt='logo skynet'
                   src='/logo.png'
                 />
