@@ -1,10 +1,8 @@
 'use client'
 import * as Styled from './styles'
-
 import Link from 'next/link'
 import { Nav } from '../Nav'
 import { Menu } from '../Menu'
-
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 

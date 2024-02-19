@@ -16,7 +16,7 @@ export function ProductsExclusive () {
           <h2 className='text-4xl'>Modelos Exclusivos</h2>
         </div>
       </div>
-      <div className=' flex flex-col md:flex-row md:flex-wrap items-center gap-2 py-5'>
+      <div className=' flex flex-col justify-center md:flex-row md:flex-wrap items-center gap-2 py-5'>
         {exclusive.image?.map((image: string) => (
           <Link key={image} href={`/productos/${exclusive.id}`}>
             <CardProductEx image={image} product={exclusive} />

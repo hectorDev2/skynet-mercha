@@ -118,6 +118,8 @@ export const tShirts = [
       "/polos/personalizados/8.png",
       "/polos/personalizados/9.png",
       "/polos/personalizados/10.png",
+      "/polos/personalizados/11.png",
+      "/polos/personalizados/12.png",
     ],
   },
 ];
@@ -140,6 +142,8 @@ export const TshirtsExclusive = {
     "/polos/personalizados/8.png",
     "/polos/personalizados/9.png",
     "/polos/personalizados/10.png",
+    "/polos/personalizados/11.png",
+    "/polos/personalizados/12.png",
   ],
 };
 

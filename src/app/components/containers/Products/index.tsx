@@ -14,7 +14,7 @@ export function Products ({ tshirts }: { tshirts: tShirts[] }) {
           <h2 className='text-4xl'>Modelos Variados</h2>
         </div>
       </div>
-      <div className=' flex flex-col md:flex-row md:flex-wrap items-center gap-2 py-5'>
+      <div className=' flex flex-col justify-center md:flex-row md:flex-wrap items-center gap-2 py-5'>
         {tshirts?.slice(0, 6).map((tShirt: tShirts) => (
           <Link key={tShirt.name} href={`/productos/${tShirt.id}`}>
             <CardProduct product={tShirt} />
