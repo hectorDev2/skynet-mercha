@@ -20,7 +20,10 @@ export const ProductGallery = ({ images = [] }: { images: string[] }) => {
   return (
     <div className='images-gallery'>
       {/* <!-- main image --> */}
-      <figcaption className='main-image'>
+      <figcaption
+        className='main-image image-flash
+'
+      >
         {/* <!--prev button --> */}
         <button onClick={beforeImage} className='prev-btn'>
           <img src='/images/icon-previous.svg' alt='previous icon' />
@@ -28,7 +31,7 @@ export const ProductGallery = ({ images = [] }: { images: string[] }) => {
         <img
           src={imagePrincipal}
           alt='image product 1'
-          className='magnifiedImg main Image w-[362px] h-[362px] '
+          className='mx-auto magnifiedImg main Image w-[362px] h-[362px] '
         />
         {/* <!--next button --> */}
         <button className='next-btn' onClick={nextImage}>
@@ -41,7 +44,7 @@ export const ProductGallery = ({ images = [] }: { images: string[] }) => {
           <figcaption
             key={image}
             className={`thumbnails-image ${
-              image == imagePrincipal && 'border-4  border-cyan-800'
+              image == imagePrincipal && 'border-4  border-[var(--primary)]'
             }`}
             onClick={() => setImagePrincipal(image)}
           >

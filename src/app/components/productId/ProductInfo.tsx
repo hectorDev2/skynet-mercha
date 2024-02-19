@@ -19,7 +19,7 @@ export const ProductInfo = ({ info }: { info: tShirts }) => {
   }
   return (
     <article className='product-description text-white'>
-      <h3 className='company'>skynet Merch</h3>
+      <h3 className='company text-[var(--primary)]'>skynet Merch</h3>
       <h1 className='product-name '>{info?.name}</h1>
       <p className='description'>{info?.description}</p>
       <div className='product-offer'>

@@ -10,7 +10,7 @@ export function Products ({ tshirts }: { tshirts: tShirts[] }) {
     >
       <div className='flex text-center justify-evenly'>
         <div className='text-center'>
-          <p className='games-label'>Merchandising</p>
+          <p className='games-label text-[var(--primary)]'>Merchandising</p>
           <h2 className='text-4xl'>Modelos Variados</h2>
         </div>
       </div>

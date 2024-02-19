@@ -118,10 +118,7 @@ export function Hero () {
                 <h1 className='text-xl md:text-5xl  drop-shadow-lg'>
                   {page.heading}
                 </h1>
-                <p
-                  className='text-xs leading-9
- md:text-5xl  drop-shadow-lg'
-                >
+                <p className='text-xs leading-9 md:text-5xl  drop-shadow-lg'>
                   {page.text}
                 </p>
               </div>

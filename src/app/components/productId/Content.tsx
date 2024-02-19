@@ -8,7 +8,7 @@ export const Content = ({ tShirt }: { tShirt: tShirts }) => {
   return (
     <main>
       {/* <!-- product section --> */}
-      <section className='section-center product-section text-white'>
+      <section className='section-center product-section my-[150px] text-white'>
         <section className='product-component'>
           {/* <!-- image gallery --> */}
           <ProductGallery images={tShirt?.image} />

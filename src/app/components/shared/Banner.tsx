@@ -32,10 +32,7 @@ export const Banner = () => {
               <p className='flex flex-row gap-x-0.5 items-center text-lg text-[#04ADFF]'>
                 Exclusivos para gente gammer
               </p>
-              <button
-                className='px-8 py-4 border border-black rounded-secondary bg-black hover:bg-black/90 text-white transition-colors drop-shadow w-fit mt-4'
-                style={{ cursor: ' none' }}
-              >
+              <button className='px-8 py-4 border border-black rounded-secondary bg-black hover:bg-black/90 text-white transition-colors drop-shadow w-fit mt-4'>
                 Descubre nuestros modelos
               </button>
             </div>
