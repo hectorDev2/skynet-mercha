@@ -3,7 +3,10 @@ import React from 'react'
 
 export const CardProduct = ({ product }: { product: tShirts }) => {
   return (
-    <div className='w-full  max-w-sm bg-white border  hover:bg-[#04abff83] border-gray-200 rounded-lg shadow dark:bg-transparent dark:border-gray-700'>
+    <div
+      className='w-full max-w-sm transition-all ease-in hover:scale-105 hover:bg-[#04abff83]
+ bg-red border border-gray-200 rounded-lg shadow  dark:border-gray-700'
+    >
       <a href='#'>
         <img
           className='p-8 rounded-t-lg'
