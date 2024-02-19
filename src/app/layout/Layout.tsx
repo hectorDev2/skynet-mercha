@@ -16,7 +16,7 @@ export const Layout = ({ children }: Props) => {
       {children}
       <Footer />
       <a
-        href='https://api.whatsapp.com/send?phone=51957929331&text=Hola%20te%20escribo%20desde%20skynet%20%20%F0%9F%91%80%20'
+        href='https://api.whatsapp.com/send?phone=51978738423&text=Hola%20te%20escribo%20desde%20skynet%20%20%F0%9F%91%80%20'
         target='_blank'
         className='z-[-1]'
       >
