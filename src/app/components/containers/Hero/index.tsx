@@ -25,7 +25,7 @@ export function Hero () {
         background: diabloBg.src,
         heading: 'Venta de merchandising',
         text: 'Polos personalizados, buena calidad y gamers',
-        url: ''
+        url: '/productos'
       },
       {
         id: 'hearthstone',
@@ -125,7 +125,10 @@ export function Hero () {
                   {page.text}
                 </p>
               </div>
-              <Link target='_blank' href={`${page.url}`}>
+              <Link
+                target={`${page.url == '/productos' ? '' : '_blank'}`}
+                href={`${page.url}`}
+              >
                 <button className='flex justify-center max-w-[300px] gap-3 cursor-pointer items-center text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-md border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'

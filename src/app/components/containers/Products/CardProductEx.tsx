@@ -11,7 +11,8 @@ export const CardProductEx = ({
 }) => {
   return (
     <div
-      className='w-full max-w-sm transition-all ease-in hover:scale-105 hover:bg-[#04abff83]
+      className='image-flash
+ w-full max-w-sm transition-all ease-in hover:scale-105 hover:bg-[#04abff83]
  bg-red border border-gray-200 rounded-lg shadow  dark:border-gray-700'
     >
       <a href='#'>

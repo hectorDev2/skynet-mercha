@@ -8,7 +8,7 @@ export const Container = styled("div", {
   overflow: "hidden",
   background: "$gradient-2",
   transition: "all 0.4s ease",
-  backdropFilter: "blur(6px)",
+  backdropFilter: "blur(6px) brightness(0.5)",
   display: "flex",
   flexDirection: "column",
   zIndex: 5,

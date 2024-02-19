@@ -52,7 +52,7 @@ export function Download () {
         <RightSide>
           <Image className='img1' src={Download1} alt='' />
           <Image
-            className='img2 hidden md:absolute max-w-[647.21px] max-h-[335.75px] right-[5.4rem]  bottom-[-3rem]'
+            className='img2 hidden md:absolute max-w-[647.21px] max-h-[435.75px] right-[5.4rem]  bottom-[-3rem]'
             src={Download2}
             alt=''
           />
