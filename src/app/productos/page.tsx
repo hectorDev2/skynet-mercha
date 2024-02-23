@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Layout } from '../layout/Layout'
 import { Banner } from '../components/shared/Banner'
 import Link from 'next/link'
+import VideoBg from '../components/Background/VideoBg'
 
 export default function Products () {
   const products = [
@@ -153,6 +154,7 @@ export default function Products () {
       <Head>
         <title>Skynet M</title>
       </Head>
+      <VideoBg />
       <main className='pt-[100px] md:pt-[150px]'>
         <h2 className='text-3xl text-center'>Nuestros Modelos</h2>
         <div className='px-[10px] md:px-[100px]'>

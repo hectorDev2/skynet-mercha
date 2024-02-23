@@ -25,7 +25,7 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
             alt='categoria anime image'
           />
         ),
-        href: '/category/anime',
+        href: '/productos/1',
         name: 'Polos anime'
       },
       {
@@ -36,19 +36,19 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
             alt='categoria star craft image'
           />
         ),
-        href: '/category/start-craft',
+        href: '/productos/7',
         name: 'Polos star craft'
       },
       {
         image: (
           <img
             className='w-[100px] md:w-[150px]'
-            src={`https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/WoW_icon.svg/2048px-WoW_icon.svg.png`}
-            alt='categoria anime image'
+            src={`https://i.pinimg.com/originals/8a/8b/50/8a8b50da2bc4afa933718061fe291520.jpg`}
+            alt='categoria dota 2'
           />
         ),
-        href: '/category/wow',
-        name: 'Polos wow'
+        href: '/productos/3',
+        name: 'Polos Dota 2'
       },
       {
         image: (
@@ -58,7 +58,7 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
             alt='categoria anime image'
           />
         ),
-        href: '/category/half-life',
+        href: '/productos/5',
         name: 'Polos Half Life'
       }
     ],

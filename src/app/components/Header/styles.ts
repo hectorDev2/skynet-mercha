@@ -9,6 +9,7 @@ export const Container = styled("header", {
   left: 0,
   width: "100%",
   zIndex: 10,
+  background: "rgba(20, 20, 20, 0.8)",
 });
 
 export const ContentContainer = styled("div", {
