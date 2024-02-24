@@ -14,7 +14,6 @@ export default async function Home ({ params }: { params: { id: string } }) {
         <title>Skynet {tshirt?.name}</title>
       </Head>
       <main>
-        <Loading />
         <Header />
         {tshirt && (
           <div className='text-center mt-[100px] md:mt-[200px] mb-[120px]'>

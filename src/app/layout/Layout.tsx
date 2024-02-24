@@ -1,8 +1,9 @@
 import { AOSInit } from '@/utils/aos'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
-
 import { Loading } from '../components/containers/Loading'
+import Link from 'next/link'
+
 type Props = {
   children: string | JSX.Element | JSX.Element[]
 }
@@ -11,11 +12,10 @@ export const Layout = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <AOSInit />
       <Loading />
       {children}
       <Footer />
-      <a
+      <Link
         href='https://api.whatsapp.com/send?phone=51978738423&text=Hola%20te%20escribo%20desde%20skynet%20%20%F0%9F%91%80%20'
         target='_blank'
         className='z-[-1]'
@@ -24,7 +24,7 @@ export const Layout = ({ children }: Props) => {
           className='fixed hover:scale-[1.1] transition-all ease-in cursor-pointer w-20 h-20 right-0 bottom-0'
           src='/whatsapp.webp'
         />
-      </a>
+      </Link>
     </>
   )
 }

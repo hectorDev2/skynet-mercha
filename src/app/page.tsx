@@ -15,7 +15,6 @@ export default async function Home () {
         <title>Skynet M</title>
       </Head>
       <main>
-        <Loading />
         <Hero />
         <ProductsExclusive />
         <Products tshirts={tShirts} />
