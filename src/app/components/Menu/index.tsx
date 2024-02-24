@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link'
 import * as Styled from './styles'
 
 import { Fragment, ReactElement, useMemo } from 'react'
@@ -80,7 +81,7 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
       },
       {
         name: 'Escultura',
-        href: '#',
+        href: '/escultura',
         image: (
           <img
             className='w-[100px] md:w-[150px]'
@@ -112,12 +113,12 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
             <>
               {games.map(game => (
                 <Fragment key={game.name}>
-                  <a href={`${game.href}`}>
+                  <Link href={`${game.href}`}>
                     <Styled.Game>
                       {game.image}
                       <p className='text-sm'>{game.name}</p>
                     </Styled.Game>
-                  </a>
+                  </Link>
                 </Fragment>
               ))}
             </>
@@ -126,10 +127,12 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
             <>
               {varios.map(game => (
                 <span key={game.name}>
-                  <Styled.Game>
-                    {game.image}
-                    <p className='text-sm'>{game.name}</p>
-                  </Styled.Game>
+                  <Link href={`${game.href}`}>
+                    <Styled.Game>
+                      {game.image}
+                      <p className='text-sm'>{game.name}</p>
+                    </Styled.Game>
+                  </Link>
                 </span>
               ))}
             </>
