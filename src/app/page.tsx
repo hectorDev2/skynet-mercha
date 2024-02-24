@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { Download } from './components/containers/Download'
-import { Loading } from './components/containers/Loading'
 import { Hero } from './components/containers/Hero'
 import { Layout } from './layout/Layout'
 import { Banner } from './components/shared/Banner'

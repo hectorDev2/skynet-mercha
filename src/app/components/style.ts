@@ -2,23 +2,6 @@ import Background from "../assets/images/background-section-download.png";
 
 import { keyframes, styled } from "@stitches/react";
 
-export const LogoAnimation = keyframes({
-  "0%": {
-    strokeWidth: 0,
-    strokeDasharray: "1 100",
-    fill: "transparent",
-  },
-  "25%": {
-    strokeWidth: 0.3,
-    strokeDasharray: "100 0",
-    fill: "transparent",
-  },
-  "100%": {
-    strokeWidth: "0",
-    fill: "white",
-  },
-});
-
 export const ContainerAnimation = keyframes({
   "0%": {
     transform: "translateY(0)",
@@ -43,8 +26,5 @@ export const Container = styled("div", {
   animation: `${ContainerAnimation} 1s ease 2s forwards`,
   svg: {
     maxWidth: "300px",
-  },
-  ".logo-blizzard": {
-    animation: `${LogoAnimation} 2s ease`,
   },
 });
