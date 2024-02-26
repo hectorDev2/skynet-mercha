@@ -11,7 +11,7 @@ export const Container = styled("div", {
   backdropFilter: "blur(6px) brightness(0.5)",
   display: "flex",
   flexDirection: "column",
-  zIndex: 5,
+  zIndex: 9,
   variants: {
     show: {
       false: {

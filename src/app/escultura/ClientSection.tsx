@@ -82,8 +82,9 @@ export const ClientSection = () => {
                 Exelencia
               </h3>
               <p className='text-muted-foreground text-md mt-2'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                nesciunt est nostrum omnis ab sapiente.
+                Comparte historias detrás de cada escultura. ¿Qué inspiró al
+                artista? ¿Cuál fue el proceso creativo? La excelencia radica en
+                los detalles y la pasión.
               </p>
             </div>
           </div>
@@ -182,8 +183,9 @@ export const ClientSection = () => {
                 Productos de calidad
               </h3>
               <p className='text-muted-foreground text-md mt-2'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                nesciunt est nostrum omnis ab sapiente.
+                Cada obra viene con un certificado que garantiza su
+                autenticidad. Valoramos la confianza de nuestros clientes y nos
+                esforzamos por cumplir con los más altos estándares.
               </p>
             </div>
           </div>
@@ -266,8 +268,9 @@ export const ClientSection = () => {
                 Cumplimiento de tareas
               </h3>
               <p className='text-muted-foreground text-md mt-2'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                nesciunt est nostrum omnis ab sapiente.
+                Cumplimos con los plazos de entrega prometidos. Sabemos que su
+                tiempo es valioso, y nos esforzamos por ser puntuales en cada
+                transacción.
               </p>
             </div>
           </div>
@@ -278,7 +281,6 @@ export const ClientSection = () => {
         src='escultura/escultura.png'
         className='w-[300px] md:w-[500px] lg:w-[600px] object-contain'
       />
-      ``
     </div>
   )
 }

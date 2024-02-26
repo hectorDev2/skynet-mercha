@@ -5,5 +5,15 @@ module.exports = {
       bufferutil: 'commonjs bufferutil'
     })
     return config
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'fakestoreapi.com',
+        port: '',
+        pathname: '/**'
+      }
+    ]
   }
 }
