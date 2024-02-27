@@ -1,6 +1,4 @@
 'use client' // <===== REQUIRED
-import React, { useEffect, useState } from 'react'
-import { Navigation, Pagination, A11y } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
@@ -8,6 +6,7 @@ import 'swiper/css/navigation'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import SlideNavButtons from './SlideNavButtons'
+import { A11y, Navigation, Pagination } from 'swiper/modules'
 
 // Our custom button component
 

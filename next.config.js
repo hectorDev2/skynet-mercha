@@ -15,5 +15,6 @@ module.exports = {
         pathname: '/**'
       }
     ]
-  }
+  },
+  noImplicitAny: false
 }
