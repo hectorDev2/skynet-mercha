@@ -8,24 +8,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import SlideNavButtons from './SlideNavButtons'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
 
-// Our custom button component
-
-interface Slide {
-  id: number
-  title: string
-  tagline: string
-  image: string
-  buttons: ButtonProps[]
-}
-
-interface ButtonProps {
-  id: number
-  text: string
-  link: string
-  type: string
-}
-const url = 'https://fakestoreapi.com/products'
-
 const DemoSlider = () => {
   const products = [
     {
