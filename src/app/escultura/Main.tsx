@@ -93,7 +93,7 @@ export const Features = () => {
                   ></path>
                 </g>
               </svg>
-              Accesibility
+              Calidad
             </h3>
           </div>
           <div className='p-6 pt-0'>
@@ -173,7 +173,7 @@ export const Features = () => {
                   ></path>
                 </g>
               </svg>
-              Community
+              Exclusividad
             </h3>
           </div>
           <div className='p-6 pt-0'>
@@ -237,7 +237,7 @@ export const Features = () => {
                   ></path>
                 </g>
               </svg>
-              Scalability
+              Arte y diseño
             </h3>
           </div>
           <div className='p-6 pt-0'>
@@ -341,7 +341,7 @@ export const Features = () => {
                   ></path>
                 </g>
               </svg>
-              Gamification
+              Gamming
             </h3>
           </div>
           <div className='p-6 pt-0'>
