@@ -1,6 +1,6 @@
 import { useSwiper } from 'swiper/react'
 
-const SlideNavButtons = () => {
+const SlideNavButtons = ({ theme }: { theme: string }) => {
   const swiper = useSwiper()
 
   return (
@@ -13,7 +13,7 @@ const SlideNavButtons = () => {
           height='44'
           viewBox='0 0 24 24'
           stroke-width='1.5'
-          stroke='#025BC1'
+          stroke={`var(--${theme})`}
           fill='none'
           stroke-linecap='round'
           stroke-linejoin='round'
@@ -32,7 +32,7 @@ const SlideNavButtons = () => {
           height='44'
           viewBox='0 0 24 24'
           stroke-width='1.5'
-          stroke='#025BC1'
+          stroke={`var(--${theme})`}
           fill='none'
           stroke-linecap='round'
           stroke-linejoin='round'

@@ -1,10 +1,11 @@
 import React from 'react'
 import { Layout } from '../layout/Layout'
-import { Features } from './Main'
-import { ClientSection } from './ClientSection'
-import DemoSlider from './DemoSlider'
-import { About } from './About'
 import Link from 'next/link'
+import { About } from '../components/shared/landing/About'
+import { Features } from '../components/shared/landing/Main'
+import { features, products } from './Data'
+import { ClientSection } from '../components/shared/landing/ClientSection'
+import DemoSlider from '../components/shared/landing/DemoSlider'
 
 export default function sculpture () {
   return (
@@ -261,9 +262,19 @@ export default function sculpture () {
           <div className='shadow'></div>
         </section>
       </main>
-      <Features />
-      <ClientSection />
-      <DemoSlider />
+      <Features
+        theme='primary'
+        subtitle='Nuestras tazas divertidas y originales'
+        title='Todo tipo de modelos de '
+        stringColor='tazas'
+        features={features}
+      />
+      <ClientSection
+        image='escultura/escultura.png'
+        theme='primary'
+        title='Clientes satisfechos'
+      />
+      <DemoSlider tag='Arte y escultura' theme='primary' products={products} />
       <About />
     </Layout>
   )

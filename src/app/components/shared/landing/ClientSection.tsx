@@ -1,9 +1,17 @@
-export const ClientSection = () => {
+export const ClientSection = ({
+  title,
+  theme = 'primary',
+  image
+}: {
+  title: string
+  theme: string
+  image: string
+}) => {
   return (
     <div className='my-[50px] grid mx-[10px] md:mx-[100px] lg:grid-cols-[1fr,1fr] gap-8 place-items-center'>
       <h2 className='text-3xl md:text-4xl font-bold'>
         <span className='bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text'>
-          Clientes satisfechos
+          {title}
         </span>
       </h2>
       <p className='text-muted-foreground text-xl mt-4 mb-8 '></p>
@@ -14,7 +22,8 @@ export const ClientSection = () => {
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 128 128'
-                className='w-12 fill-primary'
+                className='w-12'
+                fill={`var(--${theme})`}
               >
                 <title>Free Icons</title>
                 <g id='Layer_10' data-name='Layer 10'>
@@ -95,7 +104,8 @@ export const ClientSection = () => {
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 128 128'
-                className='w-12 fill-primary'
+                className='w-12 '
+                fill={`var(--${theme})`}
               >
                 <title>Free Icons</title>
                 <g id='Layer_21' data-name='Layer 21'>
@@ -196,7 +206,8 @@ export const ClientSection = () => {
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 128 128'
-                className='w-12 fill-primary'
+                className='w-12 '
+                fill={`var(--${theme})`}
               >
                 <title>Free Icons</title>
                 <g id='Layer_46' data-name='Layer 46'>
@@ -278,7 +289,7 @@ export const ClientSection = () => {
       </div>
       <img
         alt='images escultura png'
-        src='escultura/escultura.png'
+        src={`${image}`}
         className='w-[300px] md:w-[500px] lg:w-[600px] object-contain'
       />
     </div>
