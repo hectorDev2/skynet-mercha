@@ -70,7 +70,7 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
     () => [
       {
         name: 'Mugs',
-        href: '#',
+        href: '/tazas',
         image: (
           <img
             className='w-[100px] md:w-[150px]'
@@ -86,17 +86,6 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
           <img
             className='w-[100px] md:w-[150px]'
             src={`https://www.figurasmranime.cl/wp-content/uploads/2022/05/Fashion-anime-japanese-Naruto-action-figure.png_350x350-copia.png`}
-            alt=''
-          />
-        )
-      },
-      {
-        name: 'Posters',
-        href: '#',
-        image: (
-          <img
-            className='w-[100px] md:w-[150px]'
-            src={`https://www.chitrakalaart.in/wp-content/uploads/2023/08/Group-4.png`}
             alt=''
           />
         )

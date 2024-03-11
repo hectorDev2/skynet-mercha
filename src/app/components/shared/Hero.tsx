@@ -16,7 +16,7 @@ export const Hero = ({
 }) => {
   return (
     <main className='mt-[100px] z-0'>
-      <section className='container w-[75%] grid mx-auto lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10'>
+      <section className='container w-[75%] grid mx-auto lg:grid-cols-2  place-items-center py-20 md:py-32 gap-10'>
         <div className='text-center lg:text-start space-y-6'>
           <main className='text-5xl md:text-6xl font-bold'>
             <h1 className='inline'>
@@ -38,7 +38,7 @@ export const Hero = ({
           </p>
           <div className='space-y-4 md:space-y-0 md:space-x-4'>
             <button
-              className={`inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-${theme} text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full md:w-1/3`}
+              className={`inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-${theme} text-primary-foreground hover:bg-${theme}/90 h-10 px-4 py-2 w-full md:w-1/3`}
             >
               Consultar
             </button>
