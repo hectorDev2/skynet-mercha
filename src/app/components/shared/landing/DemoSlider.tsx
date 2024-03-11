@@ -13,7 +13,13 @@ const DemoSlider = ({
   theme = 'secondary',
   tag
 }: {
-  products: any[]
+  products: {
+    id: number
+    title: string
+    subtitle: string
+    tagline: string
+    description: string
+  }[]
   theme: string
   tag: string
 }) => {

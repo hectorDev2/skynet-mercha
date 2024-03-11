@@ -33,6 +33,17 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
         image: (
           <img
             className='w-[100px] md:w-[150px]'
+            src={`https://cdn.pixabay.com/photo/2013/07/12/12/16/love-145461_1280.png`}
+            alt='categoria parejas image'
+          />
+        ),
+        href: '/parejas',
+        name: 'Polos Pareja'
+      },
+      {
+        image: (
+          <img
+            className='w-[100px] md:w-[150px]'
             src={`https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-40/512/Starcraft-2-1-icon.png`}
             alt='categoria star craft image'
           />
