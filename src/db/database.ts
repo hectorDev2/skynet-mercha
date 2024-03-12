@@ -120,6 +120,12 @@ export const tShirts = [
       "/polos/personalizados/10.png",
       "/polos/personalizados/11.png",
       "/polos/personalizados/12.png",
+      "/polos/personalizados/13.png",
+      "/polos/personalizados/14.png",
+      "/polos/personalizados/15.png",
+      "/polos/personalizados/16.png",
+      "/polos/personalizados/17.png",
+      "/polos/personalizados/18.png",
     ],
   },
 ];
@@ -144,6 +150,12 @@ export const TshirtsExclusive = {
     "/polos/personalizados/10.png",
     "/polos/personalizados/11.png",
     "/polos/personalizados/12.png",
+    "/polos/personalizados/13.png",
+    "/polos/personalizados/14.png",
+    "/polos/personalizados/15.png",
+    "/polos/personalizados/16.png",
+    "/polos/personalizados/17.png",
+    "/polos/personalizados/18.png",
   ],
 };
 
