@@ -1,7 +1,24 @@
 import { NextResponse } from "next/server";
+import { prisma } from "@/libs/prisma";
+interface Params {
+  id: string;
+}
+export async function GET(
+  request: Request,
 
-export function GET() {
+  { params }: { params: Params }
+) {
+  const { id } = params;
+  const tshirt = await prisma.tshirt.findFirst({
+    where: {
+      id: Number(id),
+    },
+    include: {
+      images: true,
+    },
+  });
+
   return NextResponse.json({
-    message: "getting tshirt...",
+    tshirt,
   });
 }
