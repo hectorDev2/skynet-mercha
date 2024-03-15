@@ -26,6 +26,8 @@ html {
 :root {
   /* primary */
   --primary:#319fff;
+  --primary:#319fff;
+  --redDanger:#ff0000;
   --primary-100: hsl(25, 100%, 94%);
   --primary-200: #061d3d;
 
