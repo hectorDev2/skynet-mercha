@@ -34,6 +34,9 @@ model Tshirt{
   price Int
   description String
   images Image[]
+  tag String
+  category String
+  subcategory String
   
 }
 

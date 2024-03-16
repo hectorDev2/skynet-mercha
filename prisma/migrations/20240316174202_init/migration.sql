@@ -13,7 +13,8 @@ CREATE TABLE "Tshirt" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "name" TEXT NOT NULL,
     "price" INTEGER NOT NULL,
-    "description" TEXT NOT NULL
+    "description" TEXT NOT NULL,
+    "tag" TEXT NOT NULL
 );
 
 -- CreateTable
