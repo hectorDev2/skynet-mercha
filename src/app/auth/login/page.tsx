@@ -18,8 +18,9 @@ export const Login = () => {
     })
     if (res!.error) {
       alert(res!.error)
+      return null
     }
-    router.push('/dasboard')
+    router.push('/dashboard')
   })
 
   return (
