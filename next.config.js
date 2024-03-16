@@ -7,14 +7,12 @@ module.exports = {
     return config
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'fakestoreapi.com',
-        port: '',
-        pathname: '/**'
-      }
+    domains: [
+      'res.cloudinary.com',
+      'avatars.githubusercontent.com',
+      'lh3.googleusercontent.com'
     ]
   },
+
   noImplicitAny: false
 }

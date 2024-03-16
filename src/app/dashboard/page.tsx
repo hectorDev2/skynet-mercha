@@ -1,9 +1,33 @@
 'use client'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import Heading from '../components/shared/Heading'
+import ImageUpload from '../components/shared/ImageUpload'
+import { categories } from '@/db/dataNew'
 
 export const Dashboard = () => {
-  const { register } = useForm()
+  const { register, setValue, handleSubmit, watch } = useForm()
+  const images = watch('images')
+  const categorySelect = watch('category')
+
+  const onSubmit = handleSubmit(data => {
+    console.log('submit', data)
+  })
+
+  const setImagesValue = (value: any) => {
+    setValue('images', value, {
+      shouldDirty: true,
+      shouldTouch: true,
+      shouldValidate: true
+    })
+  }
+
+  const subcategory = categories.find(
+    (category: any) => category.id == categorySelect
+  )?.subcategories
+
+  console.log(subcategory)
+
   return (
     <div>
       <nav>
@@ -166,7 +190,7 @@ export const Dashboard = () => {
       <h2 className='text-5xl text-center mt-[100px]'>
         agregar camiseta o polo
       </h2>
-      <form className='max-w-sm mx-auto mt-[50px]'>
+      <form onSubmit={onSubmit} className='max-w-sm mx-auto mt-[50px]'>
         <div className='mb-5'>
           <label
             htmlFor='titulo'
@@ -179,6 +203,9 @@ export const Dashboard = () => {
             id='titulo'
             className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light'
             placeholder='titulo'
+            {...register('title', {
+              required: true
+            })}
             required
           />
         </div>
@@ -190,10 +217,14 @@ export const Dashboard = () => {
             descripcion
           </label>
           <input
-            type='password'
-            id='password'
+            type='description
+'
+            id='description'
             className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light'
             required
+            {...register('description', {
+              required: true
+            })}
           />
         </div>
         <div className='mb-5'>
@@ -209,31 +240,65 @@ export const Dashboard = () => {
               id='price'
               className='shadow-sm mr-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light'
               required
+              {...register('price', {
+                required: true
+              })}
             />
           </div>
         </div>
-        <div className='flex items-start mb-5'>
-          <div className='flex items-center h-5'>
-            <input
-              id='terms'
-              type='checkbox'
-              value=''
-              className='w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800'
-              required
-            />
-          </div>
+        <div className='mb-5'>
           <label
-            htmlFor='terms'
-            className='ms-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+            htmlFor='category'
+            className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
           >
-            I agree with the{' '}
-            <a
-              href='#'
-              className='text-blue-600 hover:underline dark:text-blue-500'
-            >
-              terms and conditions
-            </a>
+            categoria
           </label>
+          <select
+            id='category'
+            {...register('category', {
+              required: true
+            })}
+            className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+          >
+            <option selected>Selecciona una categoria</option>
+            {categories.map(({ id, category }) => (
+              <option key={id} value={id}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className='mb-5'>
+          <label
+            htmlFor='subcategory'
+            className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+          >
+            subcategoria
+          </label>
+          <select
+            id='subcategory'
+            {...register('subcategory', {
+              required: true
+            })}
+            className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+          >
+            <option selected>Selecciona una categoria</option>
+            {subcategory?.map(({ id, subcategory }) => (
+              <option key={id} value={id}>
+                {subcategory}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className='flex flex-col gap-8'>
+          <Heading
+            title='Agregar fotos'
+            subtitle='Muestra a tus clientes fotos de la foto'
+          />
+          <ImageUpload
+            onChange={value => setImagesValue(value)}
+            value={images}
+          />
         </div>
         <button
           type='submit'
