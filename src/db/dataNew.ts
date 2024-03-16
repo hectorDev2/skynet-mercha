@@ -27,6 +27,10 @@ export const categories = [
         id: 6,
         subcategory: "sega",
       },
+      {
+        id: 7,
+        subcategory: "otros",
+      },
     ],
   },
   {
@@ -143,3 +147,5 @@ export const categories = [
     ],
   },
 ];
+
+export const tag = ["exclusivo", "no exclusivo"];
