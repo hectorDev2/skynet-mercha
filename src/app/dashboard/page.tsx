@@ -3,15 +3,36 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import Heading from '../components/shared/Heading'
 import ImageUpload from '../components/shared/ImageUpload'
-import { categories } from '@/db/dataNew'
+import { categories, tag } from '@/db/dataNew'
 
 export const Dashboard = () => {
   const { register, setValue, handleSubmit, watch } = useForm()
   const images = watch('images')
   const categorySelect = watch('category')
 
-  const onSubmit = handleSubmit(data => {
-    console.log('submit', data)
+  const onSubmit = handleSubmit(async data => {
+    console.log(data, 'enviando...')
+
+    const res = await fetch('/api/tshirts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        ...data,
+        price: Number(data.price)
+      })
+    })
+    if (res.ok) {
+      alert('polo guardado....')
+      setValue('images', [])
+      setValue('category', '')
+      setValue('name', '')
+      setValue('description', '')
+      setValue('price', '')
+    } else {
+      console.log('error')
+    }
   })
 
   const setImagesValue = (value: any) => {
@@ -127,9 +148,9 @@ export const Dashboard = () => {
                 >
                   <path
                     stroke='currentColor'
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
                     d='M1 1h15M1 7h15M1 13h15'
                   />
                 </svg>
@@ -200,10 +221,10 @@ export const Dashboard = () => {
           </label>
           <input
             type='text'
-            id='titulo'
+            id='name'
             className='shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light'
-            placeholder='titulo'
-            {...register('title', {
+            placeholder='name'
+            {...register('name', {
               required: true
             })}
             required
@@ -286,6 +307,28 @@ export const Dashboard = () => {
             {subcategory?.map(({ id, subcategory }) => (
               <option key={id} value={id}>
                 {subcategory}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className='mb-5'>
+          <label
+            htmlFor='tag'
+            className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+          >
+            Tag
+          </label>
+          <select
+            id='tag'
+            {...register('tag', {
+              required: true
+            })}
+            className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+          >
+            <option selected>Selecciona Exclusividad</option>
+            {tag.map(tag => (
+              <option key={tag} value={tag}>
+                {tag}
               </option>
             ))}
           </select>

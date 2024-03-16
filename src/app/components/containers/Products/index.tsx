@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { tShirts } from '@/types'
 import { CardProduct } from './CardProduct'
 
-export function Products ({ tshirts }: { tshirts: tShirts[] }) {
+export function Products ({ tshirts = [] }) {
   return (
     <div
       style={{ background: 'hsla(205, 46%, 10%, 1)' }}

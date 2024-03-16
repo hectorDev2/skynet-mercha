@@ -11,7 +11,7 @@ export const Content = ({ tShirt }: { tShirt: tShirts }) => {
       <section className='section-center product-section my-[150px] text-white'>
         <section className='product-component'>
           {/* <!-- image gallery --> */}
-          <ProductGallery images={tShirt?.image} />
+          <ProductGallery images={tShirt?.images} />
           {/* <!--product description --> */}
           <ProductInfo info={tShirt} />
         </section>

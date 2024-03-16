@@ -2,7 +2,9 @@
 import React, { useState } from 'react'
 
 export const ProductGallery = ({ images = [] }: { images: string[] }) => {
-  const [imagePrincipal, setImagePrincipal] = useState(images[0] || '')
+  console.log(images)
+
+  const [imagePrincipal, setImagePrincipal] = useState<any>(images[0] || '')
   const indexOf = images.indexOf(imagePrincipal)
   console.log(indexOf)
   const nextImage = () => {
@@ -29,7 +31,7 @@ export const ProductGallery = ({ images = [] }: { images: string[] }) => {
           <img src='/images/icon-previous.svg' alt='previous icon' />
         </button>
         <img
-          src={imagePrincipal}
+          src={imagePrincipal.url}
           alt='image product 1'
           className='mx-auto magnifiedImg main Image w-[362px] h-[362px] '
         />
@@ -40,21 +42,24 @@ export const ProductGallery = ({ images = [] }: { images: string[] }) => {
       </figcaption>
       {/* <!-- gallery thumbnails for desktop --> */}
       <div className='images-thumbnails'>
-        {images.map(image => (
-          <figcaption
-            key={image}
-            className={`thumbnails-image ${
-              image == imagePrincipal && 'border-4  border-[var(--primary)]'
-            }`}
-            onClick={() => setImagePrincipal(image)}
-          >
-            <img
-              className=' Image w-[100px] h-[100px]'
-              src={image}
-              alt='image thumbnails 4'
-            />
-          </figcaption>
-        ))}
+        {images.map((image: any) => {
+          return (
+            <figcaption
+              key={image.id}
+              className={`thumbnails-image ${
+                image == imagePrincipal.url &&
+                'border-4  border-[var(--primary)]'
+              }`}
+              onClick={() => setImagePrincipal(image)}
+            >
+              <img
+                className=' Image w-[100px] h-[100px]'
+                src={image.url}
+                alt='image thumbnails 4'
+              />
+            </figcaption>
+          )
+        })}
       </div>
     </div>
   )

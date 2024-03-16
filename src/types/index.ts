@@ -4,5 +4,5 @@ export interface tShirts {
   category: string;
   price: number;
   description: string;
-  image: string[];
+  images: any[];
 }
