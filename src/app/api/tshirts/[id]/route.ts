@@ -22,3 +22,20 @@ export async function GET(
     tshirt,
   });
 }
+
+export async function DELETE(
+  request: Request,
+
+  { params }: { params: Params }
+) {
+  const { id } = params;
+  const tshirt = await prisma.tshirt.deleteMany({
+    where: {
+      id: Number(id),
+    },
+  });
+
+  return NextResponse.json({
+    tshirt,
+  });
+}

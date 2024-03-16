@@ -1,9 +1,18 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/libs/prisma";
-export async function GET() {
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const param = searchParams.get("tag");
+  console.log(param);
+
   const tshirts = await prisma.tshirt.findMany({
     include: {
       images: true,
+    },
+    where: {
+      tag: {
+        contains: param ? param : "",
+      },
     },
   });
 
@@ -13,13 +22,17 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  const { name, description, price, images } = await request.json();
+  const { name, description, price, images, tag, category, subcategory } =
+    await request.json();
 
   const newTshirt = await prisma.tshirt.create({
     data: {
-      name: name,
-      description: description,
-      price: price,
+      name,
+      description,
+      price,
+      category,
+      subcategory,
+      tag,
     },
   });
 

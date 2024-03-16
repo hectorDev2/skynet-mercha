@@ -21,6 +21,7 @@ export const Register = () => {
     if (res.ok) {
       router.push('/auth/login')
     } else {
+      console.log('enviado...')
       router.push('/')
     }
   })
