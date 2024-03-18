@@ -1,9 +1,15 @@
 import Link from 'next/link'
-import { TshirtsExclusive } from '@/db/database'
 import { CardProductEx } from './CardProductEx'
 
-export function ProductsExclusive () {
-  const exclusive = TshirtsExclusive
+export function ProductsExclusive ({ tshirts }: any) {
+  console.log(tshirts)
+
+  const exclusiveTshirts = tshirts?.map((tshirt: any) => {
+    if (tshirt.tag == 'exclusivo') {
+      return tshirt
+    }
+    return null
+  })
 
   return (
     <div
@@ -17,9 +23,12 @@ export function ProductsExclusive () {
         </div>
       </div>
       <div className=' flex flex-col justify-center md:flex-row md:flex-wrap items-center gap-2 py-5'>
-        {exclusive.image.reverse()?.map((image: string) => (
-          <Link key={image} href={`/productos/${exclusive.id}`}>
-            <CardProductEx image={image} product={exclusive} />
+        {exclusiveTshirts?.map((tshirt: any) => (
+          <Link key={tshirt?.id} href={`/productos/${tshirt?.id}`}>
+            <CardProductEx
+              image={tshirt?.images[0].url ?? ''}
+              product={tshirt}
+            />
           </Link>
         ))}
       </div>

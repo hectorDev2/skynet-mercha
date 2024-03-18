@@ -2,12 +2,15 @@
 import Link from 'next/link'
 import * as Styled from './styles'
 
-import { Fragment, ReactElement, useMemo } from 'react'
+import { ReactElement, useMemo } from 'react'
+import { Dropdowns } from '../shared/Dropdowns'
+import { Button } from '@nextui-org/react'
 
 interface IGames {
   image: ReactElement
   href: string
   name: string
+  subcategories?: any[]
 }
 
 interface MenuProps {
@@ -22,56 +25,136 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
         image: (
           <img
             className='w-[100px] md:w-[150px]'
-            src={`https://i5.walmartimages.com/seo/Funko-POP-Animation-One-Piece-Crocodile_bdeb50e4-cb02-4493-91db-a7ad9693e076.dc5dc4e0d7f5b5068d74ea32c4deb693.png`}
+            src={`https://lh3.googleusercontent.com/proxy/nXqnFaMM8tcJOzyZjz3ayG5pq5PSl58KCGfh6z8fFoYyh6wq0hZale9uxq5nt4uXgfS3PQEN49K47ogHRb2RBfzJwnCJAQe33_8v6dIgNSShYOxiSOT_1q5g7Hk`}
             alt='categoria anime image'
           />
         ),
-        href: '/productos/1',
-        name: 'Polos anime'
+        href: 'gamer',
+        name: 'Polos gamer',
+        subcategories: [
+          {
+            id: 1,
+            title: 'dota 2',
+            subtitle: 'Dota 2 Heroes'
+          },
+          {
+            id: 2,
+            title: 'nintendo',
+            subtitle: 'Recuerdos de infancia Nintendo'
+          },
+          {
+            id: 3,
+            title: 'starcraft',
+            subtitle: 'Juego de estrategia'
+          },
+          {
+            id: 4,
+            title: 'warcraft',
+            subtitle: 'Juego de estrategia'
+          },
+          {
+            id: 5,
+            title: 'diablo',
+            subtitle: 'Juego de Blizzard'
+          },
+          {
+            id: 6,
+            title: 'sega',
+            subtitle: 'Recuerdo de Sega'
+          },
+          {
+            id: 7,
+            title: 'otros',
+            subtitle: 'Mucho mas'
+          }
+        ]
       },
       {
         image: (
           <img
             className='w-[100px] md:w-[150px]'
-            src={`https://cdn.pixabay.com/photo/2013/07/12/12/16/love-145461_1280.png`}
-            alt='categoria parejas image'
+            src={`https://static.vecteezy.com/system/resources/previews/021/623/400/original/shirohige-pirate-one-piece-logo-anime-free-png.png`}
+            alt='categoria anime image'
           />
         ),
-        href: '/parejas',
-        name: 'Polos Pareja'
+        href: 'anime',
+        name: 'Polos anime',
+        subcategories: [
+          {
+            id: 1,
+            title: 'one piece',
+            subtitle: 'en busca del one piece'
+          },
+          {
+            id: 2,
+            title: 'naruto',
+            subtitle: 'Naruto shipudden'
+          },
+          {
+            id: 3,
+            title: 'dragon ball',
+            subtitle: 'Goku y mundo Z'
+          },
+          {
+            id: 4,
+            title: 'Bleach',
+            subtitle: 'El shinigami favorito'
+          },
+          {
+            id: 7,
+            title: 'otros',
+            subtitle: 'Mucho mas'
+          }
+        ]
       },
       {
         image: (
           <img
             className='w-[100px] md:w-[150px]'
-            src={`https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-40/512/Starcraft-2-1-icon.png`}
-            alt='categoria star craft image'
+            src={`https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ab52da00-71c2-4ae2-bc2a-3b28214b02c9/df5ivtx-eadd298a-d7bd-474b-8a5c-ac25ae236089.png/v1/fill/w_1280,h_1280/music_band_logo_design__song_logo_design_png__by_rahatislam11_df5ivtx-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2FiNTJkYTAwLTcxYzItNGFlMi1iYzJhLTNiMjgyMTRiMDJjOVwvZGY1aXZ0eC1lYWRkMjk4YS1kN2JkLTQ3NGItOGE1Yy1hYzI1YWUyMzYwODkucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.stwNmQZaDjjAVXsG4piJptiaoHLXKAsIMa3SAWCoV_c`}
+            alt='categoria music image'
+          />
+        ),
+        href: '/musica',
+        name: 'Polos Music',
+        subcategories: [
+          {
+            id: 1,
+            title: 'punk'
+          },
+          {
+            id: 2,
+            title: 'metalero'
+          },
+          {
+            id: 3,
+            title: 'hippie'
+          },
+          {
+            id: 4,
+            title: 'gotico'
+          },
+          {
+            id: 5,
+            title: 'ravers'
+          },
+          {
+            id: 7,
+            title: 'otros'
+          }
+        ]
+      },
+      {
+        image: (
+          <img
+            className='w-[100px] md:w-[150px]'
+            src={`https://images.vexels.com/media/users/3/220882/isolated/preview/fadcd536f480e0d2b29f05a003188f7e-ilustracion-de-idolo-inca-de-peru.png`}
+            alt='categoria diseño inka'
           />
         ),
         href: '/productos/7',
-        name: 'Polos star craft'
-      },
-      {
-        image: (
-          <img
-            className='w-[100px] md:w-[150px]'
-            src={`https://i.pinimg.com/originals/8a/8b/50/8a8b50da2bc4afa933718061fe291520.jpg`}
-            alt='categoria dota 2'
-          />
-        ),
-        href: '/productos/3',
-        name: 'Polos Dota 2'
-      },
-      {
-        image: (
-          <img
-            className='w-[100px] md:w-[150px]'
-            src={`https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Half-Life_lambda_logo.svg/2048px-Half-Life_lambda_logo.svg.png`}
-            alt='categoria anime image'
-          />
-        ),
-        href: '/productos/5',
-        name: 'Polos Half Life'
+        name: 'Polos diseño inka',
+        subcategories: []
       }
     ],
     []
@@ -111,16 +194,17 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
         <Styled.GamesContainer selected={selectedMenu || 'games'}>
           {selectedMenu === 'games' && (
             <>
-              {games.map(game => (
-                <Fragment key={game.name}>
-                  <Link href={`${game.href}`}>
-                    <Styled.Game>
+              {games.map((game: any) => {
+                if (game.subcategories.length === 0) {
+                  return (
+                    <Link href={`productos/inka`} className='flex flex-col'>
                       {game.image}
-                      <p className='text-sm'>{game.name}</p>
-                    </Styled.Game>
-                  </Link>
-                </Fragment>
-              ))}
+                      <Button variant='bordered'>{game.name}</Button>
+                    </Link>
+                  )
+                }
+                return <Dropdowns game={game} />
+              })}
             </>
           )}
           {selectedMenu === 'varios' && (

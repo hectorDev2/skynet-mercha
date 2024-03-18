@@ -1,9 +1,21 @@
-export const getTshirts = async () => {
-  const res = await fetch("http://localhost:3000/api/tshirts");
+export const getTshirts = async (categoryId?: number) => {
+  const res = await fetch(`http://localhost:3000/api/tshirts`);
   const resJson = await res.json();
   console.log(resJson);
 
   return resJson;
+};
+export const getTshirtsParams = async (categoryId: number) => {
+  try {
+    const res = await fetch(
+      `http://localhost:3000/api/tshirts?category=${categoryId}`
+    );
+    const resJson = await res.json();
+
+    return resJson;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const getTshirtById = async (id: string) => {

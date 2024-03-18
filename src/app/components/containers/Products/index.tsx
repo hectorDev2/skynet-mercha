@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { tShirts } from '@/types'
 import { CardProduct } from './CardProduct'
 
-export function Products ({ tshirts = [] }) {
+export function Products ({ tshirts = [], color = 'hsla(205, 46%, 10%, 1)' }) {
   return (
     <div
-      style={{ background: 'hsla(205, 46%, 10%, 1)' }}
+      style={{ background: `${color}` }}
       className='py-[100px] px-[10px] md:px-[100px] '
     >
       <div className='flex text-center justify-evenly'>

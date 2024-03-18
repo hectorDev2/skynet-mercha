@@ -6,9 +6,13 @@ export const CardProductEx = ({
   image
 }: {
   product: any
-
   image: string
 }) => {
+  console.log(product)
+  if (!product) {
+    return
+  }
+
   return (
     <div
       className='image-flash

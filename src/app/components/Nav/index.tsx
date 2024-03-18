@@ -25,20 +25,20 @@ const Nav = forwardRef<null, NavProps>(
         {
           label: 'Polos',
           isDropdown: true,
-          id: 'games',
+          id: 'games'
         },
         {
           label: 'Varios',
           isDropdown: true,
-          id: 'varios',
-        },
+          id: 'varios'
+        }
       ],
       []
     )
 
     return (
       <Container ref={ref}>
-        {Links.map((link) => (
+        {Links.map(link => (
           <Fragment key={link.label}>
             {link.isDropdown ? (
               <button
@@ -58,17 +58,17 @@ const Nav = forwardRef<null, NavProps>(
               >
                 <p>{link.label}</p>
                 <svg
-                  width="12"
-                  height="8"
-                  viewBox="0 0 12 8"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  width='12'
+                  height='8'
+                  viewBox='0 0 12 8'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
                 >
                   <path
-                    opacity="0.6"
-                    d="M1 1L6 6L11 1"
-                    stroke="currentColor"
-                    strokeWidth="2"
+                    opacity='0.6'
+                    d='M1 1L6 6L11 1'
+                    stroke='currentColor'
+                    strokeWidth='2'
                   />
                 </svg>
               </button>

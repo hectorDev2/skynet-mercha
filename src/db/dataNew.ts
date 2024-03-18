@@ -5,31 +5,31 @@ export const categories = [
     subcategories: [
       {
         id: 1,
-        subcategory: "dota 2",
+        title: "dota 2",
       },
       {
         id: 2,
-        subcategory: "nintendo",
+        title: "nintendo",
       },
       {
         id: 3,
-        subcategory: "starcraft",
+        title: "starcraft",
       },
       {
         id: 4,
-        subcategory: "warcraft",
+        title: "warcraft",
       },
       {
         id: 5,
-        subcategory: "diablo",
+        title: "diablo",
       },
       {
         id: 6,
-        subcategory: "sega",
+        title: "sega",
       },
       {
         id: 7,
-        subcategory: "otros",
+        title: "otros",
       },
     ],
   },
@@ -39,27 +39,33 @@ export const categories = [
     subcategories: [
       {
         id: 1,
-        subcategory: "dota 2",
+        title: "dota 2",
+        subtitle: "heroes dota 2",
       },
       {
         id: 2,
-        subcategory: "nintendo",
+        title: "nintendo",
+        subtitle: "Recuerdos de nintendo",
       },
       {
         id: 3,
-        subcategory: "starcraft",
+        title: "starcraft",
+        subtitle: "Juego de estrategia",
       },
       {
         id: 4,
-        subcategory: "warcraft",
+        title: "warcraft",
+        subtitle: "Juego de estrategia",
       },
       {
         id: 5,
-        subcategory: "diablo",
+        title: "diablo",
+        subtitle: "Juego de estrategia",
       },
       {
         id: 6,
-        subcategory: "sega",
+        title: "sega",
+        subtitle: "Recuerda a Sega",
       },
     ],
   },
@@ -69,20 +75,20 @@ export const categories = [
     subcategories: [
       {
         id: 1,
-        subcategory: "one piece",
+        title: "one piece",
       },
       {
         id: 2,
-        subcategory: "Dragon ball",
+        title: "Dragon ball",
       },
       {
         id: 3,
-        subcategory: "naruto",
+        title: "naruto",
       },
 
       {
         id: 6,
-        subcategory: "puch man",
+        title: "puch man",
       },
     ],
   },
@@ -92,27 +98,27 @@ export const categories = [
     subcategories: [
       {
         id: 1,
-        subcategory: "dota 2",
+        title: "dota 2",
       },
       {
         id: 2,
-        subcategory: "nintendo",
+        title: "nintendo",
       },
       {
         id: 3,
-        subcategory: "starcraft",
+        title: "starcraft",
       },
       {
         id: 4,
-        subcategory: "warcraft",
+        title: "warcraft",
       },
       {
         id: 5,
-        subcategory: "diablo",
+        title: "diablo",
       },
       {
         id: 6,
-        subcategory: "sega",
+        title: "sega",
       },
     ],
   },
@@ -122,27 +128,27 @@ export const categories = [
     subcategories: [
       {
         id: 1,
-        subcategory: "dota 2",
+        title: "dota 2",
       },
       {
         id: 2,
-        subcategory: "nintendo",
+        title: "nintendo",
       },
       {
         id: 3,
-        subcategory: "starcraft",
+        title: "starcraft",
       },
       {
         id: 4,
-        subcategory: "warcraft",
+        title: "warcraft",
       },
       {
         id: 5,
-        subcategory: "diablo",
+        title: "diablo",
       },
       {
         id: 6,
-        subcategory: "sega",
+        title: "sega",
       },
     ],
   },
