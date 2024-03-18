@@ -1,7 +1,6 @@
-import React from 'react'
-import { Form } from './Form'
+import React, { ReactNode } from 'react'
 
-const Sidebar = () => {
+export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
       <button
@@ -97,17 +96,11 @@ const Sidebar = () => {
           </ul>
         </div>
       </aside>
-
       <div className='p-4 sm:ml-64'>
         <div className='p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700'>
-          <h2 className='text-5xl text-center mt-[100px]'>
-            agregar camiseta o polo
-          </h2>
-          <Form />
+          {children}
         </div>
       </div>
     </div>
   )
 }
-
-export default Sidebar
