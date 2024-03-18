@@ -9,12 +9,10 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 
 model User{
@@ -33,10 +31,10 @@ model Tshirt{
   name String
   price Int
   description String
-  images Image[]
   tag String
   category String
   subcategory String
+  images Image[]
   
 }
 
