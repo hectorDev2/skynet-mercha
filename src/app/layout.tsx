@@ -1,4 +1,6 @@
 import { AOSInit } from '@/utils/aos'
+import { Analytics } from '@vercel/analytics/react'
+
 import './globals.css'
 import { Metadata } from 'next'
 
@@ -16,6 +18,7 @@ export default function RootLayout ({
     <html lang='en' className='dark'>
       <AOSInit />
       <body>{children}</body>
+      <Analytics />
     </html>
   )
 }
