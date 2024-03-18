@@ -39,33 +39,27 @@ export const categories = [
     subcategories: [
       {
         id: 1,
-        title: "dota 2",
-        subtitle: "heroes dota 2",
+        title: "punk",
       },
       {
         id: 2,
-        title: "nintendo",
-        subtitle: "Recuerdos de nintendo",
+        title: "metalero",
       },
       {
         id: 3,
-        title: "starcraft",
-        subtitle: "Juego de estrategia",
+        title: "hippie",
       },
       {
         id: 4,
-        title: "warcraft",
-        subtitle: "Juego de estrategia",
+        title: "gotico",
       },
       {
         id: 5,
-        title: "diablo",
-        subtitle: "Juego de estrategia",
+        title: "ravers",
       },
       {
-        id: 6,
-        title: "sega",
-        subtitle: "Recuerda a Sega",
+        id: 7,
+        title: "otros",
       },
     ],
   },
@@ -87,8 +81,12 @@ export const categories = [
       },
 
       {
-        id: 6,
+        id: 4,
         title: "puch man",
+      },
+      {
+        id: 5,
+        title: "otros",
       },
     ],
   },
