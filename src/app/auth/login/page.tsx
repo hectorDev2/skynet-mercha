@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { signIn } from 'next-auth/react'
+import { Button } from '@nextui-org/react'
 const Login = () => {
   const {
     register,
@@ -25,6 +26,8 @@ const Login = () => {
 
   return (
     <div className='my-10'>
+      <h2 className='text-3xl text-center'>Iniciar Sesion ADMIN</h2>
+      <img className=' mx-auto w-[200px]' src='/logo.png' alt='logo png' />
       <form className='max-w-sm mx-auto' onSubmit={onSubmit}>
         <div className='mb-5'>
           <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
@@ -48,7 +51,7 @@ const Login = () => {
         </div>
         <div className='mb-5'>
           <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
-            Contrasenia
+            Contraseña
           </label>
           <input
             {...register('password', {
@@ -66,12 +69,31 @@ const Login = () => {
           )}
         </div>
 
-        <button
-          type='submit'
-          className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+        <Button
+          className='w-full'
+          color='success'
+          endContent={
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='24'
+              height='24'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              className='icon icon-tabler icons-tabler-outline icon-tabler-login-2'
+            >
+              <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+              <path d='M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2' />
+              <path d='M3 12h13l-3 -3' />
+              <path d='M13 15l3 -3' />
+            </svg>
+          }
         >
-          Login
-        </button>
+          Entrar como admin
+        </Button>
       </form>
     </div>
   )

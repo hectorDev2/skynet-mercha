@@ -1,4 +1,5 @@
 'use client'
+import { Button } from '@nextui-org/react'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 const Register = () => {
@@ -26,7 +27,9 @@ const Register = () => {
     }
   })
   return (
-    <div className='my-10'>
+    <div className='my-10 '>
+      <h2 className='text-3xl text-center'>Registrate ADMIN</h2>
+      <img className=' mx-auto w-[200px]' src='/logo.png' alt='logo png' />
       <form className='max-w-sm mx-auto' onSubmit={onSubmit}>
         <div className='mb-5'>
           <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
@@ -58,7 +61,7 @@ const Register = () => {
             })}
             id='email'
             className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-            placeholder='name@flowbite.com'
+            placeholder='correo@sky.com'
             required
           />
           {errors.email && (
@@ -69,7 +72,7 @@ const Register = () => {
         </div>
         <div className='mb-5'>
           <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
-            Contrasenia
+            Contraseña
           </label>
           <input
             {...register('password', {
@@ -87,12 +90,34 @@ const Register = () => {
           )}
         </div>
 
-        <button
-          type='submit'
-          className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+        <Button
+          color='success'
+          className='w-full'
+          endContent={
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='24'
+              height='24'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              className='icon icon-tabler icons-tabler-outline icon-tabler-lock-access'
+            >
+              <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+              <path d='M4 8v-2a2 2 0 0 1 2 -2h2' />
+              <path d='M4 16v2a2 2 0 0 0 2 2h2' />
+              <path d='M16 4h2a2 2 0 0 1 2 2v2' />
+              <path d='M16 20h2a2 2 0 0 0 2 -2v-2' />
+              <path d='M8 11m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z' />
+              <path d='M10 11v-2a2 2 0 1 1 4 0v2' />
+            </svg>
+          }
         >
-          Registar
-        </button>
+          Registrar
+        </Button>
       </form>
     </div>
   )
