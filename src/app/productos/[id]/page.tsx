@@ -17,6 +17,9 @@ export default async function Home ({ params }: { params: { id: string } }) {
       setProduct(tshirt)
     })
   }, [])
+
+  console.log(product)
+
   return (
     <>
       <Head>
