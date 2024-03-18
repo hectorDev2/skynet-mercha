@@ -1,5 +1,5 @@
-export const getTshirts = async (categoryId?: number) => {
-  const res = await fetch(`http://localhost:3000/api/tshirts`);
+export const getTshirts = async () => {
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/tshirts`);
   const resJson = await res.json();
   console.log(resJson);
 
@@ -8,7 +8,7 @@ export const getTshirts = async (categoryId?: number) => {
 export const getTshirtsParams = async (categoryId: number) => {
   try {
     const res = await fetch(
-      `http://localhost:3000/api/tshirts?category=${categoryId}`
+      `${process.env.NEXTAUTH_URL}/api/tshirts?category=${categoryId}`
     );
     const resJson = await res.json();
 
@@ -19,13 +19,13 @@ export const getTshirtsParams = async (categoryId: number) => {
 };
 
 export const getTshirtById = async (id: string) => {
-  const res = await fetch(`http://localhost:3000/api/tshirts/${id}`);
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/tshirts/${id}`);
   const resJson = await res.json();
   return resJson;
 };
 
 export const deleteTshirt = async (id: string) => {
-  const res = await fetch(`http://localhost:3000/api/tshirts/${id}`, {
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/tshirts/${id}`, {
     method: "DELETE",
   });
   return res.ok;
