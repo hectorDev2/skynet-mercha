@@ -1,10 +1,13 @@
-import React from 'react'
-import Sidebar from './components/Sidebar'
+import { Layout } from './components/Layout'
+import { Form } from './components/Form'
 const Dashboard = () => {
   return (
-    <div>
-      <Sidebar />
-    </div>
+    <Layout>
+      <h2 className='text-5xl text-center mt-[100px]'>
+        agregar camiseta o polo
+      </h2>
+      <Form />
+    </Layout>
   )
 }
 
