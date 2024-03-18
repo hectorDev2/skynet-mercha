@@ -1,9 +1,9 @@
-import React from 'react'
-import { Form } from './Form'
+'use client'
+import { signOut } from 'next-auth/react'
 
-const Sidebar = () => {
+const Sidebar = async () => {
   return (
-    <div>
+    <>
       <button
         data-drawer-target='default-sidebar'
         data-drawer-toggle='default-sidebar'
@@ -94,19 +94,35 @@ const Sidebar = () => {
                 </span>
               </a>
             </li>
+            <li onClick={() => signOut()}>
+              <a
+                href='#'
+                className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='currently'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  className='icon icon-tabler icons-tabler-outline icon-tabler-logout'
+                >
+                  <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                  <path d='M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2' />
+                  <path d='M9 12h12l-3 -3' />
+                  <path d='M18 15l3 -3' />
+                </svg>
+                <span className='flex-1 ms-3 whitespace-nowrap'>Salir</span>
+              </a>
+            </li>
           </ul>
         </div>
       </aside>
-
-      <div className='p-4 sm:ml-64'>
-        <div className='p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700'>
-          <h2 className='text-5xl text-center mt-[100px]'>
-            agregar camiseta o polo
-          </h2>
-          <Form />
-        </div>
-      </div>
-    </div>
+    </>
   )
 }
 

@@ -75,7 +75,9 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
               </div>
             ) : (
               <>
-                <div className='font-semibold text-lg'>click para subir</div>
+                <div className='font-semibold text-lg'>
+                  click para subir fotos
+                </div>
               </>
             )}
           </div>
