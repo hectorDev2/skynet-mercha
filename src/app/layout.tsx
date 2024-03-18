@@ -17,8 +17,10 @@ export default function RootLayout ({
   return (
     <html lang='en' className='dark'>
       <AOSInit />
-      <body>{children}</body>
-      <Analytics />
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
