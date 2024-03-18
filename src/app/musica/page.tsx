@@ -9,7 +9,7 @@ import { Layout } from '../layout/Layout'
 import { Products } from '../components/containers/Products'
 import { getTshirtsParams } from '@/utils/fetch'
 
-export const GamerPage = () => {
+const GamerPage = () => {
   const [products, setProducts] = useState<any>()
 
   // getTshirts()

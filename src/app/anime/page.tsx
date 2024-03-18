@@ -9,7 +9,7 @@ import { Layout } from '../layout/Layout'
 import { Products } from '../components/containers/Products'
 import { getTshirtsParams } from '@/utils/fetch'
 
-export const AnimePage = () => {
+const Page = () => {
   const [products, setProducts] = useState<any>()
 
   // getTshirts()
@@ -52,4 +52,4 @@ export const AnimePage = () => {
   )
 }
 
-export default AnimePage
+export default Page

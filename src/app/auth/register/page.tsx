@@ -1,7 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
-export const Register = () => {
+const Register = () => {
   const {
     register,
     handleSubmit,

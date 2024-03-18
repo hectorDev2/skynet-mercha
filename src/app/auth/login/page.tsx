@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { signIn } from 'next-auth/react'
-export const Login = () => {
+const Login = () => {
   const {
     register,
     handleSubmit,
