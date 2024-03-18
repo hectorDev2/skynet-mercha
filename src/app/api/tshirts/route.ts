@@ -1,9 +1,12 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/libs/prisma";
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const param = searchParams.get("tag");
-  console.log(param);
+  const paramTag = searchParams.get("tag");
+  const paramCategory = searchParams.get("category");
+
+  console.log(paramCategory, paramTag);
 
   const tshirts = await prisma.tshirt.findMany({
     include: {
@@ -11,7 +14,11 @@ export async function GET(request: Request) {
     },
     where: {
       tag: {
-        contains: param ? param : "",
+        contains: paramTag ? paramTag : "",
+      },
+
+      category: {
+        contains: paramCategory ? paramCategory : "",
       },
     },
   });
