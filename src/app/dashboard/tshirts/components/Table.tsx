@@ -36,7 +36,7 @@ export default function TableComponent () {
       case 'name':
         return (
           <User
-            avatarProps={{ radius: 'lg', src: product.images[0].url }}
+            avatarProps={{ radius: 'lg', src: product.images[0]?.url }}
             description={product.description}
             name={cellValue}
           >
