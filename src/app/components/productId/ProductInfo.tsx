@@ -30,7 +30,7 @@ export const ProductInfo = ({ info }: { info: tShirts }) => {
       </div>
       {/* <!-- call to action--> */}
       <div className='flex gap-3'>
-        {sizes.map(size => (
+        {sizes?.map(size => (
           <button
             style={{
               border: '2px solid white',

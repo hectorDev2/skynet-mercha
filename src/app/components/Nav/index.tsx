@@ -38,7 +38,7 @@ const Nav = forwardRef<null, NavProps>(
 
     return (
       <Container ref={ref}>
-        {Links.map(link => (
+        {Links?.map(link => (
           <Fragment key={link.label}>
             {link.isDropdown ? (
               <button

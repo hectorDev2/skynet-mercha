@@ -42,7 +42,7 @@ export const ProductGallery = ({ images = [] }: { images: string[] }) => {
       </figcaption>
       {/* <!-- gallery thumbnails for desktop --> */}
       <div className='images-thumbnails'>
-        {images.map((image: any) => {
+        {images?.map((image: any) => {
           return (
             <figcaption
               key={image.id}

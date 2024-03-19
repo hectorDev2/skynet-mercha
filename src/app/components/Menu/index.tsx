@@ -194,7 +194,7 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
         <Styled.GamesContainer selected={selectedMenu || 'games'}>
           {selectedMenu === 'games' && (
             <>
-              {games.map((game: any) => {
+              {games?.map((game: any) => {
                 if (game.subcategories.length === 0) {
                   return (
                     <Link href={`inka`} className='flex flex-col'>
@@ -209,7 +209,7 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
           )}
           {selectedMenu === 'varios' && (
             <>
-              {varios.map(game => (
+              {varios?.map(game => (
                 <span key={game.name}>
                   <Link href={`${game.href}`}>
                     <Styled.Game>

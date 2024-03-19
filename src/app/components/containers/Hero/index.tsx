@@ -89,7 +89,7 @@ export function Hero () {
         gameIdActive={pages[index].id}
         handleSelectGame={handleSelectGame}
       />
-      {pages.map((page, i) => (
+      {pages?.map((page, i) => (
         <Styled.GameContent key={page.id} active={i === index}>
           {i === index && <Styled.ProgressBar />}
           <MouseParallaxContainer

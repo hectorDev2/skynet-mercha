@@ -38,7 +38,7 @@ const DemoSlider = ({
           1275: { slidesPerView: 4 }
         }}
       >
-        {products.map(
+        {products?.map(
           (item: {
             id: number
             title: string

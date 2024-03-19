@@ -10,9 +10,8 @@ import {
   Chip,
   Tooltip
 } from '@nextui-org/react'
-import { DeleteIcon } from './icons/DeleteIcon'
 import React, { Key, useEffect, useState } from 'react'
-import { columns, users } from '../data'
+import { columns } from '../data'
 import { getTshirts } from '@/utils/fetch'
 import ModalButton from './ModalButton'
 

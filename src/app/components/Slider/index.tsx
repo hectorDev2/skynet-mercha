@@ -50,7 +50,7 @@ const Slider = forwardRef<null, SliderProps>(
     return (
       <div className='hidden md:block'>
         <Container ref={ref}>
-          {games.map(game => (
+          {games?.map(game => (
             <Game
               aria-label={`Mudar para ${game.id}`}
               key={game.id}

@@ -64,7 +64,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
           >
             {value?.length > 0 ? (
               <div className='flex gap-2 justify-between flex-wrap'>
-                {value.map((photo: string, index: number) => (
+                {value?.map((photo: string, index: number) => (
                   <Image
                     width={200}
                     height={100}

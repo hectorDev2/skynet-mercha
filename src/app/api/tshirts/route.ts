@@ -44,7 +44,7 @@ export async function POST(request: Request) {
   });
 
   await Promise.all(
-    images.map(async (url: string) => {
+    images?.map(async (url: string) => {
       console.log(images);
       await prisma.image.create({
         data: {
