@@ -93,6 +93,7 @@ const Register = () => {
         <Button
           color='success'
           className='w-full'
+          onClick={onSubmit}
           endContent={
             <svg
               xmlns='http://www.w3.org/2000/svg'
