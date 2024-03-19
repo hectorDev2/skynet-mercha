@@ -4,15 +4,12 @@ import Heading from '@/app/components/shared/Heading'
 import ImageUpload from '@/app/components/shared/ImageUpload'
 import { categories, tag } from '@/db/dataNew'
 import { Button } from '@nextui-org/react'
-import { useRouter } from 'next/router'
-import React from 'react'
 import { useForm } from 'react-hook-form'
 
 export const Form = () => {
   const { register, setValue, handleSubmit, watch } = useForm()
   const images = watch('images')
   const categorySelect = watch('category')
-  const router = useRouter()
 
   const onSubmit = handleSubmit(async data => {
     console.log(data, 'enviando...')
@@ -34,7 +31,6 @@ export const Form = () => {
       setValue('name', '')
       setValue('description', '')
       setValue('price', '')
-      router.reload()
     } else {
       console.log('error')
     }
