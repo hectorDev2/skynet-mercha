@@ -26,7 +26,7 @@ export function ProductsExclusive ({ tshirts }: any) {
         {exclusiveTshirts?.map((tshirt: any) => (
           <Link key={tshirt?.id} href={`/productos/${tshirt?.id}`}>
             <CardProductEx
-              image={tshirt?.images[0].url ?? ''}
+              image={tshirt?.images[0]?.url ?? ''}
               product={tshirt}
             />
           </Link>
