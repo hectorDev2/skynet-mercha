@@ -3,7 +3,6 @@
 
 import { CldUploadWidget } from 'next-cloudinary'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 import { useCallback, useEffect, useState } from 'react'
 
 declare global {
@@ -19,7 +18,6 @@ interface ImageUploadProps {
 
 const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
   const [photos, setPhotos] = useState<any>([])
-  const router = useRouter()
 
   const handleUpload = useCallback(
     (result: any) => {
