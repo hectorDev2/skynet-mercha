@@ -1,11 +1,13 @@
 const envUrl = process.env.NEXT_PUBLIC_URL;
 
 export const getTshirts = async () => {
-  const res = await fetch(`${envUrl}/api/tshirts`);
-  const resJson = await res.json();
-  console.log(resJson);
-
-  return resJson;
+  try {
+    const res = await fetch(`${envUrl}/api/tshirts`);
+    const resJson = await res.json();
+    return resJson;
+  } catch (error) {
+    return [];
+  }
 };
 export const getTshirtsParams = async (categoryId: number) => {
   try {
