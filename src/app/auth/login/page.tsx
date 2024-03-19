@@ -9,6 +9,7 @@ const Login = () => {
     handleSubmit,
     formState: { errors }
   } = useForm()
+  const router = useRouter()
   const onSubmit = handleSubmit(async data => {
     const res = await signIn('credentials', {
       email: data.email,
@@ -19,6 +20,9 @@ const Login = () => {
     if (res!.error) {
       alert(res!.error)
       return null
+    }
+    if (res!.ok) {
+      return router.push('/dashboard')
     }
   })
 
