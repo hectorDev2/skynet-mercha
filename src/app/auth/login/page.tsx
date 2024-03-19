@@ -1,6 +1,5 @@
 'use client'
 import { useRouter } from 'next/navigation'
-import React from 'react'
 import { useForm } from 'react-hook-form'
 import { signIn } from 'next-auth/react'
 import { Button } from '@nextui-org/react'

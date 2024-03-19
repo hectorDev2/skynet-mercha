@@ -14,7 +14,7 @@ const GamerPage = () => {
 
   // getTshirts()
   useEffect(() => {
-    getTshirtsParams(2).then(res => {
+    getTshirtsParams(4).then(res => {
       console.log(res)
 
       setProducts(res.tshirts)
@@ -27,22 +27,22 @@ const GamerPage = () => {
   return (
     <Layout>
       <Hero
-        title='Polos Musica'
-        userLabel='generacion Melodia'
-        subtitle='explora nuestra gran variadad de modelos para amantes de la musica.'
+        title='Polos Gamers'
+        userLabel='generacion gamer'
+        subtitle='explora nuestra gran variadad de modelos para gamers.'
         theme='secondary'
       >
-        <img src='polos/music/music-background.png' alt='pareja polos' />
+        <img src='polos/inka/inka-background.png' alt='pareja polos' />
       </Hero>
       <Features
         theme='secondary'
         subtitle='Nuestras polos divertidos y originales'
         title='Todo tipo de modelos de '
-        stringColor='polos para amantes de la musica'
+        stringColor='polos para parejas'
         features={features}
       />
       <ClientSection
-        image='polos/music/music-background-2.png'
+        image='polos/inka/inka-background-2.png'
         theme='secondary'
         title='Clientes satisfechos'
       />

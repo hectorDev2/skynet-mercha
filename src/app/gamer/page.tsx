@@ -14,7 +14,9 @@ const GamerPage = () => {
 
   // getTshirts()
   useEffect(() => {
-    getTshirtsParams(3).then(res => {
+    getTshirtsParams(1).then(res => {
+      console.log(res)
+
       setProducts(res.tshirts)
     })
     return () => {
@@ -30,7 +32,7 @@ const GamerPage = () => {
         subtitle='explora nuestra gran variadad de modelos para gamers.'
         theme='secondary'
       >
-        <img src='parejas/principal.png' alt='pareja polos' />
+        <img src='polos/gamer-background.png' alt='pareja polos' />
       </Hero>
       <Features
         theme='secondary'
@@ -40,7 +42,7 @@ const GamerPage = () => {
         features={features}
       />
       <ClientSection
-        image='parejas/carousel/1.png'
+        image='polos/gamer/gamer-background-2.png'
         theme='secondary'
         title='Clientes satisfechos'
       />

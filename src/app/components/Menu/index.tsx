@@ -197,7 +197,7 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
               {games.map((game: any) => {
                 if (game.subcategories.length === 0) {
                   return (
-                    <Link href={`productos/inka`} className='flex flex-col'>
+                    <Link href={`inka`} className='flex flex-col'>
                       {game.image}
                       <Button variant='bordered'>{game.name}</Button>
                     </Link>

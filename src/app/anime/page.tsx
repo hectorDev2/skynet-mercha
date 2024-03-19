@@ -32,17 +32,17 @@ const Page = () => {
         subtitle='explora nuestra gran variadad de modelos de tazas.'
         theme='secondary'
       >
-        <img src='parejas/principal.png' alt='pareja polos' />
+        <img src='polos/anime/anime-background.png' alt='pareja polos' />
       </Hero>
       <Features
         theme='secondary'
         subtitle='Nuestras polos divertidos y originales'
         title='Todo tipo de modelos de '
-        stringColor='polos para parejas'
+        stringColor='polos para otakus'
         features={features}
       />
       <ClientSection
-        image='parejas/carousel/1.png'
+        image='polos/anime/anime-background-2.png'
         theme='secondary'
         title='Clientes satisfechos'
       />
