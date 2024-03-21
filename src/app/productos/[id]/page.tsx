@@ -19,8 +19,6 @@ export default async function Home ({ params }: { params: { id: string } }) {
     })
   }, [])
 
-  console.log(product)
-
   return (
     <>
       <Head>
