@@ -93,62 +93,10 @@ export const categories = [
   {
     id: 4,
     category: "diseño inka",
-    subcategories: [
-      {
-        id: 1,
-        title: "dota 2",
-      },
-      {
-        id: 2,
-        title: "nintendo",
-      },
-      {
-        id: 3,
-        title: "starcraft",
-      },
-      {
-        id: 4,
-        title: "warcraft",
-      },
-      {
-        id: 5,
-        title: "diablo",
-      },
-      {
-        id: 6,
-        title: "sega",
-      },
-    ],
   },
   {
     id: 5,
     category: "OTROS",
-    subcategories: [
-      {
-        id: 1,
-        title: "dota 2",
-      },
-      {
-        id: 2,
-        title: "nintendo",
-      },
-      {
-        id: 3,
-        title: "starcraft",
-      },
-      {
-        id: 4,
-        title: "warcraft",
-      },
-      {
-        id: 5,
-        title: "diablo",
-      },
-      {
-        id: 6,
-        title: "sega",
-      },
-    ],
   },
 ];
 

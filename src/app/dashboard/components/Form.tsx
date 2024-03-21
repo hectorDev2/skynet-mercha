@@ -25,6 +25,7 @@ export const Form = () => {
       })
     })
     if (res.ok) {
+      window.location.reload()
       alert('polo guardado....')
       setValue('images', [])
       setValue('category', '')
@@ -130,26 +131,32 @@ export const Form = () => {
         </select>
       </div>
       <div className='mb-5'>
-        <label
-          htmlFor='subcategory'
-          className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
-        >
-          subcategoria
-        </label>
-        <select
-          id='subcategory'
-          {...register('subcategory', {
-            required: true
-          })}
-          className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-        >
-          <option selected>Selecciona una categoria</option>
-          {subcategory?.map(({ id, title }) => (
-            <option key={id} value={id}>
-              {title}
-            </option>
-          ))}
-        </select>
+        {subcategory && (
+          <>
+            <label
+              htmlFor='subcategory'
+              className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+            >
+              subcategoria
+            </label>
+            <select
+              id='subcategory'
+              {...register('subcategory', {
+                required: true
+              })}
+              className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+            >
+              <>
+                <option selected>Selecciona una categoria</option>
+                {subcategory?.map(({ id, title }) => (
+                  <option key={id} value={id}>
+                    {title}
+                  </option>
+                ))}
+              </>
+            </select>
+          </>
+        )}
       </div>
       <div className='mb-5'>
         <label
