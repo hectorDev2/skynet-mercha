@@ -14,7 +14,7 @@ export function Products ({ tshirts = [], color = 'hsla(205, 46%, 10%, 1)' }) {
       <div className='flex text-center justify-evenly'>
         <div className='text-center'>
           <p className='games-label text-[var(--primary)]'>Merchandising</p>
-          <h2 className='text-4xl'>Modelos Variados</h2>
+          <h2 className='text-4xl'>Modelos No exclusivos</h2>
         </div>
       </div>
       <div className=' flex flex-col justify-center md:flex-row md:flex-wrap items-center gap-2 py-5'>
