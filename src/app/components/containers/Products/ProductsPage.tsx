@@ -1,6 +1,6 @@
 'use client'
 import { useFetch } from '@/index'
-import { Products } from './Products'
+import { Products } from './ProductsExclusive'
 
 const ProductsPage = ({ exclusive = false }) => {
   const { products } = useFetch()
