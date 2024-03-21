@@ -5,7 +5,8 @@ export const CardProductEx = ({
   product,
   image
 }: {
-  product: any
+  product: tShirts
+
   image: string
 }) => {
   console.log(product)

@@ -3,12 +3,13 @@ import Head from 'next/head'
 import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 import { Content } from '../../components/productId/Content'
-import { getTshirtId } from '@/db/database'
+import { tShirts } from '@/types'
+
 import { useEffect, useState } from 'react'
 import { getTshirtById } from '@/utils/fetch'
 
 export default async function Home ({ params }: { params: { id: string } }) {
-  const [product, setProduct] = useState<any>()
+  const [product, setProduct] = useState<tShirts>()
 
   const { id } = params
 
