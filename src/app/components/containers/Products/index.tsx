@@ -10,7 +10,7 @@ export function Products ({ tshirts }: any) {
       <div className='flex text-center justify-evenly'>
         <div className='text-center'>
           <p className='games-label text-[var(--primary)]'>Merchandising</p>
-          Productos no Exclusivos
+          polos
         </div>
       </div>
       <div className=' flex flex-col justify-center md:flex-row md:flex-wrap items-center gap-2 py-5'>
