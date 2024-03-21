@@ -8,20 +8,9 @@ import { ProductsExclusive } from './components/containers/Products/ProductsExcl
 import { useEffect, useState } from 'react'
 import { Products } from './components/containers/Products'
 import { getTshirts } from '@/utils/fetch'
+import { ProductContainer } from './components/ProductContainer'
 
 export default async function Home () {
-  const [products, setProducts] = useState<any>()
-
-  // getTshirts()
-  useEffect(() => {
-    getTshirts().then(res => {
-      setProducts(res.tshirts)
-    })
-    return () => {
-      setProducts([])
-    }
-  }, [])
-
   return (
     <Layout>
       <Head>
@@ -29,8 +18,7 @@ export default async function Home () {
       </Head>
       <main>
         <Hero />
-        <ProductsExclusive tshirts={products} />
-        <Products tshirts={products} />
+        <ProductContainer />
         <Banner />
         <Download />
       </main>

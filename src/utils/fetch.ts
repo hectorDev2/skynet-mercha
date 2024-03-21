@@ -9,9 +9,11 @@ export const getTshirts = async () => {
     return [];
   }
 };
-export const getTshirtsParams = async (categoryId: number) => {
+export const getTshirtsParams = async (categoryId?: number) => {
   try {
-    const res = await fetch(`${envUrl}/api/tshirts?category=${categoryId}`);
+    const res = await fetch(
+      `${envUrl}/api/tshirts?category=${categoryId ?? ""}`
+    );
     const resJson = await res.json();
 
     return resJson;

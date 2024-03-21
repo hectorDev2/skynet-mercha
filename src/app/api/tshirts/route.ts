@@ -3,20 +3,13 @@ import { prisma } from "@/libs/prisma";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const paramTag = searchParams.get("tag");
   const paramCategory = searchParams.get("category");
-
-  console.log(paramCategory, paramTag);
 
   const tshirts = await prisma.tshirt.findMany({
     include: {
       images: true,
     },
     where: {
-      tag: {
-        contains: paramTag ? paramTag : "",
-      },
-
       category: {
         contains: paramCategory ? paramCategory : "",
       },

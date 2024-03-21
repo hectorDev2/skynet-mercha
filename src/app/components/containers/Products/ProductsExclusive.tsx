@@ -2,14 +2,9 @@ import Link from 'next/link'
 import { CardProductEx } from './CardProductEx'
 
 export function ProductsExclusive ({ tshirts }: any) {
-  console.log(tshirts)
-
-  const exclusiveTshirts = tshirts?.map((tshirt: any) => {
-    if (tshirt.tag == 'exclusivo') {
-      return tshirt
-    }
-    return null
-  })
+  const tshirtFilter = tshirts.filter(
+    (tshirt: any) => tshirt.tag === 'exclusivo'
+  )
 
   return (
     <div
@@ -23,14 +18,15 @@ export function ProductsExclusive ({ tshirts }: any) {
         </div>
       </div>
       <div className=' flex flex-col justify-center md:flex-row md:flex-wrap items-center gap-2 py-5'>
-        {exclusiveTshirts?.map((tshirt: any) => (
-          <Link key={tshirt?.id} href={`/productos/${tshirt?.id}`}>
-            <CardProductEx
-              image={tshirt?.images[0]?.url ?? ''}
-              product={tshirt}
-            />
-          </Link>
-        ))}
+        {tshirtFilter &&
+          tshirtFilter?.map((tshirt: any) => (
+            <Link key={tshirt?.name} href={`/productos/${tshirt?.id}`}>
+              <CardProductEx
+                image={tshirt?.images[0]?.url ?? ''}
+                product={tshirt}
+              />
+            </Link>
+          ))}
       </div>
       <div className='w-full py-20 flex justify-center '>
         <Link href='/productos/9'>
