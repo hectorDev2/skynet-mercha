@@ -15,8 +15,6 @@ const Page = () => {
   // getTshirts()
   useEffect(() => {
     getTshirtsParams(3).then(res => {
-      console.log(res)
-
       setProducts(res.tshirts)
     })
     return () => {
@@ -28,7 +26,7 @@ const Page = () => {
     <Layout>
       <Hero
         title='Polos Anime'
-        userLabel='cool y otaku'
+        userLabel='gente cool y otaku'
         subtitle='explora nuestra gran variadad de modelos de tazas.'
         theme='secondary'
       >
