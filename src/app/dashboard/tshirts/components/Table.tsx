@@ -22,10 +22,10 @@ const statusColorMap: any = {
 }
 
 export default function TableComponent () {
-  const [products, setProducts] = useState()
+  const [products, setProducts] = useState([])
   useEffect(() => {
     getTshirts()
-      .then(res => setProducts(res.tshirts))
+      .then(res => setProducts(res.tshirts.reverse()))
       .catch(error => console.log(error))
   }, [])
 

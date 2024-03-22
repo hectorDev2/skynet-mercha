@@ -21,6 +21,7 @@ export function Products ({ tshirts, example = true, exclusive = false }: any) {
         {tshirtFilter &&
           tshirtFilter
             .slice(0, example ? 6 : tshirtFilter.length)
+            .reverse()
             ?.map((tshirt: any) => (
               <Link key={tshirt?.name} href={`/productos/${tshirt?.id}`}>
                 <CardProductEx

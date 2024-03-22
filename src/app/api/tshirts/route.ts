@@ -9,6 +9,11 @@ export async function GET(request: Request) {
     include: {
       images: true,
     },
+    orderBy: [
+      {
+        id: "desc",
+      },
+    ],
     where: {
       category: {
         contains: paramCategory ? paramCategory : "",
