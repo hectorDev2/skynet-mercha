@@ -14,7 +14,7 @@ const GamerPage = () => {
 
   // getTshirts()
   useEffect(() => {
-    getTshirtsParams(2).then(res => {
+    getTshirtsParams(3).then(res => {
       setProducts(res.tshirts)
     })
     return () => {
