@@ -164,6 +164,6 @@ export const getTshirtId = (id: string | string[] | undefined) => {
 };
 
 export const filterTshirts = (category: string) => {
-  const results = tShirts.filter((t) => t.category === category);
+  const results = tShirts?.filter((t) => t.category === category);
   return results;
 };
