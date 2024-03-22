@@ -3,8 +3,8 @@ import { CardProductEx } from './CardProductEx'
 
 export function Products ({ tshirts, example = true, exclusive = false }: any) {
   const tshirtFilter = exclusive
-    ? tshirts.filter((tshirt: any) => tshirt.tag === 'exclusivo')
-    : tshirts.filter((tshirt: any) => tshirt.tag === 'no exclusivo')
+    ? tshirts?.filter((tshirt: any) => tshirt.tag === 'exclusivo')
+    : tshirts?.filter((tshirt: any) => tshirt.tag === 'no exclusivo')
 
   return (
     <div

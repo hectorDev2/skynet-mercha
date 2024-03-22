@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { CardProductEx } from './CardProductEx'
 
-export function Products ({ tshirts }: any) {
+export function Products ({ tshirts, color = 'hsla(205, 46%, 10%, 1)' }: any) {
   return (
     <div
-      style={{ background: 'hsla(205, 46%, 10%, 1)' }}
+      style={{ background: color }}
       className='py-[50px] px-[10px] md:px-[100px] '
     >
       <div className='flex text-center justify-evenly'>

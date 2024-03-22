@@ -10,6 +10,7 @@ interface IGames {
   image: ReactElement
   href: string
   name: string
+  category?: number
   subcategories?: any[]
 }
 
@@ -31,6 +32,7 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
         ),
         href: 'gamer',
         name: 'Polos gamer',
+        category: 1,
         subcategories: [
           {
             id: 1,
@@ -79,6 +81,7 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
         ),
         href: 'anime',
         name: 'Polos anime',
+        category: 2,
         subcategories: [
           {
             id: 1,
@@ -115,8 +118,9 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
             alt='categoria music image'
           />
         ),
-        href: '/musica',
+        href: 'musica',
         name: 'Polos Music',
+        category: 3,
         subcategories: [
           {
             id: 1,
@@ -152,8 +156,9 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
             alt='categoria diseño inka'
           />
         ),
-        href: '/productos/7',
+        href: 'inka',
         name: 'Polos diseño inka',
+        category: 4,
         subcategories: []
       }
     ],

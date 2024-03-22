@@ -6,30 +6,34 @@ import {
   DropdownTrigger
 } from '@nextui-org/react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export const Dropdowns = ({ game }: { game: any }) => {
-  console.log(game)
+  const router = useRouter()
 
   return (
     <div className='flex flex-col'>
-      <Link href={game.href ?? ''}>{game.image}</Link>
+      <Link href={`/${game.href}` ?? ''}>{game.image}</Link>
       <Dropdown>
         <DropdownTrigger>
           <Button variant='bordered'>{game.name}</Button>
         </DropdownTrigger>
-        <DropdownMenu aria-label='Static Actions'>
+        <DropdownMenu
+          onAction={key => router.push(`/${game.href}/${key}`)}
+          aria-label='Static Actions'
+        >
           {game.subcategories?.map((subcategory: any) => {
-            console.log(subcategory)
-
             return (
               <DropdownItem
-                key='new'
-                description={subcategory.subtitle}
+                key={subcategory.id}
+                description={
+                  <Link className='w-full' href={`/gamer/${subcategory.id}`}>
+                    {subcategory.subtitle}
+                  </Link>
+                }
                 // startContent={game.image}
               >
-                <Link href={`productos/${subcategory.title}`}>
-                  {subcategory.title}
-                </Link>
+                {subcategory.title}
               </DropdownItem>
             )
           })}
