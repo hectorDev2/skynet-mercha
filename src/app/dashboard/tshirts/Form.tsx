@@ -2,7 +2,7 @@
 
 import Heading from '@/app/components/shared/Heading'
 import ImageUpload from '@/app/components/shared/ImageUpload'
-import { categories, tag } from '@/db/dataNew'
+import { categories, labels, tag } from '@/db/dataNew'
 import { getTshirtById } from '@/utils/fetch'
 import { Button } from '@nextui-org/react'
 import { useEffect, useState } from 'react'
@@ -25,6 +25,8 @@ export const Form = ({ id }: { id: string }) => {
   const categorySelect = watch('category')
 
   const onSubmit = handleSubmit(async data => {
+    console.log(data)
+
     const res = await fetch(`/api/tshirts/${id}`, {
       method: 'PUT',
       headers: {
@@ -62,6 +64,7 @@ export const Form = ({ id }: { id: string }) => {
     setValue('images', product.images)
     setValue('category', product.category)
     setValue('subcategory', product.subcategory)
+    setValue('label', product.label)
   }
 
   useEffect(() => {
@@ -211,6 +214,28 @@ export const Form = ({ id }: { id: string }) => {
           ))}
         </select>
       </div>
+      <div className='mb-5'>
+        <label
+          htmlFor='label'
+          className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
+        >
+          label
+        </label>
+        <select
+          id='label'
+          {...register('label', {
+            required: true
+          })}
+          className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+        >
+          <option selected>Selecciona un label</option>
+          {labels?.map((lab, i) => (
+            <option key={lab} value={lab}>
+              {lab}
+            </option>
+          ))}
+        </select>
+      </div>
       <div className='flex flex-col gap-8'>
         <Heading
           title='Agregar fotos'
@@ -228,7 +253,7 @@ export const Form = ({ id }: { id: string }) => {
         type='submit'
         className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
       >
-        AGREGAR NUEVO POLO
+        EDITAR POLO
       </Button>
       <Button
         color='danger'
