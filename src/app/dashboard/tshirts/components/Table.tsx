@@ -16,6 +16,7 @@ import { columns } from '../data'
 import { getTshirts } from '@/utils/fetch'
 import ModalButton from './ModalButton'
 import { EditIcon } from './icons/EditIcon'
+import Link from 'next/link'
 
 const statusColorMap: any = {
   active: 'success',
@@ -69,10 +70,12 @@ export default function TableComponent () {
         return (
           <div className='relative flex justify-center items-center gap-2'>
             <ModalButton productId={product.id} />
-            <Tooltip color='success' content='eliminar polo'>
-              <Button>
-                <EditIcon />
-              </Button>
+            <Tooltip color='success' content='editar'>
+              <Link href={`tshirts/${product.id}`}>
+                <Button>
+                  <EditIcon />
+                </Button>
+              </Link>
             </Tooltip>
           </div>
         )
