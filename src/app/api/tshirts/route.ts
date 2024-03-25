@@ -27,8 +27,16 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const { name, description, price, images, tag, category, subcategory } =
-    await request.json();
+  const {
+    name,
+    description,
+    price,
+    images,
+    tag,
+    category,
+    subcategory,
+    label,
+  } = await request.json();
 
   const newTshirt = await prisma.tshirt.create({
     data: {
@@ -38,12 +46,12 @@ export async function POST(request: Request) {
       category,
       subcategory,
       tag,
+      label,
     },
   });
 
   await Promise.all(
     images?.map(async (url: string) => {
-      console.log(images);
       await prisma.image.create({
         data: {
           url: url,

@@ -52,6 +52,7 @@ export async function PUT(request: Request, { params }: { params: Params }) {
       price: data.price,
       category: data.category,
       subcategory: data.subcategory,
+      label: data.label,
       tag: data.tag,
     },
     include: {
