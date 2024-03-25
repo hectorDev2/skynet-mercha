@@ -25,6 +25,8 @@ export const getTshirtsParams = async (categoryId?: number) => {
 export const getTshirtById = async (id: string) => {
   const res = await fetch(`${envUrl}/api/tshirts/${id}`);
   const resJson = await res.json();
+  console.log(resJson);
+
   return resJson;
 };
 
