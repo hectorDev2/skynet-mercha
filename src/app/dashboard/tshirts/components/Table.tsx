@@ -8,12 +8,14 @@ import {
   TableCell,
   User,
   Chip,
-  Tooltip
+  Tooltip,
+  Button
 } from '@nextui-org/react'
 import React, { Key, useEffect, useState } from 'react'
 import { columns } from '../data'
 import { getTshirts } from '@/utils/fetch'
 import ModalButton from './ModalButton'
+import { EditIcon } from './icons/EditIcon'
 
 const statusColorMap: any = {
   active: 'success',
@@ -67,6 +69,11 @@ export default function TableComponent () {
         return (
           <div className='relative flex justify-center items-center gap-2'>
             <ModalButton productId={product.id} />
+            <Tooltip color='success' content='eliminar polo'>
+              <Button>
+                <EditIcon />
+              </Button>
+            </Tooltip>
           </div>
         )
       default:
@@ -88,8 +95,6 @@ export default function TableComponent () {
       </TableHeader>
       <TableBody items={products ?? []}>
         {(item: { id: number }) => {
-          console.log(item)
-
           return (
             <TableRow key={item.id}>
               {columnKey => (
