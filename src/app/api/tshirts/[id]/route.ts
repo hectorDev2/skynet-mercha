@@ -39,3 +39,34 @@ export async function DELETE(
     tshirt,
   });
 }
+
+export async function PUT(request: Request, { params }: { params: Params }) {
+  const data = await request.json();
+  const tshirt = await prisma.tshirt.update({
+    where: {
+      id: Number(params.id),
+    },
+    data: {
+      name: data.name,
+      description: data.description,
+      price: data.price,
+      category: data.category,
+      subcategory: data.subcategory,
+      tag: data.tag,
+    },
+    include: {
+      images: true,
+    },
+  });
+
+  const images = await prisma.image.findMany({
+    where: {
+      tshirtId: Number(params.id),
+    },
+  });
+  console.log(images);
+
+  return NextResponse.json({
+    tshirt,
+  });
+}
