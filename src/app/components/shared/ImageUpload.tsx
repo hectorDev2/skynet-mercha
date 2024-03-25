@@ -32,6 +32,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
   useEffect(() => {
     onChange(photos)
   }, [photos])
+  console.log(photos)
 
   return (
     <CldUploadWidget
@@ -64,15 +65,19 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
           >
             {value?.length > 0 ? (
               <div className='flex gap-2 justify-between flex-wrap'>
-                {value?.map((photo: string, index: number) => (
-                  <Image
-                    width={200}
-                    height={100}
-                    key={index}
-                    src={photo}
-                    alt='House'
-                  />
-                ))}
+                {value?.map((photo: string, index: number) => {
+                  console.log(photo)
+
+                  return (
+                    <Image
+                      width={200}
+                      height={100}
+                      key={index}
+                      src={photo}
+                      alt='House'
+                    />
+                  )
+                })}
               </div>
             ) : (
               <>

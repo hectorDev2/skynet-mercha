@@ -9,7 +9,6 @@ export const CardProductEx = ({
 
   image: string
 }) => {
-  console.log(product)
   if (!product) {
     return
   }
