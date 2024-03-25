@@ -34,6 +34,7 @@ model Tshirt{
   tag String
   category String
   subcategory String
+  label String @default("default")
   images Image[]
   
 }

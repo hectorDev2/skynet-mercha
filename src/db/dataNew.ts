@@ -101,3 +101,5 @@ export const categories = [
 ];
 
 export const tag = ["exclusivo", "no exclusivo"];
+
+export const labels = ["tendencia", "liquidacion"];
