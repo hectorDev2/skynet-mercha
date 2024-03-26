@@ -36,8 +36,9 @@ model Tshirt{
   subcategory String
   label String @default("default")
   images Image[]
-  
 }
+
+
 
 model Image {
   id        Int       @id @default(autoincrement())
