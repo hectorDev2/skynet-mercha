@@ -1,14 +1,26 @@
-import { Layout } from '../components/Layout'
-import TableComponent from './components/Table'
+import { Layout } from "../components/Layout";
+import { AddForm } from "../components/AddForm";
+const cloudinary = require("cloudinary").v2;
 
 const Dashboard = () => {
+  // cloudinary.config({
+  //   cloud_name: "dfih7mtw6",
+  //   api_key: "223439396858958",
+  //   api_secret: "FxhvUQNv6adhJ6InJRv8uUjl3FI",
+  // });
+
+  // cloudinary.uploader
+  //   .destroy("dun8is42uah04wimcagt")
+  //   .then((result: any) => console.log(result));
+
   return (
     <Layout>
-      <img className=' mx-auto w-[200px]' src='/logo.png' alt='logo png' />
-      <h2 className='text-5xl py-2 text-center mt-[20px]'>lista de polos</h2>
-      <TableComponent />
+      <h2 className="text-5xl text-center mt-[100px]">
+        agregar camiseta o polo
+      </h2>
+      <AddForm />
     </Layout>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

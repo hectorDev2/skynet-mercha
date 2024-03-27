@@ -1,16 +1,16 @@
-import { Layout } from '../../components/Layout'
-import { Form } from '../Form'
+import { EditForm } from "../../components/EditForm";
+import { Layout } from "../../components/Layout";
 
 const Dashboard = ({ params }: any) => {
   return (
     <Layout>
-      <img className=' mx-auto w-[200px]' src='/logo.png' alt='logo png' />
-      <h2 className='text-5xl py-2 text-center mt-[20px]'>
+      <img className=" mx-auto w-[200px]" src="/logo.png" alt="logo png" />
+      <h2 className="text-5xl py-2 text-center mt-[20px]">
         Editar polo {params.id}
       </h2>
-      <Form id={params.id} />
+      <EditForm id={params.id} />
     </Layout>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

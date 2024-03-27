@@ -82,7 +82,7 @@ export default function TableComponent() {
           <div className="relative flex justify-center items-center gap-2">
             <ModalButton productId={product.id} />
             <Tooltip color="success" content="editar">
-              <Link href={`tshirts/${product.id}`}>
+              <Link href={`${product.id}`}>
                 <Button>
                   <EditIcon />
                 </Button>
