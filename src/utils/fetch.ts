@@ -36,3 +36,13 @@ export const deleteTshirt = async (id: string) => {
   });
   return res.ok;
 };
+
+export const getShoes = async () => {
+  try {
+    const res = await fetch(`${envUrl}/api/shoes`);
+    const resJson = await res.json();
+    return resJson;
+  } catch (error) {
+    return [];
+  }
+};
