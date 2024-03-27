@@ -60,6 +60,7 @@ model Shoe{
   subcategory String
   label String @default("default")
   price Int
+  gender String
   images ImageShoe[]
   userId Int @default(2)
   user User? @relation(fields: [userId],references: [id])
