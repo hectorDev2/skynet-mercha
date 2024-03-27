@@ -22,6 +22,8 @@ model User{
   password String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  tshirts Tshirt[]
+  shoes Shoe[]
 }
 
 
@@ -36,8 +38,9 @@ model Tshirt{
   subcategory String
   label String @default("default")
   images Image[]
+  userId Int @default(2)
+  user User? @relation(fields: [userId],references: [id])
 }
-
 
 
 model Image {
@@ -45,4 +48,25 @@ model Image {
   url       String
   tshirtId  Int?
   tshirt    Tshirt?   @relation(fields: [tshirtId], references: [id])
+}
+
+
+model Shoe{
+  id Int @default(autoincrement()) @id
+  name String
+  description String
+  tag String
+  category String
+  subcategory String
+  label String @default("default")
+  images ImageShoe[]
+  userId Int @default(2)
+  user User? @relation(fields: [userId],references: [id])
+}
+
+model ImageShoe{
+  id        Int       @id @default(autoincrement())
+  url       String
+  shoeId  Int?
+  shoe    Shoe?   @relation(fields: [shoeId], references: [id])
 }
