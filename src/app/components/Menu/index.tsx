@@ -1,225 +1,265 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link'
-import * as Styled from './styles'
+import Link from "next/link";
+import * as Styled from "./styles";
 
-import { ReactElement, useMemo } from 'react'
-import { Dropdowns } from '../shared/Dropdowns'
-import { Button } from '@nextui-org/react'
+import { ReactElement, useMemo } from "react";
+import { Dropdowns } from "../shared/Dropdowns";
+import { Button } from "@nextui-org/react";
 
-interface IGames {
-  image: ReactElement
-  href: string
-  name: string
-  category?: number
-  subcategories?: any[]
+interface Interface {
+  image: ReactElement;
+  href: string;
+  name: string;
+  category?: number;
+  subcategories?: any[];
 }
 
 interface MenuProps {
-  show: boolean
-  selectedMenu: 'games' | 'varios' | null
+  show: boolean;
+  selectedMenu: "games" | "varios" | "shoes" | null;
 }
 
-export function Menu ({ show, selectedMenu }: MenuProps) {
-  const games = useMemo<IGames[]>(
+export function Menu({ show, selectedMenu }: MenuProps) {
+  const games = useMemo<Interface[]>(
     () => [
       {
         image: (
           <img
-            className='w-[100px] md:w-[150px]'
+            className="w-[100px] md:w-[150px]"
             src={`https://lh3.googleusercontent.com/proxy/nXqnFaMM8tcJOzyZjz3ayG5pq5PSl58KCGfh6z8fFoYyh6wq0hZale9uxq5nt4uXgfS3PQEN49K47ogHRb2RBfzJwnCJAQe33_8v6dIgNSShYOxiSOT_1q5g7Hk`}
-            alt='categoria anime image'
+            alt="categoria anime image"
           />
         ),
-        href: 'gamer',
-        name: 'Polos gamer',
+        href: "gamer",
+        name: "Polos gamer",
         category: 1,
         subcategories: [
           {
             id: 1,
-            title: 'dota 2',
-            subtitle: 'Dota 2 Heroes'
+            title: "dota 2",
+            subtitle: "Dota 2 Heroes",
           },
           {
             id: 2,
-            title: 'nintendo',
-            subtitle: 'Recuerdos de infancia Nintendo'
+            title: "nintendo",
+            subtitle: "Recuerdos de infancia Nintendo",
           },
           {
             id: 3,
-            title: 'starcraft',
-            subtitle: 'Juego de estrategia'
+            title: "starcraft",
+            subtitle: "Juego de estrategia",
           },
           {
             id: 4,
-            title: 'warcraft',
-            subtitle: 'Juego de estrategia'
+            title: "warcraft",
+            subtitle: "Juego de estrategia",
           },
           {
             id: 5,
-            title: 'diablo',
-            subtitle: 'Juego de Blizzard'
+            title: "diablo",
+            subtitle: "Juego de Blizzard",
           },
           {
             id: 6,
-            title: 'sega',
-            subtitle: 'Recuerdo de Sega'
+            title: "sega",
+            subtitle: "Recuerdo de Sega",
           },
           {
             id: 7,
-            title: 'otros',
-            subtitle: 'Mucho mas'
-          }
-        ]
+            title: "otros",
+            subtitle: "Mucho mas",
+          },
+        ],
       },
       {
         image: (
           <img
-            className='w-[100px] md:w-[150px]'
+            className="w-[100px] md:w-[150px]"
             src={`https://static.vecteezy.com/system/resources/previews/021/623/400/original/shirohige-pirate-one-piece-logo-anime-free-png.png`}
-            alt='categoria anime image'
+            alt="categoria anime image"
           />
         ),
-        href: 'anime',
-        name: 'Polos anime',
+        href: "anime",
+        name: "Polos anime",
         category: 2,
         subcategories: [
           {
             id: 1,
-            title: 'one piece',
-            subtitle: 'en busca del one piece'
+            title: "one piece",
+            subtitle: "en busca del one piece",
           },
           {
             id: 2,
-            title: 'naruto',
-            subtitle: 'Naruto shipudden'
+            title: "naruto",
+            subtitle: "Naruto shipudden",
           },
           {
             id: 3,
-            title: 'dragon ball',
-            subtitle: 'Goku y mundo Z'
+            title: "dragon ball",
+            subtitle: "Goku y mundo Z",
           },
           {
             id: 4,
-            title: 'Bleach',
-            subtitle: 'El shinigami favorito'
+            title: "Bleach",
+            subtitle: "El shinigami favorito",
           },
           {
             id: 7,
-            title: 'otros',
-            subtitle: 'Mucho mas'
-          }
-        ]
+            title: "otros",
+            subtitle: "Mucho mas",
+          },
+        ],
       },
       {
         image: (
           <img
-            className='w-[100px] md:w-[150px]'
+            className="w-[100px] md:w-[150px]"
             src={`https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ab52da00-71c2-4ae2-bc2a-3b28214b02c9/df5ivtx-eadd298a-d7bd-474b-8a5c-ac25ae236089.png/v1/fill/w_1280,h_1280/music_band_logo_design__song_logo_design_png__by_rahatislam11_df5ivtx-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2FiNTJkYTAwLTcxYzItNGFlMi1iYzJhLTNiMjgyMTRiMDJjOVwvZGY1aXZ0eC1lYWRkMjk4YS1kN2JkLTQ3NGItOGE1Yy1hYzI1YWUyMzYwODkucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.stwNmQZaDjjAVXsG4piJptiaoHLXKAsIMa3SAWCoV_c`}
-            alt='categoria music image'
+            alt="categoria music image"
           />
         ),
-        href: 'musica',
-        name: 'Polos Music',
+        href: "musica",
+        name: "Polos Music",
         category: 3,
         subcategories: [
           {
             id: 1,
-            title: 'punk'
+            title: "punk",
           },
           {
             id: 2,
-            title: 'metalero'
+            title: "metalero",
           },
           {
             id: 3,
-            title: 'hippie'
+            title: "hippie",
           },
           {
             id: 4,
-            title: 'gotico'
+            title: "gotico",
           },
           {
             id: 5,
-            title: 'ravers'
+            title: "ravers",
           },
           {
             id: 7,
-            title: 'otros'
-          }
-        ]
+            title: "otros",
+          },
+        ],
       },
       {
         image: (
           <img
-            className='w-[100px] md:w-[150px]'
+            className="w-[100px] md:w-[150px]"
             src={`https://images.vexels.com/media/users/3/220882/isolated/preview/fadcd536f480e0d2b29f05a003188f7e-ilustracion-de-idolo-inca-de-peru.png`}
-            alt='categoria diseño inka'
+            alt="categoria diseño inka"
           />
         ),
-        href: 'inka',
-        name: 'Polos diseño inka',
+        href: "inka",
+        name: "Polos diseño inka",
         category: 4,
-        subcategories: []
-      }
+        subcategories: [],
+      },
     ],
     []
-  )
+  );
 
-  const varios = useMemo<IGames[]>(
+  const shoes = useMemo<Interface[]>(
     () => [
       {
-        name: 'Mugs',
-        href: '/tazas',
+        name: "Varon",
+        href: "/hombre",
         image: (
           <img
-            className='w-[100px] md:w-[150px]'
-            src={`https://www.nespresso.com/static/us/solutions/product/pdp/porcelainmugs/nesp-festive-le-mug-set-2000x2000.png`}
-            alt=''
+            className="w-[100px] md:w-[150px]"
+            src={`https://images.jdmagicbox.com/quickquotes/images_main/men-shoes-sm-360-211013270-zlxfx.png`}
+            alt=""
           />
-        )
+        ),
       },
       {
-        name: 'Escultura',
-        href: '/escultura',
+        name: "Mujer",
+        href: "/mujer",
         image: (
           <img
-            className='w-[100px] md:w-[150px]'
-            src={`https://www.figurasmranime.cl/wp-content/uploads/2022/05/Fashion-anime-japanese-Naruto-action-figure.png_350x350-copia.png`}
-            alt=''
+            className="w-[100px] md:w-[150px]"
+            src={`https://cld.accentuate.io/5353320710301/1663094670671/Madrid_Heathered-Grey_3-Quarter_Product-Card-1380.png?v=1669223472897&options=w1000`}
+            alt=""
           />
-        )
-      }
+        ),
+      },
     ],
     []
-  )
+  );
+
+  const varios = useMemo<Interface[]>(
+    () => [
+      {
+        name: "Mugs",
+        href: "/tazas",
+        image: (
+          <img
+            className="w-[100px] md:w-[150px]"
+            src={`https://www.nespresso.com/static/us/solutions/product/pdp/porcelainmugs/nesp-festive-le-mug-set-2000x2000.png`}
+            alt=""
+          />
+        ),
+      },
+      {
+        name: "Escultura",
+        href: "/escultura",
+        image: (
+          <img
+            className="w-[100px] md:w-[150px]"
+            src={`https://www.figurasmranime.cl/wp-content/uploads/2022/05/Fashion-anime-japanese-Naruto-action-figure.png_350x350-copia.png`}
+            alt=""
+          />
+        ),
+      },
+    ],
+    []
+  );
 
   return (
     <>
-      <Styled.Container show={show} selected={selectedMenu || 'null'}>
-        <Styled.GamesContainer selected={selectedMenu || 'games'}>
-          {selectedMenu === 'games' && (
+      <Styled.Container show={show} selected={selectedMenu || "null"}>
+        <Styled.GamesContainer selected={selectedMenu || "games" || "shoes"}>
+          {selectedMenu === "games" && (
             <>
               {games?.map((game: any) => {
                 if (game.subcategories.length === 0) {
                   return (
-                    <Link href={`inka`} className='flex flex-col'>
+                    <Link href={`inka`} className="flex flex-col">
                       {game.image}
-                      <Button variant='bordered'>{game.name}</Button>
+                      <Button variant="bordered">{game.name}</Button>
                     </Link>
-                  )
+                  );
                 }
-                return <Dropdowns game={game} />
+                return <Dropdowns game={game} />;
               })}
             </>
           )}
-          {selectedMenu === 'varios' && (
+          {selectedMenu === "shoes" && (
             <>
-              {varios?.map(game => (
+              {shoes?.map((game: any) => {
+                return (
+                  <Link href={`inka`} className="flex flex-col">
+                    {game.image}
+                    <Button variant="bordered">{game.name}</Button>
+                  </Link>
+                );
+              })}
+            </>
+          )}
+          {selectedMenu === "varios" && (
+            <>
+              {varios?.map((game) => (
                 <span key={game.name}>
                   <Link href={`${game.href}`}>
                     <Styled.Game>
                       {game.image}
-                      <p className='text-sm'>{game.name}</p>
+                      <p className="text-sm">{game.name}</p>
                     </Styled.Game>
                   </Link>
                 </span>
@@ -229,5 +269,5 @@ export function Menu ({ show, selectedMenu }: MenuProps) {
         </Styled.GamesContainer>
       </Styled.Container>
     </>
-  )
+  );
 }

@@ -22,6 +22,9 @@ export const Container = styled("div", {
       games: {
         height: "64rem",
       },
+      shoes: {
+        height: "64rem",
+      },
       varios: {
         height: "52rem",
       },
@@ -48,6 +51,7 @@ export const GamesContainer = styled("div", {
   variants: {
     selected: {
       games: {},
+      shoes: {},
       varios: {
         gridTemplateColumns: "repeat(4, 1fr)",
       },
