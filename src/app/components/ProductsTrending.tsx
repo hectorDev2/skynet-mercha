@@ -2,12 +2,9 @@ import Link from "next/link";
 import { CardProductEx } from "./containers/Products/CardProductEx";
 
 const ProductsTrending = ({ products = [] }) => {
-  console.log(products);
-
   const tshirtFilter = products?.filter(
     (tshirt: any) => tshirt.label == "tendencia"
   );
-  console.log(tshirtFilter);
 
   return (
     <div
@@ -22,17 +19,14 @@ const ProductsTrending = ({ products = [] }) => {
       </div>
       <div className=" flex flex-col justify-center md:flex-row md:flex-wrap items-center gap-2 py-5">
         {tshirtFilter &&
-          tshirtFilter
-            .slice(0, 7)
-            .reverse()
-            ?.map((tshirt: any) => (
-              <Link key={tshirt?.name} href={`/productos/${tshirt?.id}`}>
-                <CardProductEx
-                  image={tshirt?.images[0]?.url ?? ""}
-                  product={tshirt}
-                />
-              </Link>
-            ))}
+          tshirtFilter.reverse()?.map((tshirt: any) => (
+            <Link key={tshirt?.name} href={`/productos/${tshirt?.id}`}>
+              <CardProductEx
+                image={tshirt?.images[0]?.url ?? ""}
+                product={tshirt}
+              />
+            </Link>
+          ))}
       </div>
     </div>
   );

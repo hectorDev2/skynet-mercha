@@ -5,13 +5,12 @@ import ProductsTrending from "./ProductsTrending";
 
 export const ProductContainer = () => {
   const { products } = useFetch();
-  console.log(products);
 
   return (
     <>
+      <ProductsTrending products={products} />
       <Products exclusive={true} tshirts={products} />
       <Products tshirts={products} />
-      <ProductsTrending products={products} />
     </>
   );
 };
