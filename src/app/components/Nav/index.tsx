@@ -42,12 +42,17 @@ const Nav = forwardRef<null, NavProps>(
     );
 
     return (
-      <Container ref={ref}>
+      <Container
+        className="gap-[10px] w-[100%] md:gap-10 flex justify-evenly flex-wrap"
+        ref={ref}
+      >
         {Links?.map((link) => (
           <Fragment key={link.label}>
             {link.isDropdown ? (
               <button
-                className={selectedMenu === link.id ? "active" : ""}
+                className={`text-lg md:text-2xl flex gap-2   items-center ${
+                  selectedMenu === link.id ? "active" : ""
+                }`}
                 onClick={() => {
                   if (selectedMenu === link.id && menuExpanded) {
                     handleExpandMenu(false);
@@ -61,7 +66,7 @@ const Nav = forwardRef<null, NavProps>(
                   );
                 }}
               >
-                <p>{link.label}</p>
+                <p className="">{link.label}</p>
                 <svg
                   width="12"
                   height="8"

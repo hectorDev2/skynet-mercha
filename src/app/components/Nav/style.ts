@@ -1,9 +1,6 @@
 import { styled } from "@stitches/react";
 
 export const Container = styled("nav", {
-  display: "flex",
-  alignItems: "center",
-  gap: "3.4rem",
   color: "$white",
   fontSize: "1.4rem",
   fontWeight: "500",
@@ -14,12 +11,8 @@ export const Container = styled("nav", {
     transition: "transform ease 0.3s",
   },
   button: {
-    fontSize: "1.4rem",
     fontWeight: "500",
     background: "none",
-    display: "flex",
-    alignItems: "center",
-    gap: "1.4rem",
     "&.active": {
       color: "$blue",
       svg: {
