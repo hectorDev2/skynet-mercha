@@ -6,7 +6,6 @@ import { categories, labels, tag } from "@/db/dataNew";
 import { getTshirtById } from "@/utils/fetch";
 import { Button } from "@nextui-org/react";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import { useFormPUT } from "../hook/useFormPUT";
 
 interface ProductInterface {

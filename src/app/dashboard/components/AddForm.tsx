@@ -1,51 +1,17 @@
 "use client";
 
+import { useFormPOST } from "../hook/useFormPOST";
 import Heading from "@/app/components/shared/Heading";
-import ImageUpload from "@/app/components/shared/ImageUpload";
 import { categories, labels, tag } from "@/db/dataNew";
+import ImageUpload from "@/app/components/shared/ImageUpload";
+
 import { Button } from "@nextui-org/react";
-import { useForm } from "react-hook-form";
 
 export const AddForm = () => {
-  const { register, setValue, handleSubmit, watch } = useForm();
+  const { register, watch, setImagesValue, onSubmit, resetState } =
+    useFormPOST();
   const images = watch("images");
   const categorySelect = watch("category");
-  const resetState = () => {
-    setValue("images", []);
-    setValue("category", "");
-    setValue("name", "");
-    setValue("description", "");
-    setValue("price", "");
-  };
-  const onSubmit = handleSubmit(async (data) => {
-    console.log(data, "enviando...");
-
-    const res = await fetch("/api/tshirts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...data,
-        price: Number(data.price),
-      }),
-    });
-    if (res.ok) {
-      window.location.reload();
-      alert("polo guardado....");
-      resetState();
-    } else {
-      console.log("error");
-    }
-  });
-
-  const setImagesValue = (value: any) => {
-    setValue("images", value, {
-      shouldDirty: true,
-      shouldTouch: true,
-      shouldValidate: true,
-    });
-  };
 
   const subcategory = categories.find(
     (category: any) => category.id == categorySelect
@@ -213,7 +179,7 @@ export const AddForm = () => {
         />
       </div>
       <Button
-        color="danger"
+        color="success"
         style={{
           width: "100%",
           margin: "15px 0",
