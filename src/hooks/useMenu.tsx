@@ -7,6 +7,14 @@ interface Interface {
   category?: number;
   subcategories?: any[];
 }
+
+interface ILinks {
+  label: string;
+  href?: string;
+  alt?: string;
+  isDropdown: boolean;
+  id?: string;
+}
 export const useMenu = () => {
   const games = useMemo<Interface[]>(
     () => [
@@ -159,22 +167,14 @@ export const useMenu = () => {
         name: "Varon",
         href: "hombre",
         image: (
-          <img
-            className="w-[100px] md:w-[150px]"
-            src={`https://images.jdmagicbox.com/quickquotes/images_main/men-shoes-sm-360-211013270-zlxfx.png`}
-            alt=""
-          />
+          <img className="w-[100px] md:w-[175px]" src={`shoes/3.png`} alt="" />
         ),
       },
       {
         name: "Mujer",
         href: "mujer",
         image: (
-          <img
-            className="w-[100px] md:w-[150px]"
-            src={`https://cld.accentuate.io/5353320710301/1663094670671/Madrid_Heathered-Grey_3-Quarter_Product-Card-1380.png?v=1669223472897&options=w1000`}
-            alt=""
-          />
+          <img className="w-[100px] md:w-[175px]" src={`shoes/4.png`} alt="" />
         ),
       },
     ],
@@ -208,9 +208,31 @@ export const useMenu = () => {
     ],
     []
   );
+
+  const Links: ILinks[] = useMemo(
+    () => [
+      {
+        label: "Polos",
+        isDropdown: true,
+        id: "games",
+      },
+      {
+        label: "Zapatillas",
+        isDropdown: true,
+        id: "shoes",
+      },
+      {
+        label: "Varios",
+        isDropdown: true,
+        id: "varios",
+      },
+    ],
+    []
+  );
   return {
     games,
     shoes,
     varios,
+    Links,
   };
 };
