@@ -1,18 +1,8 @@
 "use client";
 import { useForm } from "react-hook-form";
 
-export const useSubmitPOST = ({ id }: { id: any }) => {
+export const useFormPOST = () => {
   const { register, setValue, handleSubmit, watch } = useForm();
-
-  const initForm = (product: any) => {
-    setValue("name", product.name);
-    setValue("description", product.description);
-    setValue("price", product.price);
-    setValue("images", product.images);
-    setValue("category", product.category);
-    setValue("subcategory", product.subcategory);
-    setValue("label", product.label);
-  };
 
   const onSubmit = handleSubmit(async (data) => {
     console.log(data, "enviando...");
@@ -44,14 +34,19 @@ export const useSubmitPOST = ({ id }: { id: any }) => {
     });
   };
 
+  const resetState = () => {
+    setValue("images", []);
+    setValue("category", "");
+    setValue("name", "");
+    setValue("description", "");
+    setValue("price", "");
+  };
+
   return {
-    initForm,
     register,
     watch,
     setImagesValue,
     onSubmit,
+    resetState,
   };
 };
-function resetState() {
-  throw new Error("Function not implemented.");
-}
