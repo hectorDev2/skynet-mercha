@@ -12,7 +12,10 @@ export const CardShoe = ({
 }) => {
   return (
     <div
-      className={`flex-shrink-0  my-7 h-[400px] m-6 relative overflow-hidden border-5  border-[var(--${theme})] rounded-xl max-w-xs shadow-lg`}
+      style={{
+        boxShadow: `#309FFF  2px 3px 3px`,
+      }}
+      className={`flex flex-col justify-between mt-7 h-[400px] m-6 relative overflow-hidden   rounded-xl max-w-xs`}
     >
       <div className="absolute top-0 w-full overflow-hidden leading-0">
         <svg
@@ -40,20 +43,13 @@ export const CardShoe = ({
         </svg>
       </div>
       <div className="relative flex items-center justify-center">
-        <div
-          className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-          style={{
-            background:
-              "radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2",
-          }}
-        ></div>
         <img
-          className="relative w-[300px] hover:scale-150 transition-all ease-linear hover:rotate-3"
+          className="relative scale-110 w-[300px] hover:scale-150 transition-all ease-linear hover:rotate-3"
           src={`${item.tagline}/${item.id}.png`}
           alt=""
         />
       </div>
-      <div className="relative text-white px-6 pb-6 ">
+      <div className="relative text-white p-6">
         <span className="block opacity-75 -mb-1">{tag}</span>
         <div className="flex justify-between">
           <span className="block font-semibold text-xl">{item.title}</span>

@@ -36,7 +36,10 @@ export function Menu({ show, selectedMenu }: MenuProps) {
             <>
               {shoes?.map((game: any) => {
                 return (
-                  <Link href={`shoes/${game.href}`} className="flex flex-col">
+                  <Link
+                    href={`zapatillas/${game.href}`}
+                    className="flex flex-col"
+                  >
                     {game.image}
                     <Button variant="bordered">{game.name}</Button>
                   </Link>
