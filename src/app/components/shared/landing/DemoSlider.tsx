@@ -8,14 +8,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SlideNavButtons from "./SlideNavButtons";
 import { A11y, Navigation, Pagination } from "swiper/modules";
 import { CardSlider } from "./CardSlider";
-import { ProductInterface } from "@/app/types";
+import { ProductInterfaceSlider } from "@/app/types";
 
 const DemoSlider = ({
   products,
   theme = "secondary",
   tag,
 }: {
-  products: ProductInterface[];
+  products: ProductInterfaceSlider[];
   theme: string;
   tag: string;
 }) => {
@@ -35,7 +35,7 @@ const DemoSlider = ({
           1275: { slidesPerView: 3 },
         }}
       >
-        {products?.map((item: ProductInterface) => (
+        {products?.map((item: ProductInterfaceSlider) => (
           <SwiperSlide
             key={item.id}
             className=" !flex justify-center items-center"
