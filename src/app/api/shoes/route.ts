@@ -27,29 +27,11 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const {
-    name,
-    description,
-    price,
-    images,
-    tag,
-    category,
-    subcategory,
-    label,
-    gender,
-  } = await request.json();
+  const data = await request.json();
+  const { images } = data;
 
   const newTshirt = await prisma.shoe.create({
-    data: {
-      name,
-      description,
-      price,
-      category,
-      subcategory,
-      tag,
-      label,
-      gender,
-    },
+    data,
   });
 
   await Promise.all(
