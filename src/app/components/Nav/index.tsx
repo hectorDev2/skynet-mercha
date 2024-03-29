@@ -1,15 +1,8 @@
 import { Container } from "./style";
-import { forwardRef, Fragment, useMemo } from "react";
+import { forwardRef, Fragment } from "react";
 import Link from "next/link";
 import React from "react";
-
-interface ILinks {
-  label: string;
-  href?: string;
-  alt?: string;
-  isDropdown: boolean;
-  id?: string;
-}
+import { useMenu } from "@/hooks/useMenu";
 
 interface NavProps {
   handleExpandMenu: (expanded: boolean) => void;
@@ -20,26 +13,7 @@ interface NavProps {
 
 const Nav = forwardRef<null, NavProps>(
   ({ handleExpandMenu, handleSelectMenu, menuExpanded, selectedMenu }, ref) => {
-    const Links: ILinks[] = useMemo(
-      () => [
-        {
-          label: "Polos",
-          isDropdown: true,
-          id: "games",
-        },
-        {
-          label: "Zapatillas",
-          isDropdown: true,
-          id: "shoes",
-        },
-        {
-          label: "Varios",
-          isDropdown: true,
-          id: "varios",
-        },
-      ],
-      []
-    );
+    const { Links } = useMenu();
 
     return (
       <Container

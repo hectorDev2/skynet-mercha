@@ -5,17 +5,17 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import SlideNavButtons from "./SlideNavButtons";
 import { A11y, Navigation, Pagination } from "swiper/modules";
-import { CardSlider } from "./CardSlider";
-import { ProductInterface } from "@/app/types";
+import SlideNavButtons from "@/app/components/shared/landing/SlideNavButtons";
+import { CardShoe } from "./CardShoe";
+import { ProductInterfaceSlider } from "@/app/types";
 
-const DemoSlider = ({
+const SliderShoes = ({
   products,
   theme = "secondary",
   tag,
 }: {
-  products: ProductInterface[];
+  products: ProductInterfaceSlider[];
   theme: string;
   tag: string;
 }) => {
@@ -35,12 +35,12 @@ const DemoSlider = ({
           1275: { slidesPerView: 3 },
         }}
       >
-        {products?.map((item: ProductInterface) => (
+        {products?.map((item: ProductInterfaceSlider) => (
           <SwiperSlide
             key={item.id}
             className=" !flex justify-center items-center"
           >
-            <CardSlider tag={tag} theme={theme} item={item} />
+            <CardShoe tag={tag} theme={theme} item={item} />
           </SwiperSlide>
         ))}
 
@@ -50,4 +50,4 @@ const DemoSlider = ({
   );
 };
 
-export default DemoSlider;
+export default SliderShoes;
