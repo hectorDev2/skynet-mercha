@@ -36,6 +36,7 @@ export async function POST(request: Request) {
     category,
     subcategory,
     label,
+    gender,
   } = await request.json();
 
   const newTshirt = await prisma.shoe.create({
@@ -47,6 +48,7 @@ export async function POST(request: Request) {
       subcategory,
       tag,
       label,
+      gender,
     },
   });
 
