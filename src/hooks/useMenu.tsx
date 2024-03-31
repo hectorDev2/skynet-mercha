@@ -165,14 +165,14 @@ export const useMenu = () => {
     () => [
       {
         name: "Varon",
-        href: "",
+        href: "varon",
         image: (
           <img className="w-[100px] md:w-[175px]" src={`shoes/3.png`} alt="" />
         ),
       },
       {
         name: "Mujer",
-        href: "",
+        href: "mujer",
         image: (
           <img className="w-[100px] md:w-[175px]" src={`shoes/4.png`} alt="" />
         ),
