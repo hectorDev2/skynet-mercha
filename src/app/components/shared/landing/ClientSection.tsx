@@ -2,10 +2,12 @@ export const ClientSection = ({
   title,
   theme = "primary",
   image,
+  color,
 }: {
   title: string;
   theme: string;
   image: string;
+  color: string;
 }) => {
   return (
     <div className="my-[50px] grid mx-[10px] md:mx-[100px] lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
@@ -296,7 +298,7 @@ export const ClientSection = ({
         className=""
       >
         <img
-          style={{ filter: "drop-shadow(5px 10px 10px #309FFF)" }}
+          style={{ filter: `drop-shadow(5px 10px 10px ${color})` }}
           alt="images escultura png"
           src={`${image}`}
           className="w-[300px]
