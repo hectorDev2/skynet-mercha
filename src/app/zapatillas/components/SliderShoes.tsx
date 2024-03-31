@@ -11,10 +11,12 @@ import { CardShoe } from "./CardShoe";
 import { ProductInterfaceSlider } from "@/app/types";
 
 const SliderShoes = ({
+  color,
   products,
   theme = "secondary",
   tag,
 }: {
+  color: string;
   products: ProductInterfaceSlider[];
   theme: string;
   tag: string;
@@ -40,7 +42,7 @@ const SliderShoes = ({
             key={item.id}
             className=" !flex justify-center items-center"
           >
-            <CardShoe tag={tag} theme={theme} item={item} />
+            <CardShoe color={color} tag={tag} theme={theme} item={item} />
           </SwiperSlide>
         ))}
 

@@ -335,20 +335,26 @@ export const sliderMale = [
 export const sliderWoman = [
   {
     color: "#CB493E",
-    image: "/shoes/slider-woman/1.png",
-    title: "Hombre Casual ",
+    image: "/shoes/slider-woman/red.png",
+    title: "Mujer Casual ",
     description: "Zapatilla Premium para gente premium como tu",
   },
   {
     color: "#337FA4",
-    image: "/shoes/slider-woman/2.png",
-    title: "Hombre Frozzen ",
+    image: "/shoes/slider-woman/blue.png",
+    title: "Mujer Lady Frozzen ",
     description: "Zapatilla Premium para gente premium como tu",
   },
   {
     color: "#47B558",
-    image: "/shoes/slider-woman/3.png",
-    title: "Hombre Atrevido ",
+    image: "/shoes/slider-woman/green.png",
+    title: "Mujer Noche",
+    description: "Zapatilla Premium para gente premium como tu",
+  },
+  {
+    color: "#ffffff7d",
+    image: "/shoes/slider-woman/white.png",
+    title: "Lady Coquet ",
     description: "Zapatilla Premium para gente premium como tu",
   },
 ];

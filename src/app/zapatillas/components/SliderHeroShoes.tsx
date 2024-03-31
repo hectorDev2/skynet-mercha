@@ -1,15 +1,11 @@
 "use client";
-import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 import "./styles.css";
 
-// import required modules
 import { Autoplay, Pagination } from "swiper/modules";
 
 interface Props {
@@ -125,7 +121,11 @@ export const SliderHeroShoes = ({ shoes = [] }: Props) => {
                 <h2>SKYNET </h2>
               </div>
 
-              <img className="w-[700px] z-10 mx-auto" src={`${image}`} alt="" />
+              <img
+                className="w-[700px] -translate-y-7 z-10 mx-auto"
+                src={`${image}`}
+                alt=""
+              />
             </div>
           </SwiperSlide>
         ))}

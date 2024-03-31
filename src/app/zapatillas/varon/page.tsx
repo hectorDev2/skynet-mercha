@@ -16,9 +16,19 @@ export default function Shoes() {
           image="/shoes/preview.png"
           theme="primary"
           title="Zapatillas Personalizadas"
+          color="#309FFF"
         />
-        <SliderShoes tag="detalles" theme="primary" products={products} />
-        <About />
+        <SliderShoes
+          tag="detalles"
+          color="#309FFF"
+          theme="primary"
+          products={products}
+        />
+        <About
+          title="Sobre Nosotros"
+          content="Tenemos los mas grandes artistas del sector para confeccionar sus zapatillas personalizadas de la mayor calidad posible"
+          image="/shoes/preview.png"
+        />
       </div>
     </Layout>
   );

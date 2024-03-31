@@ -2,10 +2,12 @@ import { ProductInterfaceSlider } from "@/app/types";
 import React from "react";
 
 export const CardShoe = ({
+  color,
   theme,
   item,
   tag,
 }: {
+  color: string;
   theme: string;
   item: ProductInterfaceSlider;
   tag: string;
@@ -13,7 +15,7 @@ export const CardShoe = ({
   return (
     <div
       style={{
-        boxShadow: `#309FFF  2px 3px 3px`,
+        boxShadow: `${color}  2px 3px 3px`,
       }}
       className={`flex flex-col justify-between mt-7 h-[400px] m-6 relative overflow-hidden   rounded-xl max-w-xs`}
     >
