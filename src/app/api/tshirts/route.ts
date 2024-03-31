@@ -28,10 +28,29 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   const data = await request.json();
-  const { images } = data;
+  const {
+    name,
+    price,
+    description,
+    tag,
+    category,
+    subcategory,
+    label,
+    images,
+    userId,
+  } = data;
 
   const newTshirt = await prisma.tshirt.create({
-    data,
+    data: {
+      name,
+      price,
+      description,
+      tag,
+      category,
+      subcategory,
+      label,
+      userId,
+    },
   });
 
   await Promise.all(

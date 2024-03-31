@@ -6,7 +6,6 @@ import { SliderHeroShoes } from "../components/SliderHeroShoes";
 import SliderShoes from "../components/SliderShoes";
 
 export default function Shoes() {
-  console.log(sliderWoman);
   return (
     <Layout>
       <div className="my-[150px]">
