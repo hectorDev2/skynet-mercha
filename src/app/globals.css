@@ -84,7 +84,8 @@ html {
 
 body {
   
-  font-family: var(--bodyFont);
+    font-family: 'Fira Code Variable';
+
 }
 
 a {

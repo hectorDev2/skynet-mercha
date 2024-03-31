@@ -1,27 +1,27 @@
-import { AOSInit } from '@/utils/aos'
-import { Analytics } from '@vercel/analytics/react'
-
-import './globals.css'
-import { Metadata } from 'next'
+import { AOSInit } from "@/utils/aos";
+import { Analytics } from "@vercel/analytics/react";
+import "@fontsource-variable/fira-code";
+import "./globals.css";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'SKYNET MERCHA',
-  description: 'Tienda Skynet'
-}
+  title: "SKYNET MERCHA",
+  description: "Tienda Skynet",
+};
 
-export default function RootLayout ({
-  children
+export default function RootLayout({
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='dark'>
+    <html lang="en" className="dark">
       <AOSInit />
       <body>
         {children}
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
-export const dynamic = 'force-static'
+export const dynamic = "force-static";

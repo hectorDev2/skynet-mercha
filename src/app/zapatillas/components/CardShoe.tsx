@@ -45,7 +45,7 @@ export const CardShoe = ({
       <div className="relative flex items-center justify-center">
         <img
           className="relative scale-110 w-[300px] hover:scale-150 transition-all ease-linear hover:rotate-3"
-          src={`${item.tagline}/${item.id}.png`}
+          src={`/${item.tagline}/${item.id}.png`}
           alt=""
         />
       </div>

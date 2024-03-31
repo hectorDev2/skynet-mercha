@@ -9,7 +9,6 @@ export default function Shoes() {
   return (
     <Layout>
       <div className="my-[150px]">
-        <SliderHeroShoes />
         <ClientSection
           image="shoes/preview.png"
           theme="primary"

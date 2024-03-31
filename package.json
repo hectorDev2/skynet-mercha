@@ -11,6 +11,7 @@
     "gen:types": "npx supabase gen types typescript --project-id nqddrluhoilnlyvqcjgh > ./src/app/types/database.ts"
   },
   "dependencies": {
+    "@fontsource-variable/fira-code": "^5.0.17",
     "@nextui-org/react": "^2.0.20",
     "@prisma/adapter-pg": "^5.11.0",
     "@prisma/client": "5.11.0",

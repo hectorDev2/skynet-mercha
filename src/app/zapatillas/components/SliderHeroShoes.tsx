@@ -10,59 +10,48 @@ import "swiper/css/pagination";
 import "./styles.css";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
-const slider = [
-  {
-    color: "#CB493E",
-    image: "shoes/slider/red.png",
-    title: "Hombre Casual ",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-  {
-    color: "#337FA4",
-    image: "shoes/slider/blue.png",
-    title: "Hombre Frozzen ",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-  {
-    color: "#47B558",
-    image: "shoes/slider/green.png",
-    title: "Hombre Atrevido ",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-  {
-    color: "#2B64AD",
-    image: "shoes/slider/blue-2.png",
-    title: "Hombre Blue ",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-];
+interface Props {
+  shoes: {
+    color: string;
+    image: string;
+    title: string;
+    description: string;
+  }[];
+}
 
-export const SliderHeroShoes = () => {
+export const SliderHeroShoes = ({ shoes = [] }: Props) => {
   return (
     <>
       <Swiper
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           dynamicBullets: true,
           clickable: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
-        {slider.map(({ color, image, title, description }) => (
+        {shoes?.map(({ color, image, title, description }) => (
           <SwiperSlide>
             <div
               style={{ background: `${color}` }}
               className={`w-[80%] rounded-2xl   relative`}
             >
+              <h2 className="text-[300px] z-0 text-[black] font-bold filter opacity-10 absolute top-[5%] left-[1%]">
+                SKYNET
+              </h2>
               <img
-                className="absolute w-16 md:w-32 top-[10%] left-[5%] translate-x-[-50%] translate-y-[-50%]"
-                src="logo.png"
+                className="absolute z-[1] w-16 md:w-32 top-[10%] left-[5%] translate-x-[-50%] translate-y-[-50%]"
+                src="/logo.png"
                 alt="logo skynet"
               />
-              <div className="absolute bottom-[15%] left-[2%]">
-                <h2 className="font-medium text-left text-6xl">{title}</h2>
+              <div className="absolute bottom-[10%] left-[2%]">
+                <h2 className="font-medium  text-left text-6xl">{title}</h2>
                 <p>{description} </p>
                 <div className="flex">
                   <svg
@@ -132,7 +121,11 @@ export const SliderHeroShoes = () => {
                   </svg>
                 </div>
               </div>
-              <img className="w-[700px] mx-auto" src={`${image}`} alt="" />
+              <div className="absolute right-[3%] bottom-[5%]">
+                <h2>SKYNET </h2>
+              </div>
+
+              <img className="w-[700px] z-10 mx-auto" src={`${image}`} alt="" />
             </div>
           </SwiperSlide>
         ))}

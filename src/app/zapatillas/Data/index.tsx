@@ -304,3 +304,51 @@ export const products = [
     description: "Description 1",
   },
 ];
+
+export const sliderMale = [
+  {
+    color: "#CB493E",
+    image: "/shoes/slider/red.png",
+    title: "Hombre Casual ",
+    description: "Zapatilla Premium para gente premium como tu",
+  },
+  {
+    color: "#337FA4",
+    image: "/shoes/slider/blue.png",
+    title: "Hombre Frozzen ",
+    description: "Zapatilla Premium para gente premium como tu",
+  },
+  {
+    color: "#47B558",
+    image: "/shoes/slider/green.png",
+    title: "Hombre Atrevido ",
+    description: "Zapatilla Premium para gente premium como tu",
+  },
+  {
+    color: "#2B64AD",
+    image: "/shoes/slider/blue-2.png",
+    title: "Hombre Blue ",
+    description: "Zapatilla Premium para gente premium como tu",
+  },
+];
+
+export const sliderWoman = [
+  {
+    color: "#CB493E",
+    image: "/shoes/slider-woman/1.png",
+    title: "Hombre Casual ",
+    description: "Zapatilla Premium para gente premium como tu",
+  },
+  {
+    color: "#337FA4",
+    image: "/shoes/slider-woman/2.png",
+    title: "Hombre Frozzen ",
+    description: "Zapatilla Premium para gente premium como tu",
+  },
+  {
+    color: "#47B558",
+    image: "/shoes/slider-woman/3.png",
+    title: "Hombre Atrevido ",
+    description: "Zapatilla Premium para gente premium como tu",
+  },
+];
