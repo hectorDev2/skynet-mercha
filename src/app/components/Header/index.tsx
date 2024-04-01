@@ -12,9 +12,9 @@ export function Header() {
   const buttonsRef = useRef(null);
 
   const [isExpanded, setIsExpanded] = useState(false);
-  const [selectedMenu, setSelectedMenu] = useState<"games" | "varios" | null>(
-    null
-  );
+  const [selectedMenu, setSelectedMenu] = useState<
+    "games" | "varios" | "shoes" | "jackets" | null
+  >(null);
 
   const reset = () => {
     setIsExpanded(false);

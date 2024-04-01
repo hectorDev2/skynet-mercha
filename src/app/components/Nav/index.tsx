@@ -6,8 +6,10 @@ import { useMenu } from "@/hooks/useMenu";
 
 interface NavProps {
   handleExpandMenu: (expanded: boolean) => void;
-  handleSelectMenu: (type: "games" | "varios" | null) => void;
-  selectedMenu: "games" | "varios" | null;
+  handleSelectMenu: (
+    type: "games" | "varios" | "shoes" | "jackets" | null
+  ) => void;
+  selectedMenu: "games" | "varios" | "shoes" | "jackets" | null;
   menuExpanded: boolean;
 }
 

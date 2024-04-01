@@ -7,11 +7,11 @@ import { useMenu } from "@/hooks/useMenu";
 
 interface MenuProps {
   show: boolean;
-  selectedMenu: "games" | "varios" | "shoes" | null;
+  selectedMenu: "games" | "varios" | "shoes" | "jackets" | null;
 }
 
 export function Menu({ show, selectedMenu }: MenuProps) {
-  const { games, shoes, varios } = useMenu();
+  const { games, shoes, varios, jackets } = useMenu();
 
   return (
     <>
@@ -22,7 +22,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
               {games?.map((game: any) => {
                 if (game.subcategories.length === 0) {
                   return (
-                    <Link href={`inka`} className="flex flex-col">
+                    <Link href={`/inka`} className="flex flex-col">
                       {game.image}
                       <Button variant="bordered">{game.name}</Button>
                     </Link>
@@ -32,12 +32,24 @@ export function Menu({ show, selectedMenu }: MenuProps) {
               })}
             </>
           )}
+          {selectedMenu === "jackets" && (
+            <>
+              {jackets?.map((game: any) => {
+                return (
+                  <Link href={`/poleras`} className="flex flex-col">
+                    {game.image}
+                    <Button variant="bordered">{game.name}</Button>
+                  </Link>
+                );
+              })}
+            </>
+          )}
           {selectedMenu === "shoes" && (
             <>
               {shoes?.map((game: any) => {
                 return (
                   <Link
-                    href={`zapatillas/${game.href}`}
+                    href={`/zapatillas/${game.href}`}
                     className="flex flex-col"
                   >
                     {game.image}
@@ -51,7 +63,7 @@ export function Menu({ show, selectedMenu }: MenuProps) {
             <>
               {varios?.map((game) => (
                 <span key={game.name}>
-                  <Link href={`${game.href}`}>
+                  <Link href={`/${game.href}`}>
                     <Styled.Game>
                       {game.image}
                       <p className="text-sm">{game.name}</p>
