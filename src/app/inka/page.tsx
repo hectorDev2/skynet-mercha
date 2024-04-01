@@ -42,6 +42,7 @@ const GamerPage = () => {
         features={features}
       />
       <ClientSection
+        color="red"
         image="polos/inka/inka-background-2.png"
         theme="secondary"
         title="Clientes satisfechos"
