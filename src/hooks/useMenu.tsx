@@ -188,6 +188,22 @@ export const useMenu = () => {
     ],
     []
   );
+  const jackets = useMemo<Interface[]>(
+    () => [
+      {
+        name: "Varon",
+        href: "varon",
+        image: (
+          <img
+            className="w-[100px] mx-auto md:w-[175px]"
+            src={`jackets/1.png`}
+            alt=""
+          />
+        ),
+      },
+    ],
+    []
+  );
 
   const varios = useMemo<Interface[]>(
     () => [
@@ -230,6 +246,11 @@ export const useMenu = () => {
         id: "shoes",
       },
       {
+        label: "poleras",
+        isDropdown: true,
+        id: "jackets",
+      },
+      {
         label: "Varios",
         isDropdown: true,
         id: "varios",
@@ -242,5 +263,6 @@ export const useMenu = () => {
     shoes,
     varios,
     Links,
+    jackets,
   };
 };
