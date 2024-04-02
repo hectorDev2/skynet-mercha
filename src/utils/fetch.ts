@@ -1,6 +1,8 @@
+import { Shoe, tShirt } from "@/types";
+
 const envUrl = process.env.NEXT_PUBLIC_URL;
 
-export const getTshirts = async () => {
+export const getTshirts = async (): Promise<tShirt | []> => {
   try {
     const res = await fetch(`${envUrl}/api/tshirts`);
     const resJson = await res.json();
@@ -9,7 +11,9 @@ export const getTshirts = async () => {
     return [];
   }
 };
-export const getTshirtsParams = async (categoryId?: number) => {
+export const getTshirtsParams = async (
+  categoryId?: number
+): Promise<tShirt | []> => {
   try {
     const res = await fetch(
       `${envUrl}/api/tshirts?category=${categoryId ?? ""}`
@@ -19,25 +23,30 @@ export const getTshirtsParams = async (categoryId?: number) => {
     return resJson;
   } catch (error) {
     console.log(error);
+    return [];
   }
 };
 
-export const getTshirtById = async (id: string) => {
-  const res = await fetch(`${envUrl}/api/tshirts/${id}`);
-  const resJson = await res.json();
-  console.log(resJson);
+export const getTshirtById = async (id: string): Promise<tShirt | []> => {
+  try {
+    const res = await fetch(`${envUrl}/api/tshirts/${id}`);
+    const resJson = await res.json();
+    console.log(resJson);
 
-  return resJson;
+    return resJson;
+  } catch (error) {
+    return [];
+  }
 };
 
-export const deleteTshirt = async (id: string) => {
+export const deleteTshirt = async (id: string): Promise<any> => {
   const res = await fetch(`api/tshirts/${id}`, {
     method: "DELETE",
   });
   return res.ok;
 };
 
-export const getShoes = async () => {
+export const getShoes = async (): Promise<Shoe[] | []> => {
   try {
     const res = await fetch(`${envUrl}/api/shoes`);
     const resJson = await res.json();
