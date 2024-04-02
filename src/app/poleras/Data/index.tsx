@@ -263,98 +263,57 @@ export const features = [
 export const products = [
   {
     id: 1,
-    title: "zapatilla 1",
+    title: "polera 1",
     subtitle: "Heroe Dota 2",
-    tagline: "shoes",
+    tagline: "jackets",
     description: "Description 1",
   },
   {
     id: 2,
-    title: "zapatilla 2",
-    subtitle: "zapatillas fantacia",
-    tagline: "shoes",
+    title: "polera 2",
+    subtitle: "poleras fantacia",
+    tagline: "jackets",
     description: "Description 1",
   },
   {
     id: 3,
-    title: "zapatilla 3",
-    subtitle: "zapatillas fantacia",
-    tagline: "shoes",
+    title: "polera 3",
+    subtitle: "poleras fantacia",
+    tagline: "jackets",
     description: "Description 1",
   },
   {
     id: 4,
-    title: "zapatilla 4",
-    subtitle: "zapatillas fantacia",
-    tagline: "shoes",
-    description: "Description 1",
-  },
-  {
-    id: 5,
-    title: "zapatilla 5",
-    subtitle: "zapatillas fantacia",
-    tagline: "shoes",
-    description: "Description 1",
-  },
-  {
-    id: 6,
-    title: "taza 6",
-    subtitle: "tazas fantacia",
-    tagline: "shoes",
+    title: "polera 4",
+    subtitle: "poleras fantacia",
+    tagline: "jackets",
     description: "Description 1",
   },
 ];
 
-export const sliderMale = [
+export const jackets = [
   {
-    color: "#CB493E",
-    image: "/shoes/slider/red.png",
+    color: "#cb743e",
+    image: "/jackets/slider/1.png",
     title: "Hombre Casual ",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-  {
-    color: "#337FA4",
-    image: "/shoes/slider/blue.png",
-    title: "Hombre Frozzen ",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-  {
-    color: "#47B558",
-    image: "/shoes/slider/green.png",
-    title: "Hombre Atrevido ",
-    description: "Zapatilla Premium para gente premium como tu",
+    description: "polera Premium para gente premium como tu",
   },
   {
     color: "#2B64AD",
-    image: "/shoes/slider/blue-2.png",
+    image: "/jackets/slider/2.png",
+    title: "Hombre Frozzen ",
+    description: "polera Premium para gente premium como tu",
+  },
+  {
+    color: "#47a6b5",
+    image: "/jackets/slider/3.png",
+    title: "Hombre Atrevido ",
+    description: "polera Premium para gente premium como tu",
+  },
+  {
+    color: "#7e2020",
+    image: "/jackets/slider/4.png",
     title: "Hombre Blue ",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-];
-
-export const sliderWoman = [
-  {
-    color: "#CB493E",
-    image: "/shoes/slider-woman/red.png",
-    title: "Mujer Casual ",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-  {
-    color: "#337FA4",
-    image: "/shoes/slider-woman/blue.png",
-    title: "Mujer Lady Frozzen ",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-  {
-    color: "#47B558",
-    image: "/shoes/slider-woman/green.png",
-    title: "Mujer Noche",
-    description: "Zapatilla Premium para gente premium como tu",
-  },
-  {
-    color: "#ffffff7d",
-    image: "/shoes/slider-woman/white.png",
-    title: "Lady Coquet ",
-    description: "Zapatilla Premium para gente premium como tu",
+    description: "polera Premium para gente premium como tu",
   },
 ];

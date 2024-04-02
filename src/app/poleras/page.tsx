@@ -1,24 +1,23 @@
 import { About } from "@/app/components/shared/landing/About";
 import { ClientSection } from "@/app/components/shared/landing/ClientSection";
 import { Layout } from "@/app/layout/Layout";
-import { products, sliderMale } from "./Data";
+import { products, jackets } from "./Data";
 import { SliderHeroShoes } from "../zapatillas/components/SliderHeroShoes";
 import SliderShoes from "../zapatillas/components/SliderShoes";
+import SliderJackets from "./components/SliderJacket";
 
 export default function Shoes() {
-  console.log(sliderMale);
-
   return (
     <Layout>
       <div className="my-[150px]">
-        <SliderHeroShoes shoes={sliderMale} />
+        <SliderHeroShoes shoes={jackets} />
         <ClientSection
-          image="/shoes/preview.png"
+          image="/jackets/preview.png"
           theme="primary"
-          title="Zapatillas Personalizadas"
+          title="Casacas Personalizadas"
           color="#309FFF"
         />
-        <SliderShoes
+        <SliderJackets
           tag="detalles"
           color="#309FFF"
           theme="primary"
@@ -26,8 +25,8 @@ export default function Shoes() {
         />
         <About
           title="Sobre Nosotros"
-          content="Tenemos los mas grandes artistas del sector para confeccionar sus zapatillas personalizadas de la mayor calidad posible"
-          image="/shoes/preview.png"
+          content="Tenemos los mas grandes artistas del sector para confeccionar sus casacas, abrigos  personalizadas de la mayor calidad posible"
+          image="/jackets/preview.png"
         />
       </div>
     </Layout>
