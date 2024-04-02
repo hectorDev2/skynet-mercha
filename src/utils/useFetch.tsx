@@ -1,21 +1,21 @@
-'use client'
-import { useEffect, useState } from 'react'
-import { getTshirts } from './fetch'
+"use client";
+import { useEffect, useState } from "react";
+import { getTshirts } from "./fetch";
 
 export const useFetch = () => {
-  const [products, setProducts] = useState<any>([])
+  const [products, setProducts] = useState<any>([]);
 
   // getTshirts()
   useEffect(() => {
-    getTshirts().then(res => {
-      setProducts(res.tshirts)
-    })
+    getTshirts().then((res: any) => {
+      setProducts(res.tshirts);
+    });
     return () => {
-      setProducts([])
-    }
-  }, [])
+      setProducts([]);
+    };
+  }, []);
 
   return {
-    products
-  }
-}
+    products,
+  };
+};

@@ -13,7 +13,7 @@ export const getTshirts = async (): Promise<tShirt | []> => {
 };
 export const getTshirtsParams = async (
   categoryId?: number
-): Promise<tShirt | []> => {
+): Promise<tShirt | any> => {
   try {
     const res = await fetch(
       `${envUrl}/api/tshirts?category=${categoryId ?? ""}`

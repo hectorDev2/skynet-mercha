@@ -28,7 +28,7 @@ export default function TableComponent() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     getTshirts()
-      .then((res) => setProducts(res.tshirts.reverse()))
+      .then((res: any) => setProducts(res.tshirts.reverse()))
       .catch((error) => console.log(error));
   }, []);
 

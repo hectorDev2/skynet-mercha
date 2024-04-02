@@ -1,4 +1,4 @@
-import { tShirts } from "@/types";
+import { tShirt } from "@/types";
 
 export const FiveStarts = () => (
   <>
@@ -54,7 +54,7 @@ export const CardProductEx = ({
   product,
   image,
 }: {
-  product: tShirts;
+  product: tShirt;
 
   image: string;
 }) => {

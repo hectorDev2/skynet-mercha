@@ -5,7 +5,7 @@ export const useTshirts = () => {
   const [tshirts, setTshirts] = useState([]);
   useEffect(() => {
     getTshirts()
-      .then((res) => setTshirts(res.tshirts.reverse()))
+      .then((res: any) => setTshirts(res.tshirts.reverse()))
       .catch((error) => console.log(error));
   }, []);
   return {
