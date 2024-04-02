@@ -8,7 +8,7 @@ export interface tShirt {
   images: any[];
 }
 
-export interface Shoes {
+export interface Shoe {
   id: string;
   name: string;
   category: string;
