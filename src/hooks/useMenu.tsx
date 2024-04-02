@@ -196,7 +196,7 @@ export const useMenu = () => {
         image: (
           <img
             className="w-[100px] mx-auto md:w-[175px]"
-            src={`jackets/1.png`}
+            src={`/jackets/1.png`}
             alt=""
           />
         ),
