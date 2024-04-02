@@ -1,11 +1,11 @@
 "use client";
 import { Layout } from "../../components/Layout";
 import { useShoes } from "../../hook/useShoes";
-import { useTshirts } from "../../hook/useTshirts";
 import TableComponent from "../components/Table";
 
 const TableShoes = () => {
   const { shoes } = useShoes();
+  console.log(shoes);
 
   return (
     <Layout>
