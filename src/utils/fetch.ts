@@ -55,3 +55,13 @@ export const getShoes = async (): Promise<Shoe[] | []> => {
     return [];
   }
 };
+
+export const getJackets = async (): Promise<Shoe[] | []> => {
+  try {
+    const res = await fetch(`${envUrl}/api/jackets`);
+    const resJson = await res.json();
+    return resJson;
+  } catch (error) {
+    return [];
+  }
+};
