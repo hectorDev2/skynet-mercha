@@ -2,8 +2,8 @@ import { About } from "@/app/components/shared/landing/About";
 import { ClientSection } from "@/app/components/shared/landing/ClientSection";
 import { products, sliderWoman } from "../Data";
 import { SliderHeroShoes } from "../components/SliderHeroShoes";
-import SliderShoes from "../components/SliderShoes";
 import { Layout } from "@/app/layout/Layout";
+import SliderShoes from "../components/SliderShoes";
 
 export default function Shoes() {
   return (
