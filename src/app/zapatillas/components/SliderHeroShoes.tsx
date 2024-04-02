@@ -122,7 +122,7 @@ export const SliderHeroShoes = ({ shoes = [] }: Props) => {
               </div>
 
               <img
-                className="w-[700px] -translate-y-7 z-10 mx-auto"
+                className="w-[700px]  z-10 mx-auto"
                 src={`${image}`}
                 alt=""
               />

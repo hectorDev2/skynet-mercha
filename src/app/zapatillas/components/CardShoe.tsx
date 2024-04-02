@@ -1,5 +1,4 @@
 import { ProductInterfaceSlider } from "@/app/types";
-import React from "react";
 
 export const CardShoe = ({
   color,
