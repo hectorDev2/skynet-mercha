@@ -5,7 +5,7 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const paramCategory = searchParams.get("category");
 
-  const shoes = await prisma.shoe.findMany({
+  const jackets = await prisma.jacket.findMany({
     include: {
       images: true,
     },
@@ -22,32 +22,31 @@ export async function GET(request: Request) {
   });
 
   return NextResponse.json({
-    shoes,
+    jackets,
   });
 }
 
 export async function POST(request: Request) {
   try {
     const data = await request.json();
-    console.log(data);
     const { images, ...res } = data;
-    const newShoe = await prisma.shoe.create({
+    const newJacket = await prisma.jacket.create({
       data: res,
     });
 
     await Promise.all(
       images?.map(async (url: string) => {
-        await prisma.imageShoe.create({
+        await prisma.imageJacket.create({
           data: {
             url: url,
-            shoeId: newShoe.id,
+            jacketId: newJacket.id,
           },
         });
       })
     );
 
     return NextResponse.json({
-      newShoe,
+      newJacket,
       images,
     });
   } catch (error) {
