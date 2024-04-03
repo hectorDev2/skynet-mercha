@@ -5,6 +5,7 @@ import { products, jackets } from "./Data";
 import { SliderHeroShoes } from "../zapatillas/components/SliderHeroShoes";
 import SliderShoes from "../zapatillas/components/SliderShoes";
 import SliderJackets from "./components/SliderJacket";
+import { Banner } from "../components/shared/Banner";
 
 export default function Shoes() {
   return (
@@ -17,6 +18,25 @@ export default function Shoes() {
           title="Casacas Personalizadas"
           color="#309FFF"
         />
+        <Banner
+          image="/jackets/banner.png"
+          bgImage="https://static.vecteezy.com/system/resources/previews/033/377/797/non_2x/wallpaper-the-night-street-lights-the-moon-the-street-the-street-lights-ai-generated-free-photo.jpg"
+        >
+          <div className="flex flex-col gap-y-4 z-50  ">
+            <h1
+              style={{ textShadow: "#00000099 2px 5px" }}
+              className="md:text-6xl drop-shadow-lg text-4xl"
+            >
+              Especiales ofertas por lanzamiento
+            </h1>
+            <p className="flex flex-row gap-x-0.5 items-center text-lg text-[#04ADFF]">
+              Exclusivos para gente gammer
+            </p>
+            <button className="px-8 py-4 border border-black rounded-secondary bg-black hover:bg-black/90 text-white transition-colors drop-shadow w-fit mt-4">
+              Descubre nuestros modelos
+            </button>
+          </div>
+        </Banner>
         <SliderJackets
           tag="detalles"
           color="#309FFF"
