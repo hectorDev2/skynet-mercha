@@ -1,3 +1,3 @@
-import { useFetch } from "./utils/useFetch";
+import { useFetchTshirt } from "./hooks/useFetchTshirt";
 
-export { useFetch };
+export { useFetchTshirt };
