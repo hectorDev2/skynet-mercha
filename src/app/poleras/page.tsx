@@ -3,9 +3,9 @@ import { ClientSection } from "@/app/components/shared/landing/ClientSection";
 import { Layout } from "@/app/layout/Layout";
 import { products, jackets } from "./Data";
 import { SliderHeroShoes } from "../zapatillas/components/SliderHeroShoes";
-import SliderShoes from "../zapatillas/components/SliderShoes";
-import SliderJackets from "./components/SliderJacket";
 import { Banner } from "../components/shared/Banner";
+import SliderJackets from "./components/SliderJacket";
+import { JacketList } from "./components/JacketList";
 
 export default function Shoes() {
   return (
@@ -18,10 +18,8 @@ export default function Shoes() {
           title="Casacas Personalizadas"
           color="#309FFF"
         />
-        <Banner
-          image="/jackets/banner.png"
-          bgImage="https://static.vecteezy.com/system/resources/previews/033/377/797/non_2x/wallpaper-the-night-street-lights-the-moon-the-street-the-street-lights-ai-generated-free-photo.jpg"
-        >
+        <JacketList />
+        <Banner image="/jackets/banner.png" bgImage="/jackets/banner-bg.png">
           <div className="flex flex-col gap-y-4 z-50  ">
             <h1
               style={{ textShadow: "#00000099 2px 5px" }}
