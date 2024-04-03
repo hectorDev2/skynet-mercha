@@ -1,3 +1,4 @@
+import { FiveStarts } from "@/app/components/containers/Products/CardProductEx";
 import { ProductInterfaceSlider } from "@/app/types";
 
 export const CardShoe = ({
@@ -52,6 +53,8 @@ export const CardShoe = ({
       </div>
       <div className="relative text-white p-6">
         <span className="block opacity-75 -mb-1">{tag}</span>
+        {FiveStarts()}
+
         <div className="flex justify-between">
           <span className="block font-semibold text-xl">{item.title}</span>
           <span className=" bg-white rounded-full text-[var(--${theme})] text-xs font-bold px-3 leading-none flex items-center">

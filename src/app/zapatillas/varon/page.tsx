@@ -4,10 +4,9 @@ import { products, sliderMale } from "../Data";
 import { SliderHeroShoes } from "../components/SliderHeroShoes";
 import SliderShoes from "../components/SliderShoes";
 import { Layout } from "@/app/layout/Layout";
+import { ShoeList } from "../components/ShoeList";
 
 export default function Shoes() {
-  console.log(sliderMale);
-
   return (
     <Layout>
       <div className="my-[150px]">
@@ -24,6 +23,7 @@ export default function Shoes() {
           theme="primary"
           products={products}
         />
+        <ShoeList />
         <About
           title="Sobre Nosotros"
           content="Tenemos los mas grandes artistas del sector para confeccionar sus zapatillas personalizadas de la mayor calidad posible"
