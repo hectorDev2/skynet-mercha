@@ -1,4 +1,4 @@
-export const categories = [
+export const categoriesTshirt = [
   {
     id: 1,
     category: "video juegos",
@@ -99,7 +99,66 @@ export const categories = [
     category: "OTROS",
   },
 ];
+export const categoriesJacket = [
+  {
+    id: 1,
+    category: "Music",
+  },
+  {
+    id: 2,
+    category: "Clasico",
+  },
+  {
+    id: 3,
+    category: "Calle",
+  },
+  {
+    id: 4,
+    category: "Elegante",
+  },
+  {
+    id: 4,
+    category: "Otros",
+  },
+];
 
+export const categoriesShoes = [
+  {
+    id: 1,
+    category: "Music",
+  },
+  {
+    id: 2,
+    category: "Clasico",
+  },
+  {
+    id: 3,
+    category: "Calle",
+  },
+  {
+    id: 4,
+    category: "Elegante",
+  },
+  {
+    id: 4,
+    category: "Otros",
+  },
+];
+
+export const genders = [
+  {
+    id: 1,
+    gender: "Mujer",
+  },
+  {
+    id: 2,
+    gender: "Hombre",
+  },
+  {
+    id: 3,
+    gender: "Unisex",
+  },
+];
 export const tag = ["exclusivo", "no exclusivo"];
 
 export const labels = ["tendencia", "liquidacion"];
