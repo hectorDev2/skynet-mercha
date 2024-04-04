@@ -6,8 +6,6 @@ import { categoriesTshirt, labels, tag } from "@/db/dataNew";
 import { getJacketId, getTshirtById } from "@/utils/fetch";
 import { Button } from "@nextui-org/react";
 import { useEffect, useState } from "react";
-import { useFormTshirtPUT } from "../../hook/useFormTshirtPUT";
-import { useFormShoePUT } from "../../hook/useFormShoePUT";
 import { useFormJacketPUT } from "../../hook/useFormJacketPUT";
 
 interface ProductInterface {
