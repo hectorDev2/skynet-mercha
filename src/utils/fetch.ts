@@ -65,3 +65,27 @@ export const getJackets = async (): Promise<Shoe[] | []> => {
     return [];
   }
 };
+
+export const getJacketId = async (id: string): Promise<tShirt | []> => {
+  try {
+    const res = await fetch(`${envUrl}/api/jackets/${id}`);
+    const resJson = await res.json();
+    console.log(resJson);
+
+    return resJson;
+  } catch (error) {
+    return [];
+  }
+};
+
+export const getTShoeId = async (id: string): Promise<tShirt | []> => {
+  try {
+    const res = await fetch(`${envUrl}/api/shoes/${id}`);
+    const resJson = await res.json();
+    console.log(resJson);
+
+    return resJson;
+  } catch (error) {
+    return [];
+  }
+};
