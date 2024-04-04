@@ -1,9 +1,9 @@
 "use client";
-import { useFetch } from "@/index";
+import { useFetchTshirt } from "@/index";
 import { Products } from "./Products";
 
 const ProductsPage = ({ exclusive = false }) => {
-  const { products } = useFetch();
+  const { products } = useFetchTshirt();
   return <Products tshirts={products} exclusive={exclusive} example={false} />;
 };
 
