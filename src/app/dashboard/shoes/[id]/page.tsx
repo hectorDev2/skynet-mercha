@@ -1,5 +1,5 @@
-import { EditForm } from "../../components/EditForm";
 import { Layout } from "../../components/Layout";
+import { EditFormShoe } from "../../components/form/EditFormShoe";
 
 const Dashboard = ({ params }: any) => {
   return (
@@ -8,7 +8,7 @@ const Dashboard = ({ params }: any) => {
       <h2 className="text-5xl py-2 text-center mt-[20px]">
         Editar polo {params.id}
       </h2>
-      <EditForm id={params.id} />
+      <EditFormShoe id={params.id} />
     </Layout>
   );
 };

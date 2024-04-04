@@ -1,7 +1,7 @@
 "use client";
 import { Layout } from "../../components/Layout";
+import TableComponent from "../../components/Table";
 import { useShoes } from "../../hook/useShoes";
-import TableComponent from "../components/Table";
 
 const TableShoes = () => {
   const { shoes } = useShoes();
@@ -13,7 +13,7 @@ const TableShoes = () => {
       <h2 className="text-5xl py-2 text-center mt-[20px]">
         lista de Zapatillas
       </h2>
-      <TableComponent products={shoes} type="shoes" />
+      <TableComponent productTag="shoes" products={shoes} type="shoes" />
     </Layout>
   );
 };
