@@ -34,12 +34,12 @@ export const EditFormJacket = ({ id }: { id: string }) => {
   )?.subcategories;
 
   useEffect(() => {
-    getJacketId(id).then(({ tshirt }: any) => {
-      const newTshirt = {
-        ...tshirt,
-        images: tshirt.images.map((image: any) => image.url),
+    getJacketId(id).then(({ jacket }: any) => {
+      const newJacket = {
+        ...jacket,
+        images: jacket.images.map((image: any) => image.url),
       };
-      setProduct(newTshirt);
+      setProduct(newJacket);
     });
   }, []);
 
