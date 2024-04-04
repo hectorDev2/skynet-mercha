@@ -1,4 +1,4 @@
-import { EditForm } from "../../components/EditForm";
+import { EditForm } from "../../components/form/EditFormTshirt";
 import { Layout } from "../../components/Layout";
 
 const Dashboard = ({ params }: any) => {
