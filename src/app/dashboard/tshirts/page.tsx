@@ -1,5 +1,5 @@
 import { Layout } from "../components/Layout";
-import { AddForm } from "../components/AddForm";
+import { AddFormTshirt } from "../components/form/AddFormTshirt";
 const cloudinary = require("cloudinary").v2;
 
 const Dashboard = () => {
@@ -18,7 +18,7 @@ const Dashboard = () => {
       <h2 className="text-5xl text-center mt-[100px]">
         agregar camiseta o polo
       </h2>
-      <AddForm />
+      <AddFormTshirt />
     </Layout>
   );
 };
