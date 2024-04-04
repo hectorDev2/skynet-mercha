@@ -1,7 +1,8 @@
 "use client";
 import { useForm } from "react-hook-form";
+import { putRequest } from "../utils/putRequest";
 
-export const useFormPUT = ({ id }: { id: any }) => {
+export const useFormJacketPUT = ({ id }: { id: any }) => {
   const { register, setValue, handleSubmit, watch } = useForm();
 
   const initForm = (product: any) => {
@@ -15,16 +16,7 @@ export const useFormPUT = ({ id }: { id: any }) => {
   };
 
   const onSubmit = handleSubmit(async (data) => {
-    const res = await fetch(`/api/tshirts/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...data,
-        price: Number(data.price),
-      }),
-    });
+    const res = await putRequest(data, "jackets", id);
     if (res.ok) {
       window.location.reload();
       alert("polo editado...");

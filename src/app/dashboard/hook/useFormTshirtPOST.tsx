@@ -1,25 +1,17 @@
 "use client";
 import { useForm } from "react-hook-form";
+import { postRequest } from "../utils/postRequest";
 
-export const useFormPOST = () => {
+export const useFormTshirtPOST = () => {
   const { register, setValue, handleSubmit, watch } = useForm();
 
   const onSubmit = handleSubmit(async (data) => {
     console.log(data, "enviando...");
 
-    const res = await fetch("/api/tshirts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...data,
-        price: Number(data.price),
-      }),
-    });
+    const res = await postRequest(data, "tshirts");
     if (res.ok) {
       window.location.reload();
-      alert("polo guardado....");
+      alert("jacket guardado....");
       resetState();
     } else {
       console.log("error");
