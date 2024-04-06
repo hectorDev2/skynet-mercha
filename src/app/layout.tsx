@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     template: "%s | Skynet",
   },
   description: "Tienda Skynet",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

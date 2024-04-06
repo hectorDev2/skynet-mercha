@@ -4,7 +4,11 @@ import { products, sliderWoman } from "../Data";
 import { SliderHeroShoes } from "../components/SliderHeroShoes";
 import { Layout } from "@/app/layout/Layout";
 import SliderShoes from "../components/SliderShoes";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Zapatillas Mujer",
+};
 export default function Shoes() {
   return (
     <Layout>
