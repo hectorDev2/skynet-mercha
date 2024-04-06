@@ -3,7 +3,8 @@ import { CardProductEx } from "./CardProductEx";
 
 export function Products({
   title = "polos",
-  tshirts,
+  products,
+  tagProduct = "polos",
   color = "hsla(205, 46%, 10%, 1)",
 }: any) {
   return (
@@ -18,9 +19,9 @@ export function Products({
         </div>
       </div>
       <div className=" flex flex-col justify-center md:flex-row md:flex-wrap items-center gap-2 py-5">
-        {tshirts &&
-          tshirts?.map((tshirt: any) => (
-            <Link key={tshirt?.name} href={`/productos/${tshirt?.id}`}>
+        {products &&
+          products?.map((tshirt: any) => (
+            <Link key={tshirt?.name} href={`/${tagProduct}/${tshirt?.id}`}>
               <CardProductEx
                 image={tshirt?.images[0]?.url ?? ""}
                 product={tshirt}

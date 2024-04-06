@@ -20,7 +20,7 @@ const ProductsTrending = ({ products = [] }) => {
       <div className=" flex flex-col justify-center md:flex-row md:flex-wrap items-center gap-2 py-5">
         {tshirtFilter &&
           tshirtFilter.reverse()?.map((tshirt: any) => (
-            <Link key={tshirt?.name} href={`/productos/${tshirt?.id}`}>
+            <Link key={tshirt?.name} href={`/polos/${tshirt?.id}`}>
               <CardProductEx
                 image={tshirt?.images[0]?.url ?? ""}
                 product={tshirt}

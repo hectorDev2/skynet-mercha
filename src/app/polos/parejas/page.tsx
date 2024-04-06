@@ -1,9 +1,9 @@
-import { Layout } from "../layout/Layout";
-import { Features } from "../components/shared/landing/Main";
-import { ClientSection } from "../components/shared/landing/ClientSection";
-import DemoSlider from "../components/shared/landing/DemoSlider";
-import { Hero } from "../components/shared/Hero";
-import { About } from "../components/shared/landing/About";
+import { Layout } from "../../layout/Layout";
+import { Features } from "../../components/shared/landing/Main";
+import { ClientSection } from "../../components/shared/landing/ClientSection";
+import DemoSlider from "../../components/shared/landing/DemoSlider";
+import { Hero } from "../../components/shared/Hero";
+import { About } from "../../components/shared/landing/About";
 import { features, products } from "./Data";
 import { Metadata } from "next";
 

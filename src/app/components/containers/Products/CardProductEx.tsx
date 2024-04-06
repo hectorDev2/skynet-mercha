@@ -68,15 +68,11 @@ export const CardProductEx = ({
  w-full max-w-sm transition-all ease-in hover:scale-105 hover:bg-[#04abff83]
  bg-red border border-gray-200 rounded-lg shadow  dark:border-gray-700"
     >
-      <a href="#">
-        <img className="p-8 rounded-t-lg" src={image} alt="exclusive image" />
-      </a>
+      <img className="p-8 rounded-t-lg" src={image} alt="exclusive image" />
       <div className="px-5 pb-5">
-        <a href="#">
-          <h5 className="text-xl uppercase font-semibold tracking-tight text-gray-900 dark:text-white">
-            {product.name}
-          </h5>
-        </a>
+        <h5 className="text-xl uppercase font-semibold tracking-tight text-gray-900 dark:text-white">
+          {product.name}
+        </h5>
         <div className="flex items-center mt-2.5 mb-5">
           <div className="flex items-center space-x-1 rtl:space-x-reverse">
             <FiveStarts />

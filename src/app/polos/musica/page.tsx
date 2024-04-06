@@ -1,11 +1,11 @@
-import { About } from "../components/shared/landing/About";
-import { ClientSection } from "../components/shared/landing/ClientSection";
-import { Features } from "../components/shared/landing/Main";
-import { features } from "../escultura/Data";
-import { Hero } from "../components/shared/Hero";
-import { Layout } from "../layout/Layout";
+import { About } from "../../components/shared/landing/About";
+import { ClientSection } from "../../components/shared/landing/ClientSection";
+import { Features } from "../../components/shared/landing/Main";
+import { features } from "../../escultura/Data";
+import { Hero } from "../../components/shared/Hero";
+import { Layout } from "../../layout/Layout";
 import { Metadata } from "next";
-import { ContainerCategoryProducts } from "../dashboard/components/ContainerCategoryProducts";
+import { ContainerCategoryProducts } from "../../dashboard/components/ContainerCategoryProducts";
 
 export const metadata: Metadata = {
   title: "Polos Musica",
@@ -19,7 +19,7 @@ const GamerPage = () => {
         subtitle="explora nuestra gran variadad de modelos para amantes de la musica."
         theme="secondary"
       >
-        <img src="polos/music/music-background.png" alt="pareja polos" />
+        <img src="/polos/music/music-background.png" alt="pareja polos" />
       </Hero>
       <Features
         theme="secondary"
@@ -30,11 +30,11 @@ const GamerPage = () => {
       />
       <ClientSection
         color="#309FFF"
-        image="polos/music/music-background-2.png"
+        image="/polos/music/music-background-2.png"
         theme="secondary"
         title="Clientes satisfechos"
       />
-      <ContainerCategoryProducts category={3} />
+      <ContainerCategoryProducts category={2} />
       <About
         title="Sobre Nosotros"
         image="/shoes/preview-woman.png"

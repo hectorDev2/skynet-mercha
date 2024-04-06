@@ -6,5 +6,5 @@ export const JacketList = () => {
   const { products } = useFetchJacket();
   console.log(products);
 
-  return <Products title="Poleras" tshirts={products} />;
+  return <Products title="Poleras" tagProduct="poleras" products={products} />;
 };
