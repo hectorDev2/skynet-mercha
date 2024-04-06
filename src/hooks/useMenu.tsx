@@ -26,7 +26,7 @@ export const useMenu = () => {
             alt="categoria anime gamer"
           />
         ),
-        href: "gamer",
+        href: "polos/gamer",
         name: "Polos gamer",
         category: 1,
         subcategories: [
@@ -75,7 +75,7 @@ export const useMenu = () => {
             alt="categoria anime image"
           />
         ),
-        href: "anime",
+        href: "polos/anime",
         name: "Polos anime",
         category: 2,
         subcategories: [
@@ -114,7 +114,7 @@ export const useMenu = () => {
             alt="categoria music image"
           />
         ),
-        href: "musica",
+        href: "polos/musica",
         name: "Polos Music",
         category: 3,
         subcategories: [
@@ -152,7 +152,7 @@ export const useMenu = () => {
             alt="categoria diseño inka"
           />
         ),
-        href: "inka",
+        href: "polos/inka",
         name: "Polos diseño inka",
         category: 4,
         subcategories: [],
@@ -165,7 +165,7 @@ export const useMenu = () => {
     () => [
       {
         name: "Varon",
-        href: "varon",
+        href: "polos/varon",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[175px]"
@@ -176,7 +176,7 @@ export const useMenu = () => {
       },
       {
         name: "Mujer",
-        href: "mujer",
+        href: "polos/mujer",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[175px]"
@@ -192,7 +192,7 @@ export const useMenu = () => {
     () => [
       {
         name: "Varon",
-        href: "varon",
+        href: "polos/varon",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[175px]"
@@ -209,7 +209,7 @@ export const useMenu = () => {
     () => [
       {
         name: "Mugs",
-        href: "/tazas",
+        href: "polos//tazas",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[150px]"
@@ -220,7 +220,7 @@ export const useMenu = () => {
       },
       {
         name: "Escultura",
-        href: "/escultura",
+        href: "polos//escultura",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[150px]"
