@@ -1,5 +1,5 @@
 "use client";
-import { useFetchTshirt } from "@/index";
+import { useFetchTshirt } from "@/hooks/index";
 import { Products } from "./containers/Products/Products";
 import ProductsTrending from "./ProductsTrending";
 
