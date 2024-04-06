@@ -165,22 +165,22 @@ export const useMenu = () => {
     () => [
       {
         name: "Varon",
-        href: "polos/varon",
+        href: "shoes/varon",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[175px]"
-            src={`shoes/3.png`}
+            src={`/shoes/3.png`}
             alt=""
           />
         ),
       },
       {
         name: "Mujer",
-        href: "polos/mujer",
+        href: "shoes/mujer",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[175px]"
-            src={`shoes/4.png`}
+            src={`/shoes/4.png`}
             alt=""
           />
         ),
@@ -209,7 +209,7 @@ export const useMenu = () => {
     () => [
       {
         name: "Mugs",
-        href: "polos//tazas",
+        href: "tazas",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[150px]"
@@ -220,7 +220,7 @@ export const useMenu = () => {
       },
       {
         name: "Escultura",
-        href: "polos//escultura",
+        href: "escultura",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[150px]"
