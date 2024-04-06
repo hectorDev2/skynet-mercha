@@ -7,7 +7,7 @@ import { SliderHeroShoes } from "./components/SliderHeroShoes";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Zapatillas Varon",
+  title: "Zapatillas ",
 };
 export default function Shoes() {
   return (

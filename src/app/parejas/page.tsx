@@ -5,7 +5,11 @@ import DemoSlider from "../components/shared/landing/DemoSlider";
 import { Hero } from "../components/shared/Hero";
 import { About } from "../components/shared/landing/About";
 import { features, products } from "./Data";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Parejas",
+};
 export default function Pairs() {
   return (
     <Layout>

@@ -8,7 +8,11 @@ import { Hero } from "../components/shared/Hero";
 import { Layout } from "../layout/Layout";
 import { getTshirtsParams } from "@/utils/fetch";
 import { Products } from "../components/containers/Products";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Polos Musica",
+};
 const GamerPage = () => {
   const [products, setProducts] = useState<any>();
 

@@ -6,7 +6,11 @@ import { SliderHeroShoes } from "../zapatillas/components/SliderHeroShoes";
 import { Banner } from "../components/shared/Banner";
 import SliderJackets from "./components/SliderJacket";
 import { JacketList } from "./components/JacketList";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Poleras",
+};
 export default function Shoes() {
   return (
     <Layout>

@@ -6,7 +6,11 @@ import { Features } from "../components/shared/landing/Main";
 import { features, products } from "./Data";
 import { ClientSection } from "../components/shared/landing/ClientSection";
 import DemoSlider from "../components/shared/landing/DemoSlider";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Escultura",
+};
 export default function sculpture() {
   return (
     <Layout>

@@ -1,12 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { Layout } from '../layout/Layout'
+import { Metadata } from "next";
+import { Layout } from "../layout/Layout";
 
+export const metadata: Metadata = {
+  title: "Terminos y condiciones ",
+};
 const Terms = () => {
   return (
     <Layout>
-      <div className='mx-[15px] md:mx-[100px]  mt-[200px]'>
-        <h2 className='font-bold text-3xl'>Términos y Condiciones de Uso</h2>
+      <div className="mx-[15px] md:mx-[100px]  mt-[200px]">
+        <h2 className="font-bold text-3xl">Términos y Condiciones de Uso</h2>
         <p>
           Por favor, lee estos términos y condiciones de uso ('Términos',
           'Términos y Condiciones') cuidadosamente antes de usar el sitio web
@@ -24,7 +28,7 @@ const Terms = () => {
           Términos. Si no estás de acuerdo con alguna parte de los términos,
           entonces no puedes acceder al Servicio.
         </p>
-        <h2 className='font-bold text-2xl mt-3'>Cuentas</h2>
+        <h2 className="font-bold text-2xl mt-3">Cuentas</h2>
         <p>
           Cuando creas una cuenta con nosotros, debes proporcionarnos
           información precisa, completa y actualizada en todo momento. El
@@ -43,7 +47,7 @@ const Terms = () => {
           inmediatamente después de tomar conocimiento de cualquier violación de
           seguridad o uso no autorizado de tu cuenta.
         </p>
-        <h2 className='font-bold text-2xl mt-3'>Propiedad Intelectual</h2>
+        <h2 className="font-bold text-2xl mt-3">Propiedad Intelectual</h2>
         <p>
           El Servicio y su contenido original, características y funcionalidad
           son y seguirán siendo propiedad exclusiva de [Nombre de tu empresa] y
@@ -56,7 +60,7 @@ const Terms = () => {
           servicios que no son propiedad ni están controlados por [Nombre de tu
           empresa].
         </p>
-        <h2 className='font-bold text-2xl mt-3'>Enlaces a Otros Sitios Web</h2>
+        <h2 className="font-bold text-2xl mt-3">Enlaces a Otros Sitios Web</h2>
         <p>
           [Nombre de tu empresa] no tiene control sobre, y no asume
           responsabilidad por, el contenido, las políticas de privacidad o las
@@ -65,9 +69,9 @@ const Terms = () => {
           indirectamente, por cualquier daño o pérdida causados o supuestamente
           causados por o en conexión con el uso o la confianza en dicho
           contenido, bienes o servicios disponibles en o a través de cualquier
-          sitio web o servicio.{' '}
+          sitio web o servicio.{" "}
         </p>
-        <h2 className='font-bold text-2xl mt-3'>Cambios</h2>
+        <h2 className="font-bold text-2xl mt-3">Cambios</h2>
         <p>
           Nos reservamos el derecho, a nuestra sola discreción, de modificar o
           reemplazar estos Términos en cualquier momento. Si una revisión es
@@ -81,10 +85,10 @@ const Terms = () => {
           términos revisados. Si no aceptas los nuevos términos, por favor deja
           de usar el Servicio.
         </p>
-        <h2 className='font-bold text-2xl mt-3'>Contacto</h2>
+        <h2 className="font-bold text-2xl mt-3">Contacto</h2>
         <h2>Si tienes alguna pregunta sobre estos Términos, contáctanos.</h2>
       </div>
     </Layout>
-  )
-}
-export default Terms
+  );
+};
+export default Terms;

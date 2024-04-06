@@ -1,7 +1,11 @@
+import { Metadata } from "next";
 import { Layout } from "../components/Layout";
 import { AddFormTshirt } from "../components/form/AddFormTshirt";
 const cloudinary = require("cloudinary").v2;
 
+export const metadata: Metadata = {
+  title: "Polos dashboard",
+};
 const Dashboard = () => {
   // cloudinary.config({
   //   cloud_name: "dfih7mtw6",
