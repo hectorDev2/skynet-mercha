@@ -9,6 +9,7 @@ export const useShoes = () => {
       .then((res: any) => setShoes(res?.shoes?.reverse()))
       .catch((error) => console.log(error));
   }, []);
+
   return {
     shoes,
   };
