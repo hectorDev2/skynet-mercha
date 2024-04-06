@@ -35,9 +35,7 @@ export function Products({ tshirts, example = true, exclusive = false }: any) {
       </div>
       {example && (
         <div className="w-full py-20 flex justify-center ">
-          <Link
-            href={`/productos/${exclusive ? "exclusivos" : "no-exclusivos"}`}
-          >
+          <Link href={`/polos/${exclusive ? "exclusivos" : "no-exclusivos"}`}>
             <button>
               VER MAS
               <svg
