@@ -47,8 +47,15 @@ export const SliderHeroShoes = ({ shoes = [] }: Props) => {
                 alt="logo skynet"
               />
               <div className="absolute bottom-[10%] left-[2%]">
-                <h2 className="font-medium  text-left text-6xl">{title}</h2>
-                <p>{description} </p>
+                <h2
+                  style={{
+                    textShadow: "1px 1px 1px black,  0 0 0.1em black",
+                  }}
+                  className="font-medium   text-left text-2xl md:text-6xl"
+                >
+                  {title}
+                </h2>
+                <p className="text-sm text-left md:text-base">{description} </p>
                 <div className="flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
