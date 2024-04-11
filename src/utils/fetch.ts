@@ -11,6 +11,8 @@ export const getTshirts = async (): Promise<tShirt | []> => {
     return [];
   }
 };
+
+//#region
 export const getTshirtsParams = async (
   categoryId?: number
 ): Promise<tShirt | any> => {

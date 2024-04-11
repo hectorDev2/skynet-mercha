@@ -165,7 +165,7 @@ export const useMenu = () => {
     () => [
       {
         name: "Varon",
-        href: "shoes/varon",
+        href: "varon",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[175px]"
@@ -176,7 +176,7 @@ export const useMenu = () => {
       },
       {
         name: "Mujer",
-        href: "shoes/mujer",
+        href: "mujer",
         image: (
           <img
             className="w-[100px] mx-auto md:w-[175px]"

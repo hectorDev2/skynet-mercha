@@ -68,7 +68,12 @@ export const CardProductEx = ({
  w-full max-w-sm transition-all ease-in hover:scale-105 hover:bg-[#04abff83]
  bg-red border border-gray-200 rounded-lg shadow  dark:border-gray-700"
     >
-      <img className="p-8 rounded-t-lg" src={image} alt="exclusive image" />
+      <img
+        loading="lazy"
+        className="p-8 rounded-t-lg"
+        src={image}
+        alt="exclusive image"
+      />
       <div className="px-5 pb-5">
         <h5 className="text-xl uppercase font-semibold tracking-tight text-gray-900 dark:text-white">
           {product.name}
