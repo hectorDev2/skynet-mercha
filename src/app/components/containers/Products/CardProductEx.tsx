@@ -1,4 +1,5 @@
 import { tShirt } from "@/types";
+import Image from "next/image";
 
 export const FiveStarts = () => (
   <div className="flex">
@@ -68,7 +69,9 @@ export const CardProductEx = ({
  w-full max-w-sm transition-all ease-in hover:scale-105 hover:bg-[#04abff83]
  bg-red border border-gray-200 rounded-lg shadow  dark:border-gray-700"
     >
-      <img
+      <Image
+        width={300}
+        height={300}
         loading="lazy"
         className="p-8 rounded-t-lg"
         src={image}
